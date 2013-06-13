@@ -1,0 +1,144 @@
+html {
+    font: 100%/1.5 "PT Serif", serif;
+}
+
+.avatar {
+  display: inline-block;
+  position: absolute;
+  top: .5em;
+  left: -4em;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  background: url(/images/headshot_tiny.jpg) no-repeat;
+}
+
+.avatar2 {
+  display: inline-block;
+  float: right;
+  top: 1em;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  background: url(/images/headshot.jpg) no-repeat;
+  background-size: 140px;
+}
+
+.header h1 {
+  display: inline;
+}
+
+/* color scheme: http://colorschemedesigner.com/#3s21QvyQpw0w0 */
+.container {
+    max-width: 1040px;
+    background-color: #fffdfd;
+    color: #525252;
+}
+
+a {
+  color: #ff8a04;
+  text-decoration: none;
+}
+
+a:not(:hover) {
+  color: #0e9ce0;
+}
+
+/* Project list */
+ul.projects li {
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+ul.projects p {
+    font-size: 85%;
+    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
+}
+
+ul.projects img {
+    float: right;
+    margin-left: 1em;
+}
+
+/* Notes list */
+ul.notes li {
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+ul.notes a, .title {
+    font-family: "PT Sans", sans-serif;
+}
+
+ul.notes p {
+    margin: 0;
+    color: #858585;
+}
+
+ul.notes img {
+  float: right;
+}
+
+aside {
+  font-size: small;
+  right: 0;
+  position: absolute;
+  width: 180px;
+}
+
+p, code {
+  max-width: 720px;
+}
+
+/* Work off the assumption of 1.5 line height @ 16px. */
+p, .p, ul, ol, hr, table, form, pre,
+h1, .alpha, h2, .beta {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+h1, .alpha {
+    font-size: 48px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2, .beta {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3, .gamma {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h4, .delta {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-top: -1px;
+}
+
+
+h1, h2, h3, h4, .header, .footer, .publication {
+    font-family: "PT Sans", sans-serif;
+}
+
+.header {
+    margin-top: 1em;
+}

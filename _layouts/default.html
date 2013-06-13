@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>{{ site.name }} | {{ page.title }}</title>
+
+    <link rel="stylesheet" media="all" href="/css/toast.css" />
+    <link rel="stylesheet" media="all" href="/css/mine.css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body lang="en">
+    <div class="container typeset">
+            <div class="header">
+                {% if page.url != '/index.html' %}
+                    <p><a href="/" rel="author"><i class="icon-fixed-width icon-th"></i> {{ site.name }}</a></p>
+
+                    <!-- Add plugin that switches to h2 based on number of words -->
+                    {% if page.longtitle %}
+                        <h2><u>{{ page.title }}</u></h2>
+                    {% else %}
+                        <h1>{{ page.title }}</h1>
+                    {% endif %}
+                {% else %}
+                <div class="avatar2"></div>
+                <!-- <div class="avatar"></div> -->
+                <h1>{{ site.name }}</h1>
+                {% endif %}
+            </div>
+
+            <div class="content">
+                {% if page.div_class %}
+                <div class="{{ page.div_class }}">
+                    {{ content }}
+                </div>
+                {% else %}
+                    {{ content }}
+                {% endif %}
+            </div>
+
+            {% if page.comments %}
+                <hr />
+                {% include comments.html %}
+            {% endif %}
+
+            <hr />
+            <div class="footer">
+                <p>
+                Sergey Karayev -
+                <a href="sergeykarayev@gmail.com"><i class="icon-fixed-width icon-envelope"></i></a> &middot;
+                <a href="http://www.linkedin.com/in/sergeykarayev"><i class="icon-fixed-width icon-linkedin"></i></a> &middot;
+                <a href="https://twitter.com/sergeykarayev"><i class="icon-fixed-width icon-twitter"></i></a> -
+                Last updated on {{ site.time | date_to_string }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% if page.code %}
+<link rel="stylesheet" href="/ext/highlight.js/styles/solarized_light.css">
+<script src="/ext/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% endif %}
+</body>
+</html>
