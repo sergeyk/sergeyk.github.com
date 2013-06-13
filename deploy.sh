@@ -8,6 +8,6 @@ if [ $CUR_BRANCH='source' ]; then
     cp -r _site/. .
     rm -r _site
     git add -A
-    git commit -am `git rev-parse --abbrev-ref HEAD`
+    git commit -am `git log --oneline -1`
     git push origin master
 fi
