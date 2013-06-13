@@ -1,5 +1,5 @@
 name: Sergey Karayev
 pygments: true
-permalink: /:categories/:title
+permalink: /:title
 markdown: kramdown
 ordered_categories: [academic, other]

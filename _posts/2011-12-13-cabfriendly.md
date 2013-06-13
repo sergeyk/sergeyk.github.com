@@ -24,10 +24,10 @@ The modularity of our design allows the service to easily scale in the cloud as 
 
 ### Architecture
 
-![Architecture of our application.](/work/images/cabfriendly/architecture.png)
+![Architecture of our application.](/images/cabfriendly/architecture.png)
 
 ### Use case scenario
 
-![A use case scenario in screenshots of the app.](/work/images/cabfriendly/use_case.png)
+![A use case scenario in screenshots of the app.](/images/cabfriendly/use_case.png)
 
 {% include peoples_urls.md %}
