@@ -1,6 +1,8 @@
 # Deploy to github by pushing the msater branch
 
 CUR_BRANCH=`git rev-parse --abbrev-ref HEAD`
+MSG=`git log --oneline -1`
+
 if [ $CUR_BRANCH='source' ]; then
     git push origin source
 
@@ -10,7 +12,7 @@ if [ $CUR_BRANCH='source' ]; then
     cp -r _site/. .
     rm -r _site
     git add -A
-    git commit -m `git rev-parse --abbrev-ref HEAD`
+    git commit -m $MSG
     git push origin master
 
     git checkout source
