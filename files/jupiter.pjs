@@ -1,0 +1,85 @@
+int THIN = 1;
+int THICK = 3;
+float[] hues = {5, 25, 50, 100, 185, 215};
+
+void setup() {
+  size(640,640);
+  smooth();
+  background(#E9DECC);
+  colorMode(HSB, 360);
+  frameRate(10);
+}
+
+void draw() {
+  int top_half_height = int(height/2 * 18.0/19);
+
+  // MATLAB:
+  // draw from a Dirichlet distribution with 17 alpha params of symmetric alpha 100
+  // fprintf('%0.4f,', dirichlet_sample(repmat(100, 1, 17))); fprintf('\n');
+  float[] cuts = {
+    0.0619,0.0521,0.0587,0.0589,0.0545,0.0676,0.0491,0.0684,0.0574,0.0646,0.0590,0.0553,0.0584,0.0635,0.0505,0.0640,0.0562,
+  };
+
+  //quadrant ii - 17 cuts
+  drawQuadrant(cuts, hues, width/2,top_half_height, false);
+
+  // quadrant i - 17 cuts
+  pushMatrix();
+  translate(width/2,0);
+  // NOTE: not using rotateX because processing.js doesn't handle it
+  drawQuadrant(cuts, hues, width/2, top_half_height, true);
+  popMatrix();
+
+  // fprintf('%0.4f,', dirichlet_sample(repmat(30, 1, 19))); fprintf('\n');
+  float[] cuts2 = {
+    0.0583,0.0424,0.0483,0.0510,0.0728,0.0567,0.0458,0.0592,0.0588,0.0381,0.0582,0.0450,0.0451,0.0516,0.0507,0.0445,0.0567,0.0626,0.0540,
+  };
+
+  //quadrant iii - 19 cuts
+  pushMatrix();
+  translate(width,height);
+  rotate(PI);
+  translate(width/2,0);
+  drawQuadrant(cuts2, hues, width/2,height-top_half_height, true);
+  popMatrix();
+
+  //quadrant iv - 19 cuts
+  pushMatrix();
+  translate(width,height);
+  rotate(PI);
+  drawQuadrant(cuts2, hues, width/2,height-top_half_height, false);
+  popMatrix();
+
+  // center lines
+  strokeWeight(THICK);
+  line(width/2,0, width/2,height);
+  line(0,top_half_height, width,top_half_height);
+}
+
+void drawQuadrant(float[] cuts, float[] hues, int qwidth, int qheight, boolean backwards) {
+  int x_offset = 7;
+  int y_offset = 7;
+
+  if (backwards) {
+    x_offset = qwidth - x_offset;
+    qwidth = 0;
+  }
+
+  strokeWeight(THIN);
+  float y0 = 0;
+  for (int i=0; i<cuts.length; i++) {
+    float hue = hues[int(random(hues.length))];
+    float sat = (random(1) >= 0.9) ? 360 : 100+random(260);
+    float bri = 160+random(200);
+    color rc = color(hue, sat, bri);
+    fill(rc);
+    float strip_height = 1.0*(qheight-y_offset) * cuts[i];
+    float y1 = y0 + strip_height;
+    quad(x_offset,qheight, qwidth,y_offset+y0,
+    qwidth,y_offset+y1, x_offset,qheight);
+    y0 = y1;
+  }
+
+  strokeWeight(THICK);
+  line(x_offset,qheight, qwidth,y_offset);
+}

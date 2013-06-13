@@ -6,6 +6,8 @@ layout: default
 
 thumbnail: /images/mdp_masks.png
 
+alias: /work/timely/
+
 abstract:
 |
     Features have different costs and different classes benefit from different features.
@@ -18,6 +20,7 @@ publications_abstract:
 publications:
     ICMLW-2013:
     |
+        <img src="/images/mdp_masks.png" width="200px" />
         **Dynamic Feature Selection for Classification on a Budget**
         <br />
         [Sergey Karayev][sk],
@@ -29,6 +32,7 @@ publications:
         \[[pdf](/files/icmlw_2013_dynamic_feature_selection.pdf)\]
     NIPS-2012:
     |
+        <img src="/images/timely_thumb.png" width="200px" />
         **Timely Object Recognition**
         <br />
         [Sergey Karayev][sk],

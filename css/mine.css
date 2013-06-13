@@ -3,9 +3,7 @@ html, body {
 }
 
 .avatar {
-  display: inline-block;
   position: absolute;
-  top: .5em;
   left: -4em;
   width: 48px;
   height: 48px;
@@ -137,6 +135,16 @@ hr {
 
 h1, h2, h3, h4, .header, .footer, .publication {
     font-family: "PT Sans", sans-serif;
+}
+
+.publication {
+    display: block;
+}
+
+
+.publication img {
+    float: right;
+    margin-left: 0.5em;
 }
 
 .header {

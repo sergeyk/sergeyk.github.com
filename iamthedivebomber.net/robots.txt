@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /sonya/
+Disallow: /files/
+Disallow: /audio/
+Disallow: /projects/

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>iamthedivebomber: UW Courses</title>
+   <meta name="author" content="Sergey Karayev" />
+   <!-- <link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="Tom Preston-Werner" type="application/atom+xml" /> -->
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="../../../css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="../../../css/screen.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="../../../">iamthedivebomber: stuff by sergey karayev</a>
+    <a class="extra" href="../../../">home</a>
+  </div>
+
+  <div id="post">
+<h1>UW Courses</h1>
+<p class="meta">17 November 2008 &#8211; Seattle</p>
+<p>During my summer internship at <a href="http://zillow.com">Zillow.com</a>, I finished a web application that I started working on back in the spring. Initially, I was going to make a Facebook application that would replace the old Schedules app, where you could enter the courses you were taking. To this end, I made a scraper for the <a href="http://www.washington.edu/students/timeschd/">UW Time Schedule</a>, and started working on the Model side of a <a href="http://www.rubyonrails.org/">Ruby on Rails</a> app. Swept up by schoolwork, I soon ran out of motivation.</p>
+<p>That quarter, I was taking a Statistics class aimed at Computer Science majors (UW Seattle: <span class="caps">STAT</span> 391). The final project was done in groups and was completely up to the students to define. My group, which included <a href="http://cs.washington.edu/homes/af/">Alan Fineberg</a> and Justin McOmie, decided to explore the relationship between UW instructor salaries and the student evaluations of their courses. The University collects student evaluations of almost every course at the end of the quarter, and stores data from the last three quarters at <a href="http://washington.edu/cec/">http://washington.edu/cec/</a>. Salary data is available biannually for the past decade from what seems to be a <a href="http://www.lbloom.net/"><span class="caps">FOIA</span> request</a>. Since three quarters of evaluations were not enough, we headed to the <a href="http://www.archive.org/">Internet Archive</a> and dug up evaluations from 1998-2005. Unfortunately, in 2005 UW seems to have enabled an authentication gateway, shutting poor bots out.</p>
+<p>Anyway, processing the data was a pretty fun bit of data mining. We had to do a substantial amount of cleanup to handle duplicate instructor and evaluation entries, and to join the data the way we wanted to. Although I won&#8217;t vouch for the soundness of our statistical foundations, we were unable to find any significant consistent relationship between instructor performance and salary. We looked at tenured and non-tenured instructors in many departments. Take the finding with a grain of salt, as there are a lot of things missing from a proper analysis: inclusion of research performance and grant money data, normalization of evaluations by course (some courses should be expected to rate lower, because they are harder), and data from 2005-2007.</p>
+<p>I was responsible for scraping the evaluations, and I decided to make a web app that would present this new wealth of data in a useful way. Mainly, I wanted to enable searching, and present average ratings by course and instructor. Writing the application was a fun experience in learning Rails, and an exercise in <a href="http://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a>. Development was on slow simmer for a while, kicking up over the last few weeks of the summer (curiously, as I got busier at Zillow).</p>
+<p>The result is accessible to all at <a href="http://uwcourses.com/">UW Courses</a>. I would be honored if you checked it out, and I hope that UW students find it useful. It contains about five times as many evaluations as are made accessible by UW, and provides a decent search interface. The source code for the whole application lives <a href="http://github.com/iamthedivebomber/uw-courses/tree/master">here</a> at Github. Feel free to contribute.</p>
+<p>Rails was a bit of a poor choice for this application, because the data it presents is really static. I feel that Rails really shines in terms of productivity and ease in dynamic, not static, data applications. Also, I got a good look at Rails performance issues, as the vast amount of data I was dealing with meant that I ran into &#8220;scaling&#8221; problems immediately. The site could be blazing fast with page caching (with memcached), but my hosting solution&#8211;<a href="http://www.slicehost.com/">256 Slicehost slice</a>&#8211;lacks the memory.</p>
+<p><a href="http://uwcourses.com"><img src="../../../images/uwcourses.png" alt="A screenshot of uwcourses.com" /></a></p>
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+
+      <li><span>05 Jul 2008</span> &raquo; <a href="../../../2008/07/05/here's-why.html">Here's Why: review of a book review</a></li>
+
+      <li><span>14 Nov 2007</span> &raquo; <a href="../../../2007/11/14/maze-runner.html">Maze Runner</a></li>
+
+      <li><span>09 Sep 2007</span> &raquo; <a href="../../../2007/09/09/grant-me-serenity.html">Grant me serenity</a></li>
+
+  </ul>
+</div>
+
+  <div class="footer">
+    This is my simple religion. There is no need for temples; no need for complicated philosophy. Our own brain, our own heart is our temple; the philosophy is kindness. - Dalai Lama
+    <!--<div class="rss">
+      <a href="http://feeds.feedburner.com/tom-preston-werner">
+        <img src="/images/rss.png" alt="Subscribe to RSS Feed" />
+      </a>
+    </div>-->
+  </div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6826743-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

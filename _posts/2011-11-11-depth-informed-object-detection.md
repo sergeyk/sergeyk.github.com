@@ -18,6 +18,7 @@ publications_abstract:
 publications:
     ICCVW-2011:
     |
+        <img src="/images/b3do_thumb_half.png" width="200px" />
         **A Category-Level 3-D Object Dataset: Putting the Kinect to Work**
         <br />
         [Allison Janoch][aj],
@@ -34,6 +35,7 @@ publications:
         \[[dataset](http://kinectdata.com)\]
     IROS-2011:
     |
+        <img src="/images/iros2011_thumb.png" width="200px" />
         **Practical 3-D Object Detection Using Category and Instance-level Appearance Models**
         <br />
         [Kate Saenko][ks],

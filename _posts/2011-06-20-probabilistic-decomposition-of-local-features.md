@@ -18,6 +18,7 @@ publications_abstract:
 publications:
     CVPR-2011:
     |
+        <img src="/images/cvpr2011_thumb.png" width="200px" />
         **A Probabilistic Model for Recursive Factorized Image Features**
         <br />
         [Sergey Karayev][sk],
@@ -33,6 +34,7 @@ publications:
         \[[slides](/files/cvpr2011_slides.pdf)\]
     NIPS-2009:
     |
+        <img src="/images/nips2009_thumb.png" width="200px" />
         **An Additive Latent Feature Model for Transparent Object Recognition**
         <br />
         [Mario Fritz][mf],
