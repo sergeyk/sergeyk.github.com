@@ -2,7 +2,7 @@ CUR_BRANCH=`git rev-parse --abbrev-ref HEAD`
 if [ $CUR_BRANCH='source' ]; then
     git push origin source
 
-    jekyll
+    jekyll build
     git checkout master
     git rm -qr .
     cp -r _site/. .
