@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Sergey Karayev | Setting up a development environment on Mac OS X 10.8 Mountain Lion</title>
+
+    <link rel="stylesheet" media="all" href="/css/toast.css" />
+    <link rel="stylesheet" media="all" href="/css/mine.css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body lang="en">
+    <div class="container typeset">
+            <div class="header">
+                
+                    <p><a href="/" rel="author"><i class="icon-fixed-width icon-th"></i> Sergey Karayev</a></p>
+
+                    <!-- Add plugin that switches to h2 based on number of words -->
+                    
+                        <h2><u>Setting up a development environment on Mac OS X 10.8 Mountain Lion</u></h2>
+                    
+                
+            </div>
+
+            <div class="content">
+                
+                    <p>Do you want a good modern development setup?
+Ruby and Node for all the web goodness and Python with a beautiful ipython console, Numpy, and Scipy for math and statistical computing?</p>
+
+<p>This is the gospel.
+This is what you will do.</p>
+
+<hr />
+
+<h2 id="building-blocks-homebrew-xcode-x11-and-git">Building blocks: Homebrew, XCode, X11, and Git</h2>
+
+<p>This guide is for starting from a fresh Mountain Lion install, with nothing else installed.
+You can approximate that state, by getting rid of all your macports and finks and what have you.
+Delete your <code>/usr/local</code>.
+Uninstall all XCodes are their developer tools.</p>
+
+<p>Install <a href="http://mxcl.github.com/homebrew/">homebrew</a>:</p>
+
+<pre><code>ruby &lt;(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+</code></pre>
+
+<p>Homebrew lets us effortlessly install things from source.
+It is good, but it needs some help: Mountain Lion doesn’t come with developer tools, and homebrew is not able to do much right now.</p>
+
+<p>Go to the App Store and download XCode (I am writing this in early August 2012, and the current version is 4.4).
+This can take a little bit, so while it’s downloading, let’s install X11 libraries that Mountain Lion stripped out.</p>
+
+<p>Go <a href="http://xquartz.macosforge.org/trac/wiki">here</a> and download 2.7.2+.
+Install it, and after it’s done, fix the symlink it makes:</p>
+
+<pre><code>ln -s /opt/X11 /usr/X11
+</code></pre>
+
+<p>When XCode download is done, launch it and go to Preferences, Downloads tab, and install the Command Line Tools.
+When it finishes, we are almost ready to brew.
+Before we do, let’s have XCode tell everyone where the tools are (this tip is from <a href="https://gist.github.com/1860902">Get Mountain Lion and Homebrew to Be Happy
+</a>).</p>
+
+<pre><code>sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+</code></pre>
+
+<p>Open up a new shell to make sure everything is loaded from scratch, and check that homebrew is good to go:</p>
+
+<pre><code>brew doctor
+</code></pre>
+
+<p>Fix the stuff it complains about until it doesn’t.</p>
+
+<p>Now let’s get git:</p>
+
+<pre><code>brew install git
+</code></pre>
+
+<p>And we are off to the races!</p>
+
+<hr />
+
+<h2 id="science-stuff-python-and-the-scipy-stack">Science stuff: Python and the SciPy stack</h2>
+
+<aside>
+  <p>12 June 2013: I now believe that the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> distribution is the best way to get a full scientific Python stack going.</p>
+</aside>
+
+<p>We are going to take advantage of a nice man’s labor of love—the <a href="https://github.com/fonnesbeck/ScipySuperpack">Scipy Superpack</a>—to dramatically cut down the time and effort it will take us to get from nothing to a full Matlab and R replacement.</p>
+
+<p>To use it most effectively, we are going to base everything on the system Python, which right now is version 2.7.2.
+This is 0.0.1 versions behind the latest and greatest, but I think we’ll survive.</p>
+
+<p>Python is best installed through an environment manager.</p>
+
+<pre><code>easy_install pip
+pip install virtualenv
+mkdir ~/.virtual_envs
+virtualenv ~/.virtual_envs/system
+source ~/.virtual_envs/system/bin/activate
+</code></pre>
+
+<p>This downloads a package manager, installs virtualenv, duplicates the system environment to a directory in your home directory, and activates this environment.</p>
+
+<p>Doing <code>which python</code> should now show a <code>.virtual_envs</code>-containing path.
+Make sure you add the last line to your <code>~/.bashrc</code>.</p>
+
+<p>Now install the superpack.
+Since we may want to keep up to date on the exciting scientific python developments, let’s check out the git repository so that we can update faster in the future.</p>
+
+<pre><code>mkdir ~/local &amp;&amp; cd ~/local
+git clone git://github.com/fonnesbeck/ScipySuperpack.git
+cd ScipySuperpack
+sh install_superpack.sh
+</code></pre>
+
+<p>Select <code>y</code> at the prompt, and that’s it!
+The script will install gfortran and binary builds of the latest development versions of Numpy, Scipy, Matplotlib, IPython, Pandas, Statsmodels, Scikit-learn, and PyMC, as well as their dependencies.</p>
+
+<p>Now let’s get IPython to <a href="http://stronginference.com/post/innovations-in-ipython">look beautiful using qtconsole</a>.
+Download <a href="http://get.qt.nokia.com/qt/source/qt-mac-opensource-4.7.4.dmg">Qt 4.7.4 libraries</a> and <a href="http://pyside.markus-ullmann.de/pyside-1.1.0-qt47-py27apple.pkg">PySide libraries</a>.</p>
+
+<p>Unfortunately, the PySide package installs its stuff into the system python site-packages directory, and our virtualenv ipython doesn’t see it.
+We could try building PySide from source, but instead we are just going to symlink the relevant stuff from the system to our virtualenv folder.
+This isn’t very clean, but it works for me.</p>
+
+<pre><code>ln -s /Library/Python/2.7/site-packages/pysideuic $HOME/.virtual_envs/system/lib/python2.7/site-packages
+ln -s /Library/Python/2.7/site-packages/PySide $HOME/.virtual_envs/system/lib/python2.7/site-packages
+</code></pre>
+
+<p>Install some remaining dependencies (for some reason, the DateUtils package that the Superpack installs doesn’t work right for me):</p>
+
+<pre><code>pip install pygments
+pip install dateutils
+</code></pre>
+
+<p>Now try it out:</p>
+
+<pre><code>ipython qtconsole --pylab=inline
+</code></pre>
+
+<p>In the qtconsole, try</p>
+
+<pre><code>plot(randn(500),rand(500),'o',alpha=0.2)
+</code></pre>
+
+<p>And enjoy the inline goodness.</p>
+
+<hr />
+
+<h2 id="web-stuff-ruby-node">Web stuff: Ruby, Node</h2>
+
+<p>Ruby is also best installed using an environment manager.
+Install RVM:</p>
+
+<pre><code>curl -L https://get.rvm.io | bash -s stable
+</code></pre>
+
+<p>Open up a new shell and let RVM install itself into your bashrc:</p>
+
+<pre><code>source ~/.rvm/scripts/rvm
+</code></pre>
+
+<p>Open up another shell and test that it works:</p>
+
+<pre><code>type rvm | head -n 1
+</code></pre>
+
+<p>should give <code>rvm is a function</code>.
+Great.</p>
+
+<p>Now let’s install a version of Ruby.
+1.9.3 (the latest version) works fine with the compilers provided by XCode 4.4, so:</p>
+
+<pre><code>rvm install 1.9.3
+rvm use 1.9.3 --default
+</code></pre>
+
+<p>You should be all set now.
+For sanity, check that <code>which bundle</code> shows some <code>.rvm</code>-derived path.
+If there are problems, consult the <a href="https://rvm.io/rvm/install/#explained">detailed installation guide</a>.</p>
+
+<p>For Node and its package manager, simply</p>
+
+<pre><code>brew install node
+</code></pre>
+
+<p>Lastly, you may want to install Heroku at some point.
+I ran into a problem when installing from the <a href="http://toolbelt.heroku.com">Heroku Toolbelt</a> package.
+Instead, simply</p>
+
+<pre><code>gem install heroku
+gem install foreman
+</code></pre>
+
+<p>And you’re done.
+Good stuff.</p>
+
+                
+            </div>
+
+            
+                <hr />
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'sergeykarayevwebsite'; // required: replace example with your forum shortname
+
+    var disqus_title = "Setting up a development environment on Mac OS X 10.8 Mountain Lion";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+
+            <hr />
+            <div class="footer">
+                <p>
+                Sergey Karayev -
+                <a href="sergeykarayev@gmail.com"><i class="icon-fixed-width icon-envelope"></i></a> &middot;
+                <a href="http://www.linkedin.com/in/sergeykarayev"><i class="icon-fixed-width icon-linkedin"></i></a> &middot;
+                <a href="https://twitter.com/sergeykarayev"><i class="icon-fixed-width icon-twitter"></i></a> -
+                Last updated on 13 Jun 2013
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+<link rel="stylesheet" href="/ext/highlight.js/styles/solarized_light.css">
+<script src="/ext/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

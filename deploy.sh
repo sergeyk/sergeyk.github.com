@@ -1,5 +1,7 @@
 CUR_BRANCH=`git rev-parse --abbrev-ref HEAD`
 if [ $CUR_BRANCH='source' ]; then
+    git push origin source
+
     jekyll
     git checkout master
     git rm -qr .
