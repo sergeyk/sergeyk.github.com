@@ -12,7 +12,7 @@ if [ $CUR_BRANCH='source' ]; then
     cp -r _site/. .
     rm -r _site
     git add -A
-    git commit -m $MSG
+    git commit -m "$MSG"
     git push origin master
 
     git checkout source
