@@ -29,13 +29,13 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
                 {% endcapture %}
 
                 <li>
-                {% if post contains 'thumbnail' %}
-                    <img src="{{ post.thumbnail }}" width="200px">
+                {% if post.thumbnail %}
+                    <img src="{{ post.thumbnail }}" width="180px">
                 {% endif %}
 
                 <h3><a href="{{ url }}">{{ post.title }}</a></h3>
 
-                {% if post contains 'abstract' %}
+                {% if post.abstract %}
                     {{ post.abstract | markdownify }}
                 {% endif %}
 
@@ -53,26 +53,28 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
 ---
 
 <h2>Notes</h2>
-<ul class="notes">
+<ul class="projects">
 {% for post in site.posts %}
     {% if post.featured %}
     {% else %}
-        <li>
-            {% if post.thumbnail %}
-                <img src="{{ post.thumbnail }}" width="100px" />
-            {% endif %}
-
-{% if post.metadata_only %}
-<span class="title" markdown="1">
-{{ post.title }} - {{ post.links }}
-</span>
+{% if post.thumbnail %}
+<li>
+<img src="{{ post.thumbnail }}" width="180px" />
 {% else %}
-<a href="{{ post.url }}">{{ post.title }}</a>
+<li class="nothumb">
 {% endif %}
-- {{ post.date | date_to_string }}
-
-<p markdown="1">{{ post.abstract }}</p>
-        </li>
+        <h3>
+{% if post.metadata_only %}
+<span markdown="1">{{ post.title }} - {{ post.links }}</span>
+{% else %}
+<span markdown="1"><a href="{{ post.url }}">{{ post.title }}</a></span>
+{% endif %}
+        </h3>
+        <p markdown="1">
+{{ post.date | date_to_string }}<br />
+{{ post.abstract }}
+        </p>
+    </li>
     {% endif %}
 {% endfor %}
 </ul>
