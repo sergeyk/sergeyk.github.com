@@ -151,29 +151,38 @@ ul.projects li {
     margin-bottom: 1.5rem;
 }
 
-ul.projects li p {
+ul.projects p {
     margin-left: 200px;
-}
-ul.projects li h3 {
-    margin-left: 200px;
-}
-
-ul.projects li.nothumb p {
-    margin-left: 0px;
-}
-ul.projects li.nothumb h3 {
-    margin-left: 0px;
-}
-
-ul.projects li p {
     font-size: 85%;
     margin-bottom: 18px;
     margin-bottom: 1.125rem;
+}
+ul.projects h3 {
+    margin-left: 200px;
+}
+
+ul.projects .nothumb p {
+    margin-left: 0px;
+}
+ul.projects .nothumb h3 {
+    margin-left: 0px;
 }
 
 ul.projects img {
     /* Must be width=180px */
     float: left;
+}
+
+@media screen and (max-width: 420px) {
+    ul.projects img {
+        float: none;
+    }
+    ul.projects p {
+        margin-left: 0;
+    }
+    ul.projects h3 {
+        margin-left: 0;
+    }
 }
 
 aside {
