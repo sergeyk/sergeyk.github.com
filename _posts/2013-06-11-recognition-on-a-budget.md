@@ -15,7 +15,7 @@ abstract:
 
 publications_abstract:
 >
-    Publications at **[ICML-W 2013](/files/icmlw_2013_dynamic_feature_selection.pdf)**, **[NIPS 2012](/files/nips_2012_timely_object_recognition.pdf)**.
+    Publications at **[ICMLW 2013](/files/icmlw_2013_dynamic_feature_selection.pdf)**, **[NIPS 2012](/files/nips_2012_timely_object_recognition.pdf)**.
 
 publications:
     ICMLW-2013:
@@ -30,6 +30,7 @@ publications:
         ICML-W 2013 - Prediction with Sequential Models
         <br />
         \[[pdf](/files/icmlw_2013_dynamic_feature_selection.pdf)\]
+        \[[slides](/files/icmlw_2013_slides.pdf)\]
     NIPS-2012:
     |
         <img src="/images/timely_thumb.png" width="180px" />
@@ -67,6 +68,10 @@ On the latter, we show that Anytime answers can be given for any desired cost bu
 {% endfor %}
 
 ## Code
+
+<aside markdown="1">
+    Updated code coming soon!
+</aside>
 
 - [timely_object_recognition](https://github.com/sergeyk/timely_object_recognition): main repository
 - [sk-py-utils](https://github.com/sergeyk/skpyutils): utility classes and methods for Python

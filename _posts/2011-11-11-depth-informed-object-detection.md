@@ -13,7 +13,7 @@ abstract:
 
 publications_abstract:
 >
-    Publications at **[IROS 2011](/files/iros2011.pdf)**, **[ICCV-W 2011](/files/iccvw2011.pdf)**.
+    Publications at **[IROS 2011](/files/iros2011.pdf)**, **[ICCVW 2011](/files/iccvw2011.pdf)**.
 
 publications:
     ICCVW-2011:
