@@ -20,7 +20,12 @@ We have developed a cloud-based mobile web application to match users who reques
 The application is hosted on Amazon's EC2 service and combines several open-source frameworks (Django, PostgresQL, Redis, Node.js) with social networking (Facebook), mapping, and location-awareness (Google) APIs.
 The modularity of our design allows the service to easily scale in the cloud as the user base grows.
 
-[Use it!](http://cabfriendly.com)
+<del markdown="1">
+    [Use it!](http://cabfriendly.com)
+</del>
+(The application is now offline, sorry.)
+
+The [code](https://github.com/sergeyk/cabfriendly) is provided with no documentation or support.
 
 ### Architecture
 
