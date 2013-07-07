@@ -33,6 +33,7 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
                     <img src="{{ post.thumbnail }}" width="180px">
                 {% endif %}
 
+                <div>
                 <h3><a href="{{ url }}">{{ post.title }}</a></h3>
 
                 {% if post.abstract %}
@@ -42,6 +43,7 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
                 {% if post.publications_abstract %}
                     {{ post.publications_abstract | markdownify }}
                 {% endif %}
+                </div>
                 </li>
             {% endif %}
         {% endfor %}
@@ -63,19 +65,21 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
 {% else %}
 <li class="nothumb">
 {% endif %}
-        <h3>
+<div>
+<h3>
 {% if post.metadata_only %}
 <span markdown="1">{{ post.title }} - {{ post.links }}</span>
 {% else %}
 <span markdown="1"><a href="{{ post.url }}">{{ post.title }}</a></span>
 {% endif %}
-        </h3>
-        <p markdown="1">
+</h3>
+<p markdown="1">
 {{ post.date | date_to_string }}<br />
 {{ post.abstract }}
-        </p>
-    </li>
-    {% endif %}
+</p>
+</div>
+</li>
+{% endif %}
 {% endfor %}
 </ul>
 

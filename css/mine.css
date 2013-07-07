@@ -144,43 +144,47 @@ a:not(:hover) {
     font-family: "PT Sans", sans-serif;
 }
 
-/* Project list */
+/**
+    PROJECTS LIST
+**/
 ul.projects li {
-    display: inline-block;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    display: block;
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+    /* Clearfix */
+    overflow: hidden;
+    *overflow: visible;
 }
 
 ul.projects p {
-    margin-left: 200px;
     font-size: 85%;
-    margin-bottom: 18px;
-    margin-bottom: 1.125rem;
-}
-ul.projects h3 {
-    margin-left: 200px;
+    margin-bottom: 0;
 }
 
-ul.projects .nothumb p {
-    margin-left: 0px;
-}
-ul.projects .nothumb h3 {
-    margin-left: 0px;
+ul.projects p+p {
+    margin-top: 18px;
+    margin-top: 1.125rem;
 }
 
-ul.projects img {
-    /* Must be width=180px */
+ul.projects li img {
     float: left;
 }
 
+ul.projects li div {
+    margin-left: 200px;
+}
+
+ul.projects li.nothumb div {
+    margin-left: 0;
+}
+
+/* If iPhone size, display images and text on different lines. */
 @media screen and (max-width: 420px) {
-    ul.projects img {
+    ul.projects li img {
         float: none;
     }
-    ul.projects p {
-        margin-left: 0;
-    }
-    ul.projects h3 {
+
+    ul.projects li div {
         margin-left: 0;
     }
 }

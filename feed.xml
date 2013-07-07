@@ -1,5 +1,4 @@
 ---
-layout: none
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -10,8 +9,10 @@ layout: none
         <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
         {% for post in site.posts limit:20 %}
             <item>
-                <title>{{ post.title }}</title>
-                <description>{{ post.abstract | xml_escape }}</description>
+                <title>{{ post.title | markdownify | xml_escape }}</title>
+                {% if post.abstract %}
+                    <description>{{ post.abstract | markdowinfy | xml_escape }}</description>
+                {% endif %}
                 <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
                 <link>{{ site.url }}{{ post.url }}</link>
                 <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>

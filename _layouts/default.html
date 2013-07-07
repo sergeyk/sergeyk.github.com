@@ -49,12 +49,14 @@
                     For now, manually set longtitle flag in post metadata.
                     -->
                     {% if page.longtitle %}
-                        <h2><u>{{ page.title }}</u></h2>
+                        <h2><u>{{ page.title | markdownify }}</u></h2>
                     {% else %}
-                        <h1>{{ page.title }}</h1>
+                        <h1>{{ page.title | markdownify }}</h1>
                     {% endif %}
                     <aside>
-                        Published {{ page.date | date_to_string }}
+                        Published {{ page.date | date_to_string }}.
+                        <!--<br />
+                        Reading time: {{ page.content | reading_time }}.-->
                     </aside>
 
                 {% else %}
