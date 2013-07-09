@@ -85,11 +85,11 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
 
 {% include peoples_urls.md %}
 
----
+<!--
+<hr />
 
 <div id="feed"></div>
 
-<!--
 <script type="text/javascript">
 google.load("feeds", "1");
 

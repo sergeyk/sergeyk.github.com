@@ -70,15 +70,7 @@
                             <i class="icon-fixed-width icon-th"></i> {{ site.name }}
                         </a>
                     </p>
-                    <!--
-                    TODO: Add plugin that switches to h2 based on number of words.
-                    For now, manually set longtitle flag in post metadata.
-                    -->
-                    {% if page.longtitle %}
-                        <h2><u>{{ page.title | markdownify }}</u></h2>
-                    {% else %}
-                        <h1>{{ page.title | markdownify }}</h1>
-                    {% endif %}
+                    <h1>{{ page.title | markdownify }}</h1>
                     <aside>
                         Published {{ page.date | date_to_string }}.
                         <!--<br />
@@ -87,7 +79,7 @@
 
                 {% else %}
                 <div class="avatar"></div>
-                <h1>{{ site.name }}</h1>
+                <div style="display: inline-block;"><h1>{{ site.name }}</h1></div>
                 {% endif %}
             </div>
 

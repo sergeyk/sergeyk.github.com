@@ -1,6 +1,5 @@
 ---
 title: "Attentional Object Detection: introductory slides"
-longtitle: true
 category: academic
 thumbnail: /images/attentional_object_detection_thumb.png
 
