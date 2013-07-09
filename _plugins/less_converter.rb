@@ -25,7 +25,7 @@ module Jekyll
       setup
       begin
         parser = Less::Parser.new :paths => ['./css']
-        parser.parse(content).to_css
+        parser.parse(content).to_css :compress => true
       rescue => e
         puts "Less Exception: #{e.message}"
       end
