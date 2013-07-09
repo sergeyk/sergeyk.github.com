@@ -1,3 +1,6 @@
+---
+---
+
 /* Apply ipython notebook styles to notebook div. */
 #notebook {
   @import "notebook.less";
@@ -123,14 +126,16 @@ html, body {
 }
 
 .avatar {
-  float: right;
-  width: 140px;
-  height: 140px;
-  border-radius: 70px;
-  -webkit-border-radius: 70px;
-  -moz-border-radius: 70px;
+  display: inline-block;
+  margin-bottom: -1.25em;
+  margin-right: 0.5em;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
   background: url(/images/headshot.jpg) no-repeat;
-  background-size: 140px;
+  background-size: 60px;
 }
 
 a {
@@ -228,8 +233,8 @@ h1, .alpha, h2, .beta {
 }
 
 h1, .alpha {
-    font-size: 48px;
-    font-size: 3rem;
+    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
