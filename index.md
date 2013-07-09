@@ -53,13 +53,13 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
 ---
 
 <h2>Notes</h2>
-<ul class="projects">
+<ul class="projects notes">
 {% for post in site.posts %}
     {% if post.featured %}
     {% else %}
 {% if post.thumbnail %}
 <li>
-<img src="{{ post.thumbnail }}" width="180px" />
+<img src="{{ post.thumbnail }}" width="120px" />
 {% else %}
 <li class="nothumb">
 {% endif %}
