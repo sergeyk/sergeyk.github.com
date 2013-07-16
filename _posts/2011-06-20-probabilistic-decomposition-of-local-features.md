@@ -13,7 +13,7 @@ abstract:
 
 publications_abstract:
 >
-    Publications at **[CVPR 2011](/files/cvpr2011.pdf)**, **[NIPS 2009](/files/nips2009.pdf)**.
+    Publications at [CVPR 2011](/files/cvpr2011.pdf), [NIPS 2009](/files/nips2009.pdf).
 
 publications:
     CVPR-2011:

@@ -10,8 +10,8 @@ thumbnail: /images/cabfriendly_thumb.png
 
 abstract:
 >
-    We have developed a cloud-based mobile web application to match users who request similar trips and would like to share a cab.
-    The application is hosted on Amazon's EC2 service and combines several open-source frameworks with social networking (Facebook), mapping, and location-awareness (Google) APIs.
+    A cloud-based mobile web application to match up users who request similar trips and would like to share a cab.
+    The application is hosted on EC2 and combines several open-source frameworks with social networking and location-awareness APIs.
 ---
 
 (Joint work with [Adam Roberts][ar] and [Harold Pimentel][hp].)

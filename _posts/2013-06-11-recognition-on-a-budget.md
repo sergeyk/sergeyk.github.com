@@ -15,7 +15,7 @@ abstract:
 
 publications_abstract:
 >
-    Publications at **[ICMLW 2013](/files/icmlw_2013_dynamic_feature_selection.pdf)**, **[NIPS 2012](/files/nips_2012_timely_object_recognition.pdf)**.
+    Publications at [ICMLW 2013](/files/icmlw_2013_dynamic_feature_selection.pdf), [NIPS 2012](/files/nips_2012_timely_object_recognition.pdf).
 
 publications:
     ICMLW-2013:
