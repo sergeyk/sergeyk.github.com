@@ -70,7 +70,7 @@ On the latter, we show that Anytime answers can be given for any desired cost bu
 ## Code
 
 <aside markdown="1">
-    Updated code coming soon!
+Updated code coming soon!
 </aside>
 
 - [timely_object_recognition](https://github.com/sergeyk/timely_object_recognition): main repository

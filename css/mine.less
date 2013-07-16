@@ -113,7 +113,7 @@ strong {
   color scheme: http://colorschemedesigner.com/#3s21QvyQpw0w0
 */
 html, body {
-    font: 100%/1.5 "PT Serif", serif;
+    font: 100%/1.5 "ff-meta-serif-web-pro", serif;
     background-color: #fcfcfa;
     color: #656564;
 }
@@ -127,15 +127,15 @@ html, body {
 
 .avatar {
   display: inline-block;
-  margin-bottom: -1.25em;
-  margin-right: 0.5em;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
+  margin-bottom: -1.25rem;
+  margin-right: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
   background: url(/images/headshot.jpg) no-repeat;
-  background-size: 60px;
+  background-size: 4rem;
 }
 
 a {
@@ -150,34 +150,29 @@ a:not(:hover) {
   color: #0e9ce0;
 }
 
-.title {
-    font-family: "PT Sans", sans-serif;
-}
-
 /**
     PROJECTS LIST
 **/
 ul.projects li {
     display: block;
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     /* Clearfix */
     overflow: hidden;
     *overflow: visible;
 }
 
 ul.projects p {
-    font-size: 85%;
+    font-size: .9rem;
     margin-bottom: 0;
 }
 
 ul.projects p+p {
-    margin-top: 18px;
     margin-top: 1.125rem;
 }
 
 ul.projects li img {
     float: left;
+    margin-top: .25em;
 }
 
 ul.projects li div {
@@ -196,6 +191,7 @@ ul.projects li.nothumb div {
 @media screen and (max-width: 420px) {
     ul.projects li img {
         float: none;
+        margin-top: 0;
     }
 
     ul.projects li div {
@@ -205,7 +201,8 @@ ul.projects li.nothumb div {
 
 aside {
   font-size: small;
-  margin-left: 780px; /* 720 for p + 60 margin + 180 for aside = 960 */
+  margin-left: 700px; /* 640 for p + 60 margin + 180 for aside = 880 */
+  margin-bottom: 1.5rem;
   position: absolute;
   width: 180px;
 }
@@ -213,15 +210,17 @@ aside {
 @media screen and (max-width: 840px) {
   aside {
     margin-left: 0;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
     position: relative;
     width: auto;
   }
 }
 
-p, pre, code {
-  max-width: 720px;
+.article {
+  max-width: 880px;
+}
+
+.content p, pre, code {
+  max-width: 640px;
 }
 
 code {
@@ -229,46 +228,32 @@ code {
   overflow: auto;
 }
 
-/* Work off the assumption of 1.5 line height @ 16px. */
 p, .p, ul, ol, hr, table, form, pre,
 h1, .alpha, h2, .beta {
-    margin-bottom: 24px;
     margin-bottom: 1.5rem;
 }
 
-h1, .alpha {
-    font-size: 32px;
+h1, h2, h3, h4, .header, .footer, .publication {
+    font-family: "source-sans-pro", sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
     font-size: 2rem;
-    font-weight: 700;
 }
 
-h2, .beta {
-    font-size: 24px;
+h2 {
     font-size: 1.5rem;
-    font-weight: 700;
 }
 
-h3, .gamma {
-    font-size: 16px;
+h3 {
     font-size: 1rem;
-    font-weight: 700;
-}
-
-h4, .delta {
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 400;
 }
 
 hr {
     border: none;
     border-bottom: 1px solid rgba(0,0,0,.1);
     margin-top: -1px;
-}
-
-
-h1, h2, h3, h4, .header, .footer, .publication {
-    font-family: "PT Sans", sans-serif;
 }
 
 .publication p img {

@@ -32,7 +32,7 @@ More details are in my [CV](/sergey_karayev_cv.pdf).
                 {% endif %}
 
                 <div>
-                <h3><a href="{{ url }}">{{ post.title }}</a></h3>
+                <h4><a href="{{ url }}">{{ post.title }}</a></h4>
 
                 {% if post.abstract %}
                     {{ post.abstract | markdownify }}

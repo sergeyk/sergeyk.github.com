@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="/ext/highlight.js/styles/solarized_light.css">
     {% endif %}
 
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="//use.typekit.net/uzs7hgs.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     {% if page.code %}
@@ -61,20 +63,18 @@
 
 <body lang="en">
     <div class="container typeset">
+        {% if page.url != '/index.html' %}
+        <div class="smaller_container">
+        {% endif %}
             <div class="header">
                 {% if page.url != '/index.html' %}
                     <p>
                         <a href="/" rel="author">
-                            <i class="icon-fixed-width icon-th"></i> {{ site.name }}
+                            <i class="icon-fixed-width icon-th"></i>
+                            {{ site.name }}
                         </a>
                     </p>
-                    <h1>{{ page.title | markdownify }}</h1>
-                    <aside>
-                        Published {{ page.date | date_to_string }}.
-                        <!--<br />
-                        Reading time: {{ page.content | reading_time }}.-->
-                    </aside>
-
+                    <h1>{{ page.title | markdownify | strip }}</h1>
                 {% else %}
                 <div class="avatar"></div>
                 <div style="display: inline-block;"><h1>{{ site.name }}</h1></div>
@@ -82,12 +82,15 @@
             </div>
 
             <div class="content">
-                {% if page.div_class %}
-                <div class="{{ page.div_class }}">
-                    {{ content }}
-                </div>
+                {% if page.url != '/index.html' %}
+                <aside>
+                    Published {{ page.date | date_to_string }}.
+                    <!--<br />
+                    Reading time: {{ page.content | reading_time }}.-->
+                </aside>
+                {{ content }}
                 {% else %}
-                    {{ content }}
+                {{ content }}
                 {% endif %}
             </div>
 
@@ -122,6 +125,9 @@
                 </p>
             </div>
         </div>
+        {% if page.url != '/index.html' %}
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>
