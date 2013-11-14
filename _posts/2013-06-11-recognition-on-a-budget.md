@@ -31,6 +31,8 @@ publications:
         <br />
         \[[pdf](/files/icmlw_2013_dynamic_feature_selection.pdf)\]
         \[[slides](/files/icmlw_2013_slides.pdf)\]
+        \[[poster](/files/icmlw_2013_poster.pdf)\]
+        \[code coming soon\]
     NIPS-2012:
     |
         <img src="/images/timely_thumb.png" width="180px" />
@@ -45,6 +47,7 @@ publications:
         <br />
         \[[pdf](/files/nips_2012_timely_object_recognition.pdf)\]
         \[[poster](/files/nips_2012_timely_object_recognition_poster.pdf)\]
+        \[[code](https://github.com/sergeyk/timely_object_recognition)\] (also need [sk-py-utils](https://github.com/sergeyk/skpyutils) and [sk-vis-utils](https://github.com/sergeyk/skvisutils))
 ---
 
 <p class="abstract">
@@ -66,15 +69,5 @@ On the latter, we show that Anytime answers can be given for any desired cost bu
 {{ publication[1] }}
 </div>
 {% endfor %}
-
-## Code
-
-<aside markdown="1">
-Updated code coming soon!
-</aside>
-
-- [timely_object_recognition](https://github.com/sergeyk/timely_object_recognition): main repository
-- [sk-py-utils](https://github.com/sergeyk/skpyutils): utility classes and methods for Python
-- [sk-vis-utils](https://github.com/sergeyk/skvisutils): classes and methods for dealing with object recognition data and tasks
 
 {% include peoples_urls.md %}

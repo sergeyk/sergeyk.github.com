@@ -31,7 +31,7 @@ publications:
         <br />
         ICCV-W 2011
         <br />
-        \[[pdf](/files/iccv2011.pdf)\]
+        \[[pdf](/files/iccvw2011.pdf)\]
         \[[dataset](http://kinectdata.com)\]
     IROS-2011:
     |
