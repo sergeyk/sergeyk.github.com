@@ -1,8 +1,11 @@
+[aa]: http://www.agarwala.org/
+[ah]: http://www.dgp.toronto.edu/~hertzman/
 [aj]: http://www.eecs.berkeley.edu/~allie/
 [ar]: http://www.cs.berkeley.edu/~adarob/
 [as]: http://www.cs.berkeley.edu/~xshyr/
 [gb]: http://www.willowgarage.com/pages/people/gary-bradski-senior-researcher
 [hp]: http://www.eecs.berkeley.edu/~pimentel/
+[hw]: http://www.adobe.com/technology/people/seattle/holger-winnemoeller.html
 [hos]: http://www.eecs.berkeley.edu/~song/
 [jb]: http://www.cs.berkeley.edu/~barron/
 [jl]: #
