@@ -2,7 +2,7 @@
 title: Home
 layout: default
 ---
-I am a PhD candidate in CS at UC Berkeley, working with [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/) as part of [BVLC](http://berkeleyvision.org/bvlc/).\\
+I am a PhD candidate in CS at UC Berkeley, working with [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/) as part of the [BVLC](http://bvlc.eecs.berkeley.edu/).\\
 I want to solve hard problems in artificial intelligence, particularly for computer vision.\\
 More details are in my [CV](/sergey_karayev_cv.pdf).
 

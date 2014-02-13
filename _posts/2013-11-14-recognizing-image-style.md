@@ -12,7 +12,7 @@ abstract:
 |
     The style of an image plays a significant role in how it is viewed, but has received little attention in computer vision research.
     We present two novel datasets of image style: 55K Flickr photographs and 85K paintings.
-    Our approach shows excellent classification performance on both datasets.
+    Our approach, based on convolutional nets, shows excellent classification performance on both datasets.
 
 publications_abstract:
 >
@@ -30,7 +30,8 @@ publications:
         [Aseem Agarwala][aa],
         [Trevor Darrell][td]
         <br />
-        \[[arxiv](http://arxiv.org/abs/1311.3715)\]
+        \[[arxiv page](http://arxiv.org/abs/1311.3715)\]
+        \[[pdf (fast)[(/files/2013_recognizing_image_style_arxiv.pdf)\]
         \[code and data coming soon\]
 ---
 
