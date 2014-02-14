@@ -16,7 +16,7 @@ abstract:
 
 publications_abstract:
 >
-    Tech report on [Arxiv](http://arxiv.org/abs/1311.3715).
+    Tech report on [arXiv](/files/1311.3715v1.pdf).
 
 publications:
     Arxiv-2013:
@@ -30,8 +30,8 @@ publications:
         [Aseem Agarwala][aa],
         [Trevor Darrell][td]
         <br />
-        \[[arxiv page](http://arxiv.org/abs/1311.3715)\]
-        \[[pdf (fast)[(/files/2013_recognizing_image_style_arxiv.pdf)\]
+        \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
+        \[[pdf](/files/1311.3715v1.pdf)\]
         \[code and data coming soon\]
 ---
 
