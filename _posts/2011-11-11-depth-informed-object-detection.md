@@ -11,9 +11,7 @@ abstract:
     Using the Microsoft Kinect, we gather a large dataset of indoor crowded scenes.
     We investigate ways to unify state-of-the-art object detection systems and improve them with depth information.
 
-publications_abstract:
->
-    Publications at [IROS 2011](/files/iros2011.pdf), [ICCVW 2011](/files/iccvw2011.pdf).
+    - Publications at [IROS 2011](/files/iros2011.pdf), [ICCVW 2011](/files/iccvw2011.pdf).
 
 publications:
     ICCVW-2011:

@@ -10,13 +10,12 @@ alias: /work/image_style/
 
 abstract:
 |
-    The style of an image plays a significant role in how it is viewed, but has received little attention in computer vision research.
-    We present two novel datasets of image style: 55K Flickr photographs and 85K paintings.
-    Our approach, based on convolutional nets, shows excellent classification performance on both datasets.
+    Image style is an important part of visual communication, but has received scant research attention.
+    We present novel datasets, including of painting style.
+    Our approach is based on convolutional nets and shows excellent classification and search.
 
-publications_abstract:
->
-    Tech report on [arXiv](/files/1311.3715v1.pdf).
+    - Tech report on [arXiv](/files/1311.3715v1.pdf).
+    - Vislab [code and datasets](http://sergeykarayev.com/vislab/).
 
 publications:
     Arxiv-2013:
@@ -32,7 +31,7 @@ publications:
         <br />
         \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
         \[[pdf](/files/1311.3715v1.pdf)\]
-        \[code and data coming soon\]
+        \[[code and data](http://sergeykarayev.com/vislab/)\]
 ---
 
 <p class="abstract">
@@ -44,6 +43,9 @@ We present two novel datasets: 55K Flickr photographs annotated with curated sty
 Our approach shows excellent classification performance on both datasets.
 We use the learned classifiers to extend traditional tag-based image search to consider stylistic constraints, and demonstrate cross-dataset understanding of style.
 </p>
+
+This project is a work in progress.
+The code linked below contains most up-to-date data and experiments.
 
 ## Publications
 

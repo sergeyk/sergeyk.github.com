@@ -11,9 +11,7 @@ abstract:
     Our method for additively decomposing local image patches, LDA-SIFT, shows best performance on a novel transparent object recognition dataset.
     We recursively extend the model to multiple layers and successfully apply it to general object classification.
 
-publications_abstract:
->
-    Publications at [CVPR 2011](/files/cvpr2011.pdf), [NIPS 2009](/files/nips2009.pdf).
+    - Publications at [CVPR 2011](/files/cvpr2011.pdf), [NIPS 2009](/files/nips2009.pdf).
 
 publications:
     CVPR-2011:
