@@ -27,7 +27,7 @@ publications:
         <br />
         CVPR 2014 (Oral)
         <br />
-        \[[pdf](/files/cvpr2014_karayev.pdf)\]
+        \[[pdf](/files/cvpr_2014_anytime_recognition.pdf)\]
         \[slides\]
         \[poster\]
         \[code\]
