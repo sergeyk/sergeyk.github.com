@@ -14,7 +14,7 @@ abstract:
     We present novel datasets, including of painting style.
     Our approach is based on convolutional nets and shows excellent classification and search.
 
-    - Tech report on [arXiv](/files/1311.3715v1.pdf).
+    - Report on [arXiv](/files/1311.3715v1.pdf).
     - Vislab [code and datasets](http://sergeykarayev.com/vislab/).
 
 publications:

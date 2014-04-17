@@ -11,11 +11,26 @@ alias: /work/timely/
 abstract:
 |
     Features have different costs and different classes benefit from different features.
-    A multi-class recognition system must select them intelligently to maximize performance under a cost budget.
+    A multi-class recognition system should dynamically select them to maximize performance under a cost budget.
 
-    - Publications at [ICMLW 2013](/files/icmlw_2013_dynamic_feature_selection.pdf), [NIPS 2012](/files/nips_2012_timely_object_recognition.pdf).
+    - Publications at [CVPR 2014](/files/cvpr_2014_anytime_recognition.pdf), [ICMLW 2013](/files/icmlw_2013_dynamic_feature_selection.pdf), [NIPS 2012](/files/nips_2012_timely_object_recognition.pdf).
 
 publications:
+    CVPR-2014:
+    |
+        <img src="/images/imagenet_thumb.png" width="180px" />
+        **Anytime Recognition of Objects and Scenes**
+        <br />
+        [Sergey Karayev][sk],
+        [Mario Fritz][mf],
+        [Trevor Darrell][td]
+        <br />
+        CVPR 2014 (Oral)
+        <br />
+        \[[pdf](/files/cvpr2014_karayev.pdf)\]
+        \[slides\]
+        \[poster\]
+        \[code\]
     ICMLW-2013:
     |
         <img src="/images/mdp_masks.png" width="180px" />
@@ -29,8 +44,6 @@ publications:
         <br />
         \[[pdf](/files/icmlw_2013_dynamic_feature_selection.pdf)\]
         \[[slides](/files/icmlw_2013_slides.pdf)\]
-        \[[poster](/files/icmlw_2013_poster.pdf)\]
-        \[[code](https://github.com/sergeyk/timely_classification)\]
     NIPS-2012:
     |
         <img src="/images/timely_thumb.png" width="180px" />
