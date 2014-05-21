@@ -61,6 +61,7 @@
 */
 html, body {
     font: 100%/1.5 "ff-meta-serif-web-pro", serif;
+    text-rendering: optimizeLegibility;
     color: #585857;
 }
 
@@ -170,9 +171,12 @@ aside {
   max-width: 640px;
 }
 
+em {
+  font-style: italic;
+}
+
 h1, h2, h3, h4, .header, .footer, .publication, .sans {
     font-family: "source-sans-pro", sans-serif;
-    text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4 {
@@ -208,7 +212,7 @@ h3, .h3-like{
     line-height:  2em;
     margin-bottom: 2em;
 }
-.small, ul.projects p {
+.footer, .small, ul.projects p {
     font-size: .875em; /* equiv 14px */
     line-height: 1.7143em;
     margin-bottom: 1.7143em;

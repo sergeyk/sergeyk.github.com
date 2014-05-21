@@ -27,6 +27,11 @@
     <script>hljs.initHighlightingOnLoad();</script>
     {% endif %}
 
+    <!-- Any other scripts or anything that the page may want. -->
+    {% if page.head %}
+    {{ page.head }}
+    {% endif %}
+
     <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
     <script type="text/javascript">
     init_mathjax = function() {
@@ -115,14 +120,12 @@
 
             <hr />
             <div class="footer">
-<p>
 Updated {{ site.time | date_to_string }}
 &nbsp; | &nbsp;
 <a href="sergeykarayev@gmail.com"><i class="icon-envelope"></i></a> &middot;
 <a href="http://www.linkedin.com/in/sergeykarayev"><i class="icon-linkedin"></i></a> &middot;
 <a href="https://twitter.com/sergeykarayev"><i class="icon-twitter"></i></a> &middot;
 <a href="http://iamthedivebomber.net"><i class="icon-plane"></i></a>
-</p>
             </div>
         </div>
         {% if page.url != '/index.html' %}
