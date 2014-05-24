@@ -15,7 +15,7 @@ abstract:
     Our approach is based on convolutional nets and shows excellent classification and search.
 
     - Report on [arXiv](/files/1311.3715v1.pdf).
-    - Vislab [code and datasets](http://sergeykarayev.com/vislab/).
+    - Vislab [code and datasets](http://vislab.berkeleyvision.org/).
 
 publications:
     Arxiv-2013:
@@ -31,7 +31,7 @@ publications:
         <br />
         \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
         \[[pdf](/files/1311.3715v1.pdf)\]
-        \[[code and data](http://sergeykarayev.com/vislab/)\]
+        \[[code and data](http://vislab.berkeleyvision.org)\]
 ---
 
 <p class="abstract">

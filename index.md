@@ -45,21 +45,6 @@ I look like [this](/images/mexico_getting_my_picture_taken.jpg).
 
 ---
 
-<!-- ## Code
-
-<ul class="projects notes">
-    <li class="nothumb"><div>
-    <span class="sans" markdown="1">
-        [Vislab](http://sergeykarayev.com/vislab): Python code for visual recognition.
-    </span>
-    <p markdown="1">
-        Code initially written for the [Image Style Recognition](/recognizing-image-style) project.
-    </p>
-    </div></li>
-</ul>
-
---- -->
-
 ## Notes
 
 <ul class="projects notes">
