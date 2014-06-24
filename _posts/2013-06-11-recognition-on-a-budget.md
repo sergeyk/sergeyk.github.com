@@ -29,8 +29,8 @@ publications:
         <br />
         \[[pdf](/files/cvpr_2014_anytime_recognition.pdf)\]
         \[slides\]
-        \[poster\]
-        \[code\]
+        \[[poster](/files/cvpr_2014_poster.pdf)\]
+        \[[code](https://github.com/sergeyk/anytime_recognition)\]
     ICMLW-2013:
     |
         <img src="/images/mdp_masks.png" width="180px" />
