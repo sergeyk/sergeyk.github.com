@@ -28,7 +28,7 @@ publications:
         CVPR 2014 (Oral)
         <br />
         \[[pdf](/files/cvpr_2014_anytime_recognition.pdf)\]
-        \[slides\]
+        \[[slides](/files/cvpr_2014_slides.pdf)\]
         \[[poster](/files/cvpr_2014_poster.pdf)\]
         \[[code](https://github.com/sergeyk/anytime_recognition)\]
     ICMLW-2013:
