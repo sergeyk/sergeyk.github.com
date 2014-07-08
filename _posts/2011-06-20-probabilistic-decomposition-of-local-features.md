@@ -11,12 +11,13 @@ abstract:
     Our method for additively decomposing local image patches shows best performance on a novel transparent object recognition dataset.
     We extend the model to multiple layers and apply it to general object classification.
 
-    - Publications at [CVPR 2011](/files/cvpr2011.pdf), [NIPS 2009](/files/nips2009.pdf).
+bullets:
+|
+    - [CVPR 2011](/files/cvpr2011.pdf), [NIPS 2009](/files/nips2009.pdf).
 
 publications:
     CVPR-2011:
-        image:
-            "/images/cvpr2011_thumb.png"
+        image: /images/cvpr2011_thumb.png
         info:
         |
             **A Probabilistic Model for Recursive Factorized Image Features**

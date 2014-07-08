@@ -42,12 +42,15 @@ Go nuts:
                 {% if post.metadata_only %}
                     <span markdown="1">{{ post.title }} - {{ post.links }}</span>
                 {% else %}
-                    <span markdown="1"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                    <span markdown="1"><a href="{{ url }}">{{ post.title }}</a></span>
                 {% endif %}
                 </h4>
 
                 {% if post.abstract %}
                     {{ post.abstract | markdownify }}
+                {% endif %}
+                {% if post.bullets %}
+                    {{ post.bullets | markdownify }}
                 {% endif %}
                 </div>
                 </li>

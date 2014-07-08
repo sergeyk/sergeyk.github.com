@@ -13,13 +13,14 @@ abstract:
     Image style is integral to visual communication, but has received scant research attention.
     We gather datasets of photo and painting style, and evaluate convolutional neural nets for the task.
 
-    - Publication at [BMVC 2014](/files/1311.3715v2.pdf).
-    - [Code and datasets](http://vislab.berkeleyvision.org/) and a [demo](http://demo.vislab.berkeleyvision.org/).
+bullets:
+|
+    - [BMVC 2014](/files/1311.3715v2.pdf).
+    - [Vislab](http://vislab.berkeleyvision.org/) (code and data) and [demo](http://demo.vislab.berkeleyvision.org/).
 
 publications:
     Arxiv-2013:
-        image:
-            /images/image_style_thumb.png
+        image: /images/image_style_thumb.png
         info:
         |
             **Recognizing Image Style**
@@ -37,6 +38,7 @@ publications:
             \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
             \[[pdf](/files/1311.3715v2.pdf)\]
             \[[code and data](http://vislab.berkeleyvision.org)\]
+            \[[demo](http://demo.vislab.berkeleyvision.org)\]
 ---
 
 <p class="abstract">
