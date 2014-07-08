@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/ext/highlight.js/styles/sunburst.css">
     {% endif %}
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="//use.typekit.net/uzs7hgs.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -75,7 +75,7 @@
                 {% if page.url != '/index.html' %}
                     <p>
                         <a href="/" rel="author">
-                            <i class="icon-fixed-width icon-th"></i>
+                            <i class="fa fa-th"></i>
                             {{ site.name }}
                         </a>
                     </p>
@@ -119,14 +119,7 @@
             {% endif %}
 
             <hr />
-            <div class="footer">
-Updated {{ site.time | date_to_string }}
-&nbsp; | &nbsp;
-<a href="sergeykarayev@gmail.com"><i class="icon-envelope"></i></a> &middot;
-<a href="http://www.linkedin.com/in/sergeykarayev"><i class="icon-linkedin"></i></a> &middot;
-<a href="https://twitter.com/sergeykarayev"><i class="icon-twitter"></i></a> &middot;
-<a href="http://iamthedivebomber.net"><i class="icon-plane"></i></a>
-            </div>
+            <div class="footer"> Updated {{ site.time | date_to_string }} </div>
         </div>
         {% if page.url != '/index.html' %}
         </div>

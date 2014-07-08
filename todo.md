@@ -1,2 +1,3 @@
+- [ ] abstract project display list into plugin
 - [ ] add colophon section (link from footer)
 - [ ] add test page showing all the headings, figures, tables, etc. to test typography and redesigns

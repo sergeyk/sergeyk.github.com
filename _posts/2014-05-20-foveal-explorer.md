@@ -1,9 +1,12 @@
 ---
 title: Foveal Explorer
-abstract: A JavaScript applet for exploring images foveally.
 thumbnail: /images/foveal_explorer.jpg
-category: research
-featured: false
+abstract:
+  |
+  A JavaScript applet for exploring images "foveally," by moving a high-resolution area around.
+  Written to gather visual attention data on Amazon Mechanical Turk.
+category: other
+featured: true
 layout: default
 comments: false
 head:

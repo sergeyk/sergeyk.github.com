@@ -1,5 +1,5 @@
 ---
-title: Recognition on a Budget
+title: Anytime Visual Recognition
 category: academic
 featured: true
 layout: default

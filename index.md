@@ -2,10 +2,19 @@
 title: Home
 layout: default
 ---
-I am a PhD candidate in CS at UC Berkeley, working with [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/) as part of the [BVLC](http://bvlc.eecs.berkeley.edu/).\\
-I want to solve hard problems in artificial intelligence, particularly for computer vision.\\
-More details are in my [CV](/sergey_karayev_cv.pdf).
-I look like [this](/images/mexico_getting_my_picture_taken.jpg).
+I am a PhD candidate in Computer Science at UC Berkeley, advised by [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/).
+<br />
+I try to make useful things, usually for computer vision.
+The details are in my [CV](/files/sergey_karayev_cv.pdf).
+<br />
+Go nuts:
+&nbsp;
+<a href="sergeykarayev@gmail.com"><i class="fa fa-send"></i></a> &middot;
+<a href="https://github.com/sergeyk/"><i class="fa fa-github"></i></a> &middot;
+<a href="http://www.linkedin.com/in/sergeykarayev"><i class="fa fa-linkedin"></i></a> &middot;
+<a href="https://twitter.com/sergeykarayev"><i class="fa fa-twitter"></i></a> &middot;
+<a href="/images/mexico_getting_my_picture_taken.jpg"><i class="fa fa-smile-o"></i></a>
+.
 
 ## Projects
 
@@ -29,7 +38,13 @@ I look like [this](/images/mexico_getting_my_picture_taken.jpg).
                 {% endif %}
 
                 <div>
-                <h4><a href="{{ url }}">{{ post.title }}</a></h4>
+                <h4>
+                {% if post.metadata_only %}
+                    <span markdown="1">{{ post.title }} - {{ post.links }}</span>
+                {% else %}
+                    <span markdown="1"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                {% endif %}
+                </h4>
 
                 {% if post.abstract %}
                     {{ post.abstract | markdownify }}
@@ -73,6 +88,33 @@ I look like [this](/images/mexico_getting_my_picture_taken.jpg).
         </li>
     {% endif %}
 {% endfor %}
+</ul>
+
+---
+
+## Other stuff
+
+<ul class="projects notes">
+
+<li class="nothumb">
+<a href="http://firstpersonstories.tumblr.com/">First Person Stories</a>: a collection of tiny stories.
+</li>
+
+<li class="nothumb">
+<a href="https://soundcloud.com/ghostporn">Ghostporn</a>: some electronic music.
+</li>
+
+<li class="nothumb">
+<a href="/archive/eurotrip_09">Eurotrip '09</a>: a partial account of a "backpacking" trip to Western Europe I did before starting grad school.
+</li>
+
+<li class="nothumb">
+<a href="/archive/best_coast_tour">Best Coast Tour</a>: the summer after my first year in grad school, a friend and I biked down from the Canadian border to San Francisco.
+</li>
+
+<li class="nothumb">
+<a href="/iamthedivebomber.net"><i class="fa fa-plane"></i></a>: my old personal website.
+</li>
 </ul>
 
 {% include peoples_urls.md %}
