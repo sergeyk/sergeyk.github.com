@@ -55,8 +55,9 @@ publications:
 ## Publications
 
 {% for publication in page.publications %}
-<div class="publication" markdown="1">
-{{ publication[1] }}
+<div class="publication">
+    <div><img src="{{ publication[1].image }}" width="180px" /></div>
+    <div markdown="1">{{ publication[1].info }}</div>
 </div>
 {% endfor %}
 

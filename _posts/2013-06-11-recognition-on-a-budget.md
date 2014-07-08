@@ -17,48 +17,54 @@ abstract:
 
 publications:
     CVPR-2014:
-    |
-        <img src="/images/imagenet_thumb.png" width="180px" />
-        **Anytime Recognition of Objects and Scenes**
-        <br />
-        [Sergey Karayev][sk],
-        [Mario Fritz][mf],
-        [Trevor Darrell][td]
-        <br />
-        CVPR 2014 (Oral)
-        <br />
-        \[[pdf](/files/cvpr_2014_anytime_recognition.pdf)\]
-        \[[slides](/files/cvpr_2014_slides.pdf)\]
-        \[[poster](/files/cvpr_2014_poster.pdf)\]
-        \[[code](https://github.com/sergeyk/anytime_recognition)\]
+        image:
+            "/images/imagenet_thumb.png"
+        info:
+        |
+            **Anytime Recognition of Objects and Scenes**
+            <br />
+            [Sergey Karayev][sk],
+            [Mario Fritz][mf],
+            [Trevor Darrell][td]
+            <br />
+            CVPR 2014 (Oral)
+            <br />
+            \[[pdf](/files/cvpr_2014_anytime_recognition.pdf)\]
+            \[[slides](/files/cvpr_2014_slides.pdf)\]
+            \[[poster](/files/cvpr_2014_poster.pdf)\]
+            \[[code](https://github.com/sergeyk/anytime_recognition)\]
     ICMLW-2013:
-    |
-        <img src="/images/mdp_masks.png" width="180px" />
-        **Dynamic Feature Selection for Classification on a Budget**
-        <br />
-        [Sergey Karayev][sk],
-        [Mario Fritz][mf],
-        [Trevor Darrell][td]
-        <br />
-        ICML-W 2013 - Prediction with Sequential Models
-        <br />
-        \[[pdf](/files/icmlw_2013_dynamic_feature_selection.pdf)\]
-        \[[slides](/files/icmlw_2013_slides.pdf)\]
+        image:
+            "/images/mdp_masks.png"
+        info:
+        |
+            **Dynamic Feature Selection for Classification on a Budget**
+            <br />
+            [Sergey Karayev][sk],
+            [Mario Fritz][mf],
+            [Trevor Darrell][td]
+            <br />
+            ICML-W 2013 - Prediction with Sequential Models
+            <br />
+            \[[pdf](/files/icmlw_2013_dynamic_feature_selection.pdf)\]
+            \[[slides](/files/icmlw_2013_slides.pdf)\]
     NIPS-2012:
-    |
-        <img src="/images/timely_thumb.png" width="180px" />
-        **Timely Object Recognition**
-        <br />
-        [Sergey Karayev][sk],
-        [Tobias Baumgartner][tb],
-        [Mario Fritz][mf],
-        [Trevor Darrell][td]
-        <br />
-        NIPS 2012
-        <br />
-        \[[pdf](/files/nips_2012_timely_object_recognition.pdf)\]
-        \[[poster](/files/nips_2012_timely_object_recognition_poster.pdf)\]
-        \[[code](https://github.com/sergeyk/timely_object_recognition)\] (also need [sk-py-utils](https://github.com/sergeyk/skpyutils) and [sk-vis-utils](https://github.com/sergeyk/skvisutils))
+        image:
+            "/images/timely_thumb.png"
+        info:
+        |
+            **Timely Object Recognition**
+            <br />
+            [Sergey Karayev][sk],
+            [Tobias Baumgartner][tb],
+            [Mario Fritz][mf],
+            [Trevor Darrell][td]
+            <br />
+            NIPS 2012
+            <br />
+            \[[pdf](/files/nips_2012_timely_object_recognition.pdf)\]
+            \[[poster](/files/nips_2012_timely_object_recognition_poster.pdf)\]
+            \[[code](https://github.com/sergeyk/timely_object_recognition)\] (also need [sk-py-utils](https://github.com/sergeyk/skpyutils) and [sk-vis-utils](https://github.com/sergeyk/skvisutils))
 ---
 
 <p class="abstract">
@@ -76,8 +82,9 @@ On the latter, we show that Anytime answers can be given for any desired cost bu
 ## Publications
 
 {% for publication in page.publications %}
-<div class="publication" markdown="1">
-{{ publication[1] }}
+<div class="publication">
+    <div><img src="{{ publication[1].image }}" width="180px" /></div>
+    <div markdown="1">{{ publication[1].info }}</div>
 </div>
 {% endfor %}
 

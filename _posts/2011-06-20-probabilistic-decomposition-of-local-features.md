@@ -15,35 +15,39 @@ abstract:
 
 publications:
     CVPR-2011:
-    |
-        <img src="/images/cvpr2011_thumb.png" width="200px" />
-        **A Probabilistic Model for Recursive Factorized Image Features**
-        <br />
-        [Sergey Karayev][sk],
-        [Mario Fritz][mf],
-        [Sanja Fidler][sf],
-        [Trevor Darrell][td]
-        <br />
-        CVPR 2011
-        <br />
-        \[[pdf](/files/cvpr2011.pdf)\]
-        \[[supplement](/files/cvpr2011_supp.pdf)\]
-        \[[poster](/files/cvpr2011_poster.pdf)\]
-        \[[slides](/files/cvpr2011_slides.pdf)\]
+        image:
+            "/images/cvpr2011_thumb.png"
+        info:
+        |
+            **A Probabilistic Model for Recursive Factorized Image Features**
+            <br />
+            [Sergey Karayev][sk],
+            [Mario Fritz][mf],
+            [Sanja Fidler][sf],
+            [Trevor Darrell][td]
+            <br />
+            CVPR 2011
+            <br />
+            \[[pdf](/files/cvpr2011.pdf)\]
+            \[[supplement](/files/cvpr2011_supp.pdf)\]
+            \[[poster](/files/cvpr2011_poster.pdf)\]
+            \[[slides](/files/cvpr2011_slides.pdf)\]
     NIPS-2009:
-    |
-        <img src="/images/nips2009_thumb.png" width="200px" />
-        **An Additive Latent Feature Model for Transparent Object Recognition**
-        <br />
-        [Mario Fritz][mf],
-        [Michael Black][mb],
-        [Gary Bradski][gb],
-        [Sergey Karayev][sk],
-        [Trevor Darrell][td]
-        <br />
-        NIPS 2009
-        <br />
-        \[[pdf](/files/nips2009.pdf)\]
+        image:
+            "/images/nips2009_thumb.png"
+        info:
+        |
+            **An Additive Latent Feature Model for Transparent Object Recognition**
+            <br />
+            [Mario Fritz][mf],
+            [Michael Black][mb],
+            [Gary Bradski][gb],
+            [Sergey Karayev][sk],
+            [Trevor Darrell][td]
+            <br />
+            NIPS 2009
+            <br />
+            \[[pdf](/files/nips2009.pdf)\]
 ---
 
 {{ page.abstract }}
@@ -51,8 +55,9 @@ publications:
 ## Publications
 
 {% for publication in page.publications %}
-<div class="publication" markdown="1">
-{{ publication[1] }}
+<div class="publication">
+    <div><img src="{{ publication[1].image }}" width="180px" /></div>
+    <div markdown="1">{{ publication[1].info }}</div>
 </div>
 {% endfor %}
 

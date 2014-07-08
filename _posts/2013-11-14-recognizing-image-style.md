@@ -10,28 +10,33 @@ alias: /work/image_style/
 
 abstract:
 |
-    Image style is an important part of visual communication, but has received scant research attention.
-    We present novel datasets of photograph and painting style.
-    Our approach is based on convolutional neural nets.
+    Image style is integral to visual communication, but has received scant research attention.
+    We present novel datasets of photograph and painting style, and evaluate convolutional neural nets for the task.
 
-    - Report on [arXiv](/files/1311.3715v2.pdf).
-    - Vislab [code and datasets](http://vislab.berkeleyvision.org/).
+    - Publication at [BMVC 2014](/files/1311.3715v2.pdf).
+    - **Vislab** [code and datasets](http://vislab.berkeleyvision.org/).
 
 publications:
     Arxiv-2013:
-    |
-        <img src="/images/image_style_thumb.png" width="180px" />
-        **Recognizing Image Style**
-        <br />
-        [Sergey Karayev][sk],
-        [Aaron Hertzmann][ah],
-        [Holger Winnemoeller][hw],
-        [Aseem Agarwala][aa],
-        [Trevor Darrell][td]
-        <br />
-        \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
-        \[[pdf](/files/1311.3715v2.pdf)\]
-        \[[code and data](http://vislab.berkeleyvision.org)\]
+        image:
+            "/images/image_style_thumb.png"
+        info:
+        |
+            **Recognizing Image Style**
+            <br />
+            [Sergey Karayev][sk],
+            [Matthew Trentacoste][mt],
+            [Helen Han][hh],
+            [Aseem Agarwala][aa],
+            [Trevor Darrell][td],
+            [Aaron Hertzmann][ah],
+            [Holger Winnemoeller][hw]
+            <br />
+            BMVC 2014
+            <br />
+            \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
+            \[[pdf](/files/1311.3715v2.pdf)\]
+            \[[code and data](http://vislab.berkeleyvision.org)\]
 ---
 
 <p class="abstract">
@@ -41,8 +46,9 @@ The style of an image plays a significant role in how it is viewed, but style ha
 ## Publications
 
 {% for publication in page.publications %}
-<div class="publication" markdown="1">
-{{ publication[1] }}
+<div class="publication">
+    <div><img src="{{ publication[1].image }}" width="180px" /></div>
+    <div markdown="1">{{ publication[1].info }}</div>
 </div>
 {% endfor %}
 
