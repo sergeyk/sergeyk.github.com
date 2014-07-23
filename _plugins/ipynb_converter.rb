@@ -1,3 +1,5 @@
+require 'tempfile'
+
 module Jekyll
   class IpynbConverter < Converter
     safe true

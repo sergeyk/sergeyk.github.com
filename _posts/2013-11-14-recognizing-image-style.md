@@ -15,7 +15,7 @@ abstract:
 
 bullets:
 |
-    - [BMVC 2014](/files/1311.3715v2.pdf).
+    - [BMVC 2014](/files/1311.3715v3.pdf).
     - [Vislab](http://vislab.berkeleyvision.org/) (code and data) and [demo](http://demo.vislab.berkeleyvision.org/).
 
 publications:
@@ -36,7 +36,7 @@ publications:
             BMVC 2014
             <br />
             \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
-            \[[pdf](/files/1311.3715v2.pdf)\]
+            \[[pdf](/files/1311.3715v3.pdf)\]
             \[[code and data](http://vislab.berkeleyvision.org)\]
             \[[demo](http://demo.vislab.berkeleyvision.org)\]
 ---
