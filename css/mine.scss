@@ -1,16 +1,17 @@
 ---
 ---
 /* Normalize */
-@import "yui_reset.less";
+@import "yui_reset";
 
 /* Apply ipython notebook styles to notebook div. */
 #notebook {
-  @import "notebook.less";
+  @import "notebook";
 }
 
 /*
   Some stuff from CSS Toast.
 */
+
 .grid {
   margin-left: -3%;
   max-width: 105%;
@@ -60,22 +61,22 @@
   color scheme: http://colorschemedesigner.com/#3s21QvyQpw0w0
 */
 html, body {
-    font: 100%/1.5 "ff-meta-serif-web-pro", serif;
-    text-rendering: optimizeLegibility;
-    color: #585857;
+  font: 100%/1.5 "ff-meta-serif-web-pro", serif;
+  text-rendering: optimizeLegibility;
+  color: #585857;
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 30px;
-    padding: 0 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+  padding: 0 1.5rem;
 }
 
 .smaller_container {
-    /* 880 px width inside a 960 container */
-    max-width: 880px;
-    margin: 0 auto;
+  /* 880 px width inside a 960 container */
+  max-width: 880px;
+  margin: 0 auto;
 }
 
 .site_title {
@@ -96,7 +97,7 @@ html, body {
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a {
@@ -115,38 +116,38 @@ a:not(:hover) {
     PROJECTS LIST
 **/
 ul.projects li {
-    display: block;
-    /* Clearfix */
-    overflow: hidden;
-    *overflow: visible;
+  display: block;
+  /* Clearfix */
+  overflow: hidden;
+  *overflow: visible;
 }
 
 ul.projects li img {
-    float: left;
+  float: left;
 }
 
 ul.projects li div {
-    margin-left: 200px;
+  margin-left: 200px;
 }
 
 ul.projects.notes li div {
-    margin-left: 140px;
+  margin-left: 140px;
 }
 
 ul.projects li.nothumb div {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 /* If iPhone size, display images and text on different lines. */
 @media screen and (max-width: 420px) {
-    ul.projects li img {
-        float: none;
-        margin-top: 0;
-    }
+  ul.projects li img {
+    float: none;
+    margin-top: 0;
+  }
 
-    ul.projects li div {
-        margin-left: 0;
-    }
+  ul.projects li div {
+    margin-left: 0;
+  }
 }
 
 aside {
@@ -176,7 +177,7 @@ em {
 }
 
 h1, h2, h3, h4, .header, .footer, .publication, .sans {
-    font-family: "source-sans-pro", sans-serif;
+  font-family: "source-sans-pro", sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -188,34 +189,34 @@ h1 p, h2 p, h3 p {
 }
 
 p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
-    font-size: 1em; /* equiv 16px */
-    line-height: 1.5em;
-    margin: 0 0 1.5em 0;
+  font-size: 1em; /* equiv 16px */
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
 }
 h1, .h1-like{
-    font-size:  2em; /* equiv 32px */
-    line-height: 1.5em;
-    margin: 0 0 .75em 0;
+  font-size:  2em; /* equiv 32px */
+  line-height: 1.5em;
+  margin: 0 0 .75em 0;
 }
 h2, .h2-like{
-    font-size:  1.5em; /* equiv 24px */
-    line-height:  1em;
-    margin: 0 0  1em 0;
+  font-size:  1.5em; /* equiv 24px */
+  line-height:  1em;
+  margin: 0 0  1em 0;
 }
 h3, .h3-like{
-    font-size:  1em; /* equiv 16px */
-    line-height:  1.5em;
-    margin: 0 0  1.5em 0;
+  font-size:  1em; /* equiv 16px */
+  line-height:  1.5em;
+  margin: 0 0  1.5em 0;
 }
 .smaller, aside {
-    font-size: .75em; /* equiv 12px */
-    line-height:  2em;
-    margin-bottom: 2em;
+  font-size: .75em; /* equiv 12px */
+  line-height:  2em;
+  margin-bottom: 2em;
 }
 .footer, .small, ul.projects p {
-    font-size: .875em; /* equiv 14px */
-    line-height: 1.7143em;
-    margin-bottom: 1.7143em;
+  font-size: .875em; /* equiv 14px */
+  line-height: 1.7143em;
+  margin-bottom: 1.7143em;
 }
 
 ul.projects ul {
@@ -234,42 +235,38 @@ ul.projects ul li {
 
 /* avoid supp margin on nested elements */
 li p, li ul{
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /* you shall not pass */
 textarea, table, td, th, code, pre, samp, div, p {
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -o-hyphens: auto;
-    hyphens: auto;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 code, pre, samp {
-    white-space: pre-wrap;
-    font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+  white-space: pre-wrap;
+  font-family: consolas, monospace;
 }
 code{
-    line-height: 1em;
+  line-height: 1em;
 }
 table{
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 hr {
-    height: 0;
-    margin: -1px 0 0 0;
-    margin-bottom: 1.5rem;
-    border: 0;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+  height: 0;
+  margin: -1px 0 0 0;
+  margin-bottom: 1.5rem;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .publication div {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .header {
-    margin-top: 1em;
+  margin-top: 1em;
 }

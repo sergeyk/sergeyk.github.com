@@ -4,5 +4,6 @@ description: Sergey Karayev is mostly a CS grad student.
 url: http://sergeykarayev.com
 highlighter: pygments
 permalink: /:title
-markdown: kramdown
 ordered_categories: [academic, other]
+sass:
+  sass_dir: css
