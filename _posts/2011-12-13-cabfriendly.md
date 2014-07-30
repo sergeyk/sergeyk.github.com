@@ -2,12 +2,8 @@
 title: CabFriendly
 category: other
 featured: true
-
-layout: default
 comments: true
-
 thumbnail: /images/cabfriendly_thumb.png
-
 abstract:
 >
     A cloud-based mobile web application to match up users who request similar trips and would like to share a cab.

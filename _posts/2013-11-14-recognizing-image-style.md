@@ -2,22 +2,16 @@
 title: Recognizing Image Style
 category: academic
 featured: true
-layout: default
-
 thumbnail: /images/image_style_thumb.png
-
 alias: /work/image_style/
-
 abstract:
 |
     Image style is integral to visual communication, but has received scant research attention.
     We gather datasets of photo and painting style, and evaluate convolutional neural nets for the task.
-
 bullets:
 |
     - [BMVC 2014](/files/1311.3715v3.pdf).
     - [Vislab](http://vislab.berkeleyvision.org/) (code and data) and [demo](http://demo.vislab.berkeleyvision.org/).
-
 publications:
     Arxiv-2013:
         image: /images/image_style_thumb.png

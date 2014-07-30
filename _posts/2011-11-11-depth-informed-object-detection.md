@@ -2,10 +2,7 @@
 title: Depth-informed Object Detection
 category: academic
 featured: true
-layout: default
-
 thumbnail: /images/b3do_thumb.png
-
 abstract:
 |
     Using the Microsoft Kinect, we gather a large dataset of indoor crowded scenes.

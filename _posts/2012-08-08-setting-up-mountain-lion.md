@@ -1,14 +1,10 @@
 ---
 title: Setting up a development environment on Mac OS X 10.8 Mountain Lion
 category: other
-
 abstract: Concise notes on setting up a development environment on OS X 10.8 for statistical computing and web development.
-
-layout: default
 comments: true
 code: true
 ---
-
 Do you want a good modern development setup?
 Ruby and Node for all the web goodness and Python with a beautiful ipython console, Numpy, and Scipy for math and statistical computing?
 

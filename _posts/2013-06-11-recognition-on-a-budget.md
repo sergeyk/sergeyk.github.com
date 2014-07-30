@@ -2,21 +2,15 @@
 title: Anytime Visual Recognition
 category: academic
 featured: true
-layout: default
-
 thumbnail: /images/mdp_masks.png
-
 alias: /work/timely/
-
 abstract:
 |
     Features have different costs and different classes benefit from different features.
     A multi-class recognition system should dynamically select them to maximize performance under a cost budget.
-
 bullets:
 |
     - [CVPR 2014](/files/cvpr_2014_anytime_recognition.pdf), [ICMLW 2013](/files/icmlw_2013_dynamic_feature_selection.pdf), [NIPS 2012](/files/nips_2012_timely_object_recognition.pdf).
-
 publications:
     CVPR-2014:
         image: /images/imagenet_thumb.png

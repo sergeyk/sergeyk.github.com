@@ -7,7 +7,6 @@ abstract:
   Written to gather visual attention data on Amazon Mechanical Turk.
 category: other
 featured: true
-layout: default
 comments: false
 head:
 |

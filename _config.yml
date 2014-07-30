@@ -7,3 +7,10 @@ permalink: /:title
 ordered_categories: [academic, other]
 sass:
   sass_dir: css
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "default"

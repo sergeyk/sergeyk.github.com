@@ -2,15 +2,11 @@
 title: Probabilistic Local Image Features
 category: academic
 featured: true
-layout: default
-
 thumbnail: /images/rlda_thumb.png
-
 abstract:
 |
     Our method for additively decomposing local image patches shows best performance on a novel transparent object recognition dataset.
     We extend the model to multiple layers and apply it to general object classification.
-
 bullets:
 |
     - [CVPR 2011](/files/cvpr2011.pdf), [NIPS 2009](/files/nips2009.pdf).
