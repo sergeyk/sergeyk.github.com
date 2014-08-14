@@ -9,7 +9,7 @@ The details are in my [CV](/files/sergey_karayev_cv.pdf).
 <br />
 Go nuts:
 &nbsp;
-<a href="sergeykarayev@gmail.com"><i class="fa fa-send"></i></a> &middot;
+<a href="mailto:sergeykarayev@gmail.com"><i class="fa fa-send"></i></a> &middot;
 <a href="https://github.com/sergeyk/"><i class="fa fa-github"></i></a> &middot;
 <a href="http://www.linkedin.com/in/sergeykarayev"><i class="fa fa-linkedin"></i></a> &middot;
 <a href="https://twitter.com/sergeykarayev"><i class="fa fa-twitter"></i></a> &middot;
