@@ -2,19 +2,12 @@
 title: Home
 layout: default
 ---
-I am a PhD candidate in Computer Science at UC Berkeley, advised by [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/).
+I recently finished a PhD in Computer Science at UC Berkeley, advised by [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/).
 <br />
-I try to make useful things, usually for computer vision.
-The details are in my [CV](/files/sergey_karayev_cv.pdf).
+I now work at [Gradescope](https://gradescope.com), which allows paper-based assignments to be assessed online, enabling data-driven feedback to both students and instructors.
 <br />
-Go nuts:
-&nbsp;
-<a href="mailto:sergeykarayev@gmail.com"><i class="fa fa-send"></i></a> &middot;
-<a href="https://github.com/sergeyk/"><i class="fa fa-github"></i></a> &middot;
-<a href="http://www.linkedin.com/in/sergeykarayev"><i class="fa fa-linkedin"></i></a> &middot;
-<a href="https://twitter.com/sergeykarayev"><i class="fa fa-twitter"></i></a> &middot;
-<a href="/images/mexico_getting_my_picture_taken.jpg"><i class="fa fa-smile-o"></i></a>
-.
+Check out my [CV](/resume/sergey_karayev_cv.pdf), [Github](https://github.com/sergeyk/), or [email me](mailto:sergeykarayev@gmail.com).
+<a href="/images/mexico_getting_my_picture_taken.jpg"><i class="fa fa-smile-o"></i></a>.
 
 ## Projects
 
