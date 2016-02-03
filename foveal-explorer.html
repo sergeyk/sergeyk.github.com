@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Sergey Karayev is mostly a CS grad student.">
+    <meta name="author" content="Sergey Karayev">
+    <link rel="alternate" type="application/rss+xml"  href="http://sergeykarayev.com/feed.xml" title="Sergey Karayev RSS Feed">
+
+    <title>Sergey Karayev | Foveal Explorer</title>
+
+    <link rel="stylesheet" media="all" href="/css/mine.css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="//use.typekit.net/uzs7hgs.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    
+
+    <!-- Any other scripts or anything that the page may want. -->
+    
+    <script type="text/javascript" src="/ext/processing.min.js"></script>
+<script type="text/javascript">
+  var img = "i05june05_static_street_boston_p1010764.jpeg";
+
+  // mode is one of [free, click]
+  var mode = "click";
+
+  // legacy code from the MTurk version.
+  var HIT_accepted = function() {
+    return true;
+  };
+
+  // Binding Processing to get data from sketch
+  var bound = false;
+  function bindJavascript() {
+    var pjs = Processing.getInstanceById('ex');
+    if (pjs != null) {
+      pjs.bindJavascript(this);
+      bound = true;
+    }
+    if (!bound) {
+        setTimeout(bindJavascript, 250);
+    }
+  }
+  bindJavascript();
+</script>
+<style type="text/css">
+  #explorer {
+    cursor: crosshair;
+  }
+</style>
+
+    
+
+    <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+    <script type="text/javascript">
+    init_mathjax = function() {
+        if (window.MathJax) {
+            // MathJax loaded
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                },
+                displayAlign: 'left', // Change this to 'center' to center equations.
+                "HTML-CSS": {
+                    styles: {'.MathJax_Display': {"margin": 0}}
+                }
+            });
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        }
+    }
+    init_mathjax();
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-10074884-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body lang="en">
+    <div class="container">
+        
+        <div class="smaller_container">
+        
+            <div class="header">
+                
+                    <p>
+                        <a href="/" rel="author">
+                            <i class="fa fa-th"></i>
+                            Sergey Karayev
+                        </a>
+                    </p>
+                    <h1><p>Foveal Explorer</p></h1>
+                
+            </div>
+
+            <div class="content">
+                
+                <aside>
+                    
+                        Published 20 May 2014.
+                    
+                </aside>
+                <p>A couple of years ago, I became interested in human visual attention.
+Our eyes are mostly low-resolution, with a high-resolution center called the <em>fovea</em>.
+Visual recognition requires sequential actions, called <em>saccades</em>, which center the fovea on points of interest.
+To build models of visual attention, researchers often record saccades using an eye tracking device, and map them onto the viewed image.</p>
+
+<p>As I was working on reinforcement learning for <a href="/recognition-on-a-budget">dynamic feature selection</a> at the time, I had an idea to use <em>inverse reinforcement learning</em> for learning such a model.
+The gist of the idea is that the <em>reward function</em> provides the most concise formulation of such sequential behavior (see Pieter Abbeel’s <a href="http://scholar.google.com/scholar?cluster=10260011060619377707&amp;hl=en&amp;as_sdt=0,5&amp;as_vis=1">classic paper</a>).</p>
+
+<p>Eye fixations are strongly dependent on the task: if you’re looking for people in a street scene, you’ll look at different locations than if you’re looking for street signs.
+However, datasets of recorded eye fixations we were able to find were all gathered in “free-viewing,” with an unspecified task.</p>
+
+<p>Since this project was not intended as a main part of my thesis work, I was unwilling to invest a lot of resources into obtaining my own fixation data.
+So, I did what computer vision people do when they need to collect data: used Amazon Mechanical Turk.</p>
+
+<div id="explorer">
+    <canvas id="ex" data-processing-sources="/files/foveal_explorer/ex.pde"></canvas>
+</div>
+
+<p>Click on the purple circle above to begin the task of foveally exploring the image.
+The Mech Turk task asked people to either write down all the text or count all the people in the scene, and collected the time-stamped history of their clicks.</p>
+
+<p>I abandoned this research direction before obtaining results.
+I’m releasing the foveal explorer code, and 10K image-task fixation histories.
+Perhaps someone would like to take over!</p>
+
+<p>[<a href="http://github.com/sergeyk/foveal_explorer">code repo</a>]</p>
+
+
+                
+            </div>
+
+            
+
+            <hr />
+            <div class="footer"> Updated 02 Feb 2016 </div>
+        </div>
+        
+        </div>
+        
+    </div>
+</body>
+</html>

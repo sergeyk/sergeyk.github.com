@@ -4,9 +4,9 @@ layout: default
 ---
 I recently finished a PhD in Computer Science at UC Berkeley, advised by [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/).
 <br />
-I now work at [Gradescope](https://gradescope.com), which allows paper-based assignments to be assessed online, enabling data-driven feedback to both students and instructors.
+I am now building the universal knowledge assessment engine at [Gradescope](https://gradescope.com), starting with college STEM courses.
 <br />
-Check out my [CV](/resume/sergey_karayev_cv.pdf), [Github](https://github.com/sergeyk/), or [email me](mailto:sergeykarayev@gmail.com).
+Check out my [CV](/resume/sergey_karayev_cv.pdf), [LinkedIn](https://linkedin.in/in/sergeykarayev/), [Google Scholar](https://scholar.google.com/citations?user=ijmuZ0wAAAAJ), [Github](https://github.com/sergeyk/), or [email me](mailto:sergeykarayev@gmail.com).
 <a href="/images/mexico_getting_my_picture_taken.jpg"><i class="fa fa-smile-o"></i></a>.
 
 ## Projects

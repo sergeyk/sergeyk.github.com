@@ -3,34 +3,27 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="Sergey Karayev is mostly a CS grad student.">
+    <meta name="author" content="Sergey Karayev">
     <link rel="alternate" type="application/rss+xml"  href="http://sergeykarayev.com/feed.xml" title="Sergey Karayev RSS Feed">
 
-    <title>{{ site.name }} | {{ page.title }}</title>
+    <title>Sergey Karayev | Virtual Zoom</title>
 
     <link rel="stylesheet" media="all" href="/css/mine.css" />
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    {% if page.code %}
-    <link rel="stylesheet" href="/ext/highlight.js/styles/sunburst.css">
-    {% endif %}
+    
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="//use.typekit.net/uzs7hgs.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    {% if page.code %}
-    <script src="/ext/highlight.js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    {% endif %}
+    
 
     <!-- Any other scripts or anything that the page may want. -->
-    {% if page.head %}
-    {{ page.head }}
-    {% endif %}
+    
 
     <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
     <script type="text/javascript">
@@ -68,62 +61,41 @@
 
 <body lang="en">
     <div class="container">
-        {% if page.url != '/' %}
+        
         <div class="smaller_container">
-        {% endif %}
+        
             <div class="header">
-                {% if page.url != '/' %}
+                
                     <p>
                         <a href="/" rel="author">
                             <i class="fa fa-th"></i>
-                            {{ site.name }}
+                            Sergey Karayev
                         </a>
                     </p>
-                    <h1>{{ page.title | markdownify | strip }}</h1>
-                {% else %}
-                <div class="avatar"></div>
-                <div class="site_title"><h1>{{ site.name }}</h1></div>
-                {% endif %}
+                    <h1><p>Virtual Zoom</p></h1>
+                
             </div>
 
             <div class="content">
-                {% if page.url != '/' %}
+                
                 <aside>
-                    {% if page.date %}
-                        Published {{ page.date | date_to_string }}.
-                    {% endif %}
+                    
+                        Published 06 Jun 2009.
+                    
                 </aside>
-                {{ content }}
-                {% else %}
-                {{ content }}
-                {% endif %}
+                
+
+                
             </div>
 
-            {% if page.comments %}
-                <hr />
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                    var disqus_shortname = 'sergeykarayevwebsite';
-                    var disqus_title = "{{ page.title }}";
-
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function() {
-                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            {% endif %}
+            
 
             <hr />
-            <div class="footer"> Updated {{ site.time | date_to_string }} </div>
+            <div class="footer"> Updated 02 Feb 2016 </div>
         </div>
-        {% if page.url != '/' %}
+        
         </div>
-        {% endif %}
+        
     </div>
 </body>
 </html>
