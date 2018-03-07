@@ -22,10 +22,8 @@ module Jekyll
         # This outputs to a canonically named file in root directory.
         `jupyter nbconvert --to html --template basic #{file.path}`
 
-        binding.pry
-
         # Jesus, for some reason the last letter is cut off.
-        filename = Dir.getwd + "/#{name[0..-2]}.html"
+        filename = "/#{file.path[0..-2]}.html"
         if not File.exists? filename
           raise("What the fuck #{name} #{filename}")
         end
