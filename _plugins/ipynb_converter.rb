@@ -20,7 +20,7 @@ module Jekyll
       file.close
       begin
         # This outputs to a canonically named file in root directory.
-        `ipython nbconvert --to html --template basic #{file.path}`
+        `jupyter nbconvert --to html --template basic #{file.path}`
 
         # Jesus, for some reason the last letter is cut off.
         filename = Dir.getwd + "/#{name[0..-2]}.html"
