@@ -1,0 +1,75 @@
++==================================================================
++https://keybase.io/sergeyk
++--------------------------------------------------------------------
++
++I hereby claim:
++
++  * I am an admin of https://sergeykarayev.com
++  * I am sergeyk (https://keybase.io/sergeyk) on keybase.
++  * I have a public key with fingerprint 883F 4650 C71D CEFA 30AC  38DB 4EC8 1576 EE7C FAEF
++
++To do so, I am signing this object:
++
++{
++    "body": {
++        "key": {
++            "eldest_kid": "012023c7414bbb2c66543fb3e4257e727aa70203868e2723ceb9fbeca61817edd07a0a",
++            "fingerprint": "883f4650c71dcefa30ac38db4ec81576ee7cfaef",
++            "host": "keybase.io",
++            "key_id": "4ec81576ee7cfaef",
++            "kid": "0101ea95ee24aadc23786f762ec3659ae7e63a007f27e6eb5ea5ba95222906dca62f0a",
++            "uid": "f6913f19625883d2b91e5ba5ca94f319",
++            "username": "sergeyk"
++        },
++        "service": {
++            "hostname": "sergeykarayev.com",
++            "protocol": "https:"
++        },
++        "type": "web_service_binding",
++        "version": 1
++    },
++    "ctime": 1487693656,
++    "expire_in": 157680000,
++    "prev": "e67c30c605a8ceaa3fdef0251035a799bbb292b66d28ed0c5555bc7f044616f2",
++    "seqno": 9,
++    "tag": "signature"
++}
++
++which yields the signature:
++
++-----BEGIN PGP MESSAGE-----
++Version: Keybase OpenPGP v2.0.62
++Comment: https://keybase.io/crypto
++
++yMNvAnicbZJ9UBRlHMePO8JAHCmwcqxTNkZeJGb32bfbwwk1CggicyagEI5nd589
++toPb4+44O+AkMZlwHKdpBohhjhpeZkxlZDIHS6ThpeJNShRMRgaDnAhNJhlImcR2
++mfyjmZ5/nt8++/l+9/v77dO/waALCcgc2OS5W7GyEDDc01iqyzltzSnHeEX0YuZy
++zIbWNlQkIpfbYpNFzIzhBMABKbAUQfE8DwSGoSlS4klEAZpFLGAhZHGAkybGhACr
++kojnJB4JkCFMBItEEWchDrF4TJLtVuR0OGW7W7U1mUiJYmhcYAlRQBIkcSiQJpGn
++kGAiaJZBiBUkiCRVWKi4NIUajoculCAr6pn6YFmL9z/849w4gSBHIwQoCEUBkKyJ
++kVgGIIFkaA4iFjEkxHFWAmqFeBpBmld5AACHM6KaH0hruUvX7CSGI0iJ4BhAq9FF
++wHMEUnlagBwlkQSngS7ktMNipNJqZUVeG+aL10qPLCBtrloj/wWgE3qRJ0FQilW9
++w6m4FUEpUl8Xut0Ol1mTu70OjT+AeMu/ThZetovqLFWFBzldsmLHzIRKCm5ZsyYo
++E8twaotMPIbed8hOZJE1Qp2RCVeX9h3kUS0RwwokLjA4DU0CgpCURCThgCZwkoYs
++x2l/mwM8w4jAhERcoNXFC6yEUxRDMBLAtN5K7Apm5tSY0Kp1JVvt0F3qRJivtyc3
++UBcQogt6Qq/dMV1IcNjjm3e/d+P9j90fZEwvyRNS5lLzVJLPcWY7tAV2hd8bv/VH
++77a8azPhe/Y98r5S0zgyvfjeA+qIeQXDKmvSbGHwxVDf2I8NT9W0zhgj65DeWP20
++Mhi6o6Vhi83gX2yt3VTRu7cjYENN/ZNdRY7Yd2/NxRrTom9P+gbztwupg2+7+YQ7
++P1tyJ/V/2qnf3mje2Ge95zfMZWw7/uFhb946f+7Z/riCyqGZpAvf5w1me857g6cv
++NveVCd3LI5vTD9SL2XcSxxfDrzxMk2NPJxe2rI8wzk1nDZ+Lay15xEwEW5fOVRB/
++x7yO63491WkdWveSe+ux6s/bdtTNDtWP1XcEGr8wLk4cjMx5tSq48itDVE5IcUTC
++1WeC3kpJiRw9ZEg/qW+7+2b7/nni5lhMweWAxIfEwnyIv+W5Cjlj38kLUcdbC6Yi
++G9tabiQ3Nnw72lR4uDm17pPI1akXPm3dcyrz2NWXFxNGFrb0Vl1r011XIppkv37V
++Zhg80TN6PntBDk35rn9cuVn2Wln3N0mTJVkMufDXiUnjxMVduzpvhB0ZT+6igvzz
++5bsvfVRZO3C2NglcuY1vHY5u2l09G319Z/6z7XExwFdV/iDr+frO/KDZy5OOvtRD
++n/FfRlVF7FzhlQEnG7VX7zqYXtJed3TZQfpqNxcWrE/9ofRSd8ehjDNV+yu//qn2
++6GrT3HKMkvj7O+CXfwCN3sYA
++=bK9J
++-----END PGP MESSAGE-----
++
++And finally, I am proving ownership of this host by posting or
++appending to this document.
++
++View my publicly-auditable identity here: https://keybase.io/sergeyk
++
++==================================================================

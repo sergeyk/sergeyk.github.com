@@ -13,7 +13,7 @@ if [ $CUR_BRANCH='source' ]; then
     rm -r _site
     git add -A
     git commit -m "$MSG"
-    git push origin master
+    git push -f origin master
 
     git checkout source
 fi
