@@ -35,7 +35,7 @@ publications:
             [Kate Saenko][ks],
             **[Sergey Karayev][sk]**,
             [Yangqing Jia][yj],
-            [Alex Shyr][as],
+            [Alex Shyr][ashyr],
             [Allison Janoch][aj],
             [Jonathan Long][jl],
             [Mario Fritz][mf],

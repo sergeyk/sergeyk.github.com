@@ -6,7 +6,7 @@ metadata_only: true
 abstract:
 |
     Gradescope enables instructors to grade all of their assessment on one platform, with AI assistance.
-    While we focus on shipping features to make our users' lives better, we try to publish reports along the way.
+    While we focus on shipping features, we try to publish reports along the way.
 publications:
     L@S-2017:
         image: /images/grading_ui.png
