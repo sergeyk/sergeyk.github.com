@@ -1,6 +1,6 @@
 ---
 title: Setting up a development environment on Mac OS X 10.8 Mountain Lion
-category: other
+category: Notes
 abstract: Concise notes on setting up a development environment on OS X 10.8 for statistical computing and web development.
 comments: true
 code: true

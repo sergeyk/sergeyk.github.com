@@ -1,7 +1,7 @@
 ---
-title: CabFriendly
-category: other
 featured: true
+title: CabFriendly
+category: Other Projects
 comments: true
 thumbnail: /images/cabfriendly_thumb.png
 abstract:

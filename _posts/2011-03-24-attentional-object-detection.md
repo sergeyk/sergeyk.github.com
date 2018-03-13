@@ -1,6 +1,6 @@
 ---
 title: "Attentional Object Detection: introductory slides"
-category: academic
+category: Notes
 thumbnail: /images/attentional_object_detection_thumb.png
 abstract: Motivation for and some lit review related to the idea of attentional object detection--not looking for everything everywhere.
 comments: true

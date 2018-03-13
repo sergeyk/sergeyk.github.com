@@ -1,7 +1,7 @@
 ---
-title: Virtual Zoom
-category: other
 featured: true
+title: Virtual Zoom
+category: Other Projects
 metadata_only: true
 
 thumbnail: /images/virtualzoom_thumb.png

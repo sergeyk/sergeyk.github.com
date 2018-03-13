@@ -1,6 +1,6 @@
 ---
 title: "Self-organizing sparse codes: VS 265 course project"
-category: academic
+category: Notes
 metadata_only: true
 
 thumbnail: /images/vs265_thumb.png

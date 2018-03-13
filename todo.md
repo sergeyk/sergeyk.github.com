@@ -1,5 +1,2 @@
-- [ ] abstract project display list into plugin
-- [ ] add colophon section (link from footer)
-- [ ] add test page showing all the headings, figures, tables, etc. to test typography and redesigns
-- [ ] switch to bootstrap css
-- [ ] list notebooks separately, with links to nbviewer
+- [ ] instead of everything living in posts/, split into academic_projects/, other_projects/, and notes/
+- [ ] remove the left margin bar from Other Projects section

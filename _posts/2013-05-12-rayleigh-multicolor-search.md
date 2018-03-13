@@ -1,7 +1,7 @@
 ---
-title: Multi-color image search
-category: other
 featured: true
+title: Multi-color image search
+category: Other Projects
 actual_url: /rayleigh/
 
 thumbnail: /images/rayleigh_thumb.png

@@ -9,54 +9,6 @@
 }
 
 /*
-  Some stuff from CSS Toast.
-*/
-
-.grid {
-  margin-left: -3%;
-  max-width: 105%;
-}
-
-.unit {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  vertical-align: top;
-  margin-left: 3%;
-  margin-right: -.25em;
-  /* Clearfix */
-  overflow: hidden;
-  *overflow: visible;
-}
-
-.span-grid {
-  width: 97%;
-}
-
-.one-of-two { width: 47%; }
-.one-of-three { width: 30.36%; }
-.two-of-three { width: 63.666666666%; }
-.one-of-four { width: 22.05%; }
-.three-of-four { width: 72%; }
-.one-of-five { width: 17.07%; }
-.two-of-five { width: 37%; }
-.three-of-five { width: 57%; }
-.four-of-five { width: 77%; }
-
-@media screen and (max-width: 840px) {
-  .grid {
-    margin-left: 0;
-    max-width: none;
-  }
-
-  .unit {
-    width: auto;
-    margin-left: 0;
-    display: block;
-  }
-}
-
-/*
   My style.
   color scheme: http://colorschemedesigner.com/#3s21QvyQpw0w0
 */
@@ -112,42 +64,22 @@ a:not(:hover) {
   color: #0e9ce0;
 }
 
-/**
-    PROJECTS LIST
-**/
 ul.projects li {
-  display: block;
-  /* Clearfix */
-  overflow: hidden;
-  *overflow: visible;
+  display: flex;
+  padding-left: 1em;
+  margin-bottom: 1.5em;
+  border-left: 1px solid gray;
 }
 
-ul.projects li img {
-  float: left;
+ul.notes li {
+  display: flex;
 }
 
-ul.projects li div {
-  margin-left: 200px;
-}
-
-ul.projects.notes li div {
-  margin-left: 140px;
-}
-
-ul.projects li.nothumb div {
-  margin-left: 0;
-}
-
-/* If iPhone size, display images and text on different lines. */
-@media screen and (max-width: 420px) {
-  ul.projects li img {
-    float: none;
-    margin-top: 0;
-  }
-
-  ul.projects li div {
-    margin-left: 0;
-  }
+.post--image {
+  align-self: flex-start;
+  width: 180px;
+  margin-right: 20px;
+  margin-bottom: 1em;
 }
 
 aside {
@@ -188,56 +120,43 @@ h1 p, h2 p, h3 p {
   margin: 0;
 }
 
+p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
 p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
   font-size: 1em; /* equiv 16px */
   line-height: 1.5em;
   margin: 0 0 1.5em 0;
 }
 h1, .h1-like{
-  font-size:  2em; /* equiv 32px */
+  font-size: 2em; /* equiv 32px */
   line-height: 1.5em;
-  margin: 0 0 .75em 0;
+  margin: 0 0 1.33333em 0;
 }
 h2, .h2-like{
-  font-size:  1.5em; /* equiv 24px */
-  line-height:  1em;
-  margin: 0 0  1em 0;
+  font-size: 1.5em; /* equiv 24px */
+  line-height: 0.5em;
+  margin: 0 0 1.5em 0;
 }
 h3, .h3-like{
   font-size:  1em; /* equiv 16px */
-  line-height:  1.5em;
-  margin: 0 0  1.5em 0;
+  line-height:  1em;
+  margin: 0 0 0.5em 0;
+  font-weight: bold;
 }
 .smaller, aside {
   font-size: .75em; /* equiv 12px */
-  line-height:  2em;
+  line-height: 2em;
   margin-bottom: 2em;
 }
-.footer, .small, ul.projects p {
+.footer, .small {
   font-size: .875em; /* equiv 14px */
   line-height: 1.7143em;
   margin-bottom: 1.7143em;
 }
 
-ul.projects ul {
-  font-size: .875em; /* equiv 14px */
-  line-height: 1.7143em;
-  margin-bottom: 1.7143em;
-  margin-top: -1.7143em;
-}
-
-ul.projects ul li {
-  display: list-item;
-  list-style-type: disc;
-  overflow: visible;
-  margin-left: 1rem; /* aligned with paragraph edge */
-}
-
-/* avoid supp margin on nested elements */
-li p, li ul{
-  margin-top: 0;
-  margin-bottom: 0;
-}
 /* you shall not pass */
 textarea, table, td, th, code, pre, samp, div, p {
   word-wrap: break-word;
@@ -262,9 +181,8 @@ hr {
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
-.publication div {
-  display: inline-block;
-  vertical-align: top;
+.publication {
+  display: flex;
 }
 
 .header {
