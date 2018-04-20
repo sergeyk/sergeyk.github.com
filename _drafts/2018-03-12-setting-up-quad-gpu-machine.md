@@ -8,10 +8,6 @@ notebook: false
 
 The following setup was done on 2018 March 11.
 
-## PC Build
-
-TODO: link to first post in this series
-
 ## CUDA
 
 Because Tensorflow does not (and has [no plans to](https://github.com/tensorflow/tensorflow/issues/15140)) support CUDA 9.1, I installed CUDA 9.0.
