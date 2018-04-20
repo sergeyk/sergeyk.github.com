@@ -18,9 +18,11 @@
 [ks]: https://www.bu.edu/cs/profiles/kate-saenko/
 [mb]: https://ps.is.tue.mpg.de/person/black/
 [mf]: http://www.d2.mpi-inf.mpg.de/People/mfritz
+[mh]: http://people.ischool.berkeley.edu/~hearst/
 [mm]: https://www.linkedin.com/in/matthew-moskewicz-8237b711a/
 [mt]: http://matttrent.com/
 [pa]: https://people.eecs.berkeley.edu/~pabbeel/
+[pl]: http://people.ischool.berkeley.edu/~paul/
 [rg]: http://www.rossgirshick.info/
 [sf]: http://www.cs.toronto.edu/~fidler/
 [sg]: https://www.linkedin.com/in/sergio-guadarrama-1724379/

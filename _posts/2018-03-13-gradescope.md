@@ -8,6 +8,19 @@ abstract:
     Gradescope enables instructors to grade all of their assessment on one platform, with AI assistance.
     While we focus on shipping features, we try to publish reports along the way.
 publications:
+    L@S-2018:
+        image: /images/gradescope_las_2018.png
+        info:
+        |
+            **How Do Professors Format Exams? An Analysis of Question Variety at Scale**
+            <br />
+            [Paul Laskowski][pl],
+            **[Sergey Karayev][sk]**,
+            [Marti Hearst][mh]
+            <br />
+            Learning at Scale 2018
+            <br />
+            \[[pdf](/files/gradescope_las_2018.pdf)\]
     L@S-2017:
         image: /images/grading_ui.png
         info:
