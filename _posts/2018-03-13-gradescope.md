@@ -20,7 +20,8 @@ publications:
             <br />
             Learning at Scale 2018
             <br />
-            \[[pdf](/files/gradescope_las_2018.pdf)\]
+            \[[paper](/files/gradescope_las_2018.pdf)\]
+            \[[slides](/files/gradescope_las_2018_slides.pdf)\]
     L@S-2017:
         image: /images/grading_ui.png
         info:
@@ -34,5 +35,5 @@ publications:
             <br />
             Learning at Scale 2017
             <br />
-            \[[pdf](/files/gradescope_las_2017.pdf)\]
+            \[[paper](/files/gradescope_las_2017.pdf)\]
 ---
