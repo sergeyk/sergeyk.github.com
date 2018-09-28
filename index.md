@@ -89,7 +89,7 @@ Check out my [CV](/resume/sergey_karayev_cv.pdf), [LinkedIn](https://linkedin.in
 
 <ul class="links">
 <li class="nothumb">
-<a href="https://soundcloud.com/ghostprawn">Ghostprawn</a>: some electronic music.
+<a href="https://soundcloud.com/dj-jbgd">Some electronic music</a> I made from time to time.
 </li>
 
 <li class="nothumb">
