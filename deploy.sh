@@ -1,4 +1,4 @@
-# Deploy to github by pushing the msater branch
+# Deploy to github by pushing the master branch
 
 CUR_BRANCH=`git rev-parse --abbrev-ref HEAD`
 MSG=`git log --oneline -1`
