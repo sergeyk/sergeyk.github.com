@@ -6,6 +6,8 @@ My goal is to develop and deploy AI systems to improve human life.
 
 In 2014, I finished a PhD in Computer Science at UC Berkeley, advised by [Trevor Darrell](http://www.eecs.berkeley.edu/~trevor/), and co-founded [Gradescope](https://gradescope.com), where we develop AI to transform grading into learning.
 
+Recently, I have co-organized a weekend program on [Full Stack Deep Learning](https://fullstackdeeplearning.com).
+
 Check out my [CV](/resume/sergey_karayev_cv.pdf), [LinkedIn](https://linkedin.in/in/sergeykarayev/), [Google Scholar](https://scholar.google.com/citations?user=ijmuZ0wAAAAJ), [Github](https://github.com/sergeyk/), or [email me](mailto:sergeykarayev@gmail.com).
 
 {% for category in site.ordered_categories %}
