@@ -8,6 +8,20 @@ abstract:
     Gradescope enables instructors to grade all of their assessment on one platform, with AI assistance.
     While we focus on shipping features, we try to publish reports along the way.
 publications:
+    EDM-2019:
+        image: /images/grades_are_not_normal.png
+        info:
+        |
+            **Grades are not Normal: Improving Exam Score Models Using the Logit-Normal Distribution**
+            <br />
+            [Noah Arthurs][na],
+            [Ben Stenhaug][bs],
+            [Chris Piech][cp],
+            **[Sergey Karayev][sk]**
+            <br />
+            Educational Data Mining 2019
+            <br />
+            \[[paper](/files/grades_are_not_normal_2019.pdf)\]
     L@S-2018:
         image: /images/gradescope_las_2018.png
         info:
@@ -36,4 +50,5 @@ publications:
             Learning at Scale 2017
             <br />
             \[[paper](/files/gradescope_las_2017.pdf)\]
+
 ---

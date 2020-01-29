@@ -4,6 +4,8 @@
 [ar]: http://www.cs.berkeley.edu/~adarob/
 [as]: https://www.linkedin.com/in/arjun-singh-629216105
 [ashyr]: https://www.linkedin.com/in/alex-shyr-3669623/
+[bs]: https://www.benstenhaug.com
+[cp]: https://stanford.edu/~cpiech/bio/index.html
 [es]: https://github.com/shelhamer
 [fi]: http://www.forrestiandola.com/
 [gb]: https://www.linkedin.com/in/garybradski/
@@ -21,6 +23,7 @@
 [mh]: http://people.ischool.berkeley.edu/~hearst/
 [mm]: https://www.linkedin.com/in/matthew-moskewicz-8237b711a/
 [mt]: http://matttrent.com/
+[na]: https://scholar.google.com/citations?user=ai8A090AAAAJ
 [pa]: https://people.eecs.berkeley.edu/~pabbeel/
 [pl]: http://people.ischool.berkeley.edu/~paul/
 [rg]: http://www.rossgirshick.info/
