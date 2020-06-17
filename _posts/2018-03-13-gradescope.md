@@ -8,6 +8,19 @@ abstract:
     Gradescope enables instructors to grade all of their assessment on one platform, with AI assistance.
     While we focus on shipping features, we try to publish reports along the way.
 publications:
+    L@S-2020:
+        image: /images/gradescope_las_2020.png
+        info:
+        |
+            **Analysis of Grading Times of Short Answer Questions**
+            <br />
+            [Michael Yen][my],
+            **[Sergey Karayev][sk]**,
+            [Eric Wang][ew]
+            <br />
+            Learning at Scale 2020
+            <br />
+            \[[paper](/files/gradescope_las_2020.pdf)\]
     EDM-2019:
         image: /images/grades_are_not_normal.png
         info:

@@ -7,6 +7,7 @@
 [bs]: https://www.benstenhaug.com
 [cp]: https://stanford.edu/~cpiech/bio/index.html
 [es]: https://github.com/shelhamer
+[ew]: https://www.linkedin.com/in/ericxwangai/
 [fi]: http://www.forrestiandola.com/
 [gb]: https://www.linkedin.com/in/garybradski/
 [hh]: https://www.linkedin.com/in/helen-han-28b79357
@@ -23,6 +24,7 @@
 [mh]: http://people.ischool.berkeley.edu/~hearst/
 [mm]: https://www.linkedin.com/in/matthew-moskewicz-8237b711a/
 [mt]: http://matttrent.com/
+[my]: https://www.linkedin.com/in/michael-yen/
 [na]: https://scholar.google.com/citations?user=ai8A090AAAAJ
 [pa]: https://people.eecs.berkeley.edu/~pabbeel/
 [pl]: http://people.ischool.berkeley.edu/~paul/
