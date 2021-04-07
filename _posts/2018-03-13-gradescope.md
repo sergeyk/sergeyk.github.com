@@ -8,6 +8,18 @@ abstract:
     Gradescope enables instructors to grade all of their assessment on one platform, with AI assistance.
     While we focus on shipping features, we try to publish reports along the way.
 publications:
+    Arxiv:
+        image: /images/gradescope_hwr_2021.png
+        info:
+        |
+            **Full Page Handwriting Recognition via Image to Sequence Extraction**
+            <br />
+            [Sumeet Singh][ss2],
+            **[Sergey Karayev][sk]**
+            <br />
+            Arxiv
+            <br />
+            \[[paper](https://arxiv.org/abs/2103.06450)\]
     L@S-2020:
         image: /images/gradescope_las_2020.png
         info:

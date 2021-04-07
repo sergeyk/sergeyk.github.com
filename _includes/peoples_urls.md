@@ -33,6 +33,7 @@
 [sg]: https://www.linkedin.com/in/sergio-guadarrama-1724379/
 [sk]: http://sergeykarayev.com
 [ss]: http://www.cs.washington.edu/homes/seitz/
+[ss2]: https://www.linkedin.com/in/sumeetssingh
 [tb]: https://www.linkedin.com/in/tobias-baumgartner-b258a42/
 [td]: http://www.eecs.berkeley.edu/~trevor/
 [to]: http://www.linkedin.com/pub/trevor-owens/16/b63/a08
