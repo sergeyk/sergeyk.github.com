@@ -1,0 +1,5 @@
+I"«<p>A couple of years ago, I became interested in human visual attention.
+Our eyes are mostly low-resolution, with a high-resolution center called the <em>fovea</em>.
+Visual recognition requires sequential actions, called <em>saccades</em>, which center the fovea on points of interest.
+To build models of visual attention, researchers often record saccades using an eye tracking device, and map them onto the viewed image.</p>
+:ET

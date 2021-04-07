@@ -1,0 +1,28 @@
+I"_<p>A couple of years ago, I became interested in human visual attention.
+Our eyes are mostly low-resolution, with a high-resolution center called the <em>fovea</em>.
+Visual recognition requires sequential actions, called <em>saccades</em>, which center the fovea on points of interest.
+To build models of visual attention, researchers often record saccades using an eye tracking device, and map them onto the viewed image.</p>
+
+<p>As I was working on reinforcement learning for <a href="/recognition-on-a-budget">dynamic feature selection</a> at the time, I had an idea to use <em>inverse reinforcement learning</em> for learning such a model.
+The gist of the idea is that the <em>reward function</em> provides the most concise formulation of such sequential behavior (see Pieter Abbeel’s <a href="http://scholar.google.com/scholar?cluster=10260011060619377707&amp;hl=en&amp;as_sdt=0,5&amp;as_vis=1">classic paper</a>).</p>
+
+<p>Eye fixations are strongly dependent on the task: if you’re looking for people in a street scene, you’ll look at different locations than if you’re looking for street signs.
+However, datasets of recorded eye fixations we were able to find were all gathered in “free-viewing,” with an unspecified task.</p>
+
+<p>Since this project was not intended as a main part of my thesis work, I was unwilling to invest a lot of resources into obtaining my own fixation data.
+So, I did what computer vision people do when they need to collect data: used Amazon Mechanical Turk.</p>
+
+<div id="explorer">
+    <canvas id="ex" data-processing-sources="/files/foveal_explorer/ex.pde"></canvas>
+</div>
+
+<p>Click on the purple circle above to begin the task of foveally exploring the image.
+The Mech Turk task asked people to either write down all the text or count all the people in the scene, and collected the time-stamped history of their clicks.</p>
+
+<p>I abandoned this research direction before obtaining results.
+I’m releasing the foveal explorer code, and 10K image-task fixation histories.
+Perhaps someone would like to take over!</p>
+
+<p>[<a href="http://github.com/sergeyk/foveal_explorer">code repo</a>]</p>
+
+:ET

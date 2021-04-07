@@ -83,10 +83,8 @@
                         Published 09 Jul 2013.
                     
                 </aside>
-                <div id='notebook'>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+                <div id='notebook'><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Exploring different ways to store a numpy array in MongoDB.
 Conclusion: cPickle with protocol=2 is fastest.</p>
@@ -101,14 +99,14 @@ Conclusion: cPickle with protocol=2 is fastest.</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">cPickle</span>
-<span class="kn">from</span> <span class="nn">pymongo</span> <span class="k">import</span> <span class="n">MongoClient</span>
-<span class="kn">from</span> <span class="nn">bson.binary</span> <span class="k">import</span> <span class="n">Binary</span>
+<span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">from</span> <span class="nn">bson.binary</span> <span class="kn">import</span> <span class="n">Binary</span>
 <span class="c1"># run `mongod` in another shell to enable this connection</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">()</span>
 <span class="n">collection</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">test_database</span><span class="o">.</span><span class="n">random_arrays</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -126,7 +124,7 @@ Conclusion: cPickle with protocol=2 is fastest.</p>
 <span class="o">%</span><span class="k">timeit</span> [np.array(x[&#39;tolist&#39;]) for x in collection.find()]
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -136,7 +134,7 @@ Conclusion: cPickle with protocol=2 is fastest.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -165,7 +163,7 @@ reading tolist()
 <span class="o">%</span><span class="k">timeit</span> -n 100 [cPickle.loads(x[&#39;cpickle&#39;]) for x in collection.find()]
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -175,7 +173,7 @@ reading tolist()
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -204,7 +202,7 @@ reading cpickle
 <span class="o">%</span><span class="k">timeit</span> -n 100 [cPickle.loads(x[&#39;cpickle&#39;]) for x in collection.find()]
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -214,7 +212,7 @@ reading cpickle
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -239,7 +237,7 @@ reading cpickle protocol 2
             
 
             <hr />
-            <div class="footer"> Updated 17 Jun 2020 </div>
+            <div class="footer"> Updated 06 Apr 2021 </div>
         </div>
         
         </div>

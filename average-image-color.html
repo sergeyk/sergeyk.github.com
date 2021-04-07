@@ -83,10 +83,8 @@
                         Published 31 Jul 2013.
                     
                 </aside>
-                <div id='notebook'>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+                <div id='notebook'><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A silly little comparison of a few different methods for computing the average pixel color of a masked image (summing over pixel values).
 Using Numba's <code>@autojit</code> shows an almost 10x speedup.</p>
@@ -101,13 +99,13 @@ Using Numba's <code>@autojit</code> shows an almost 10x speedup.</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numba</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">skimage.io</span> <span class="k">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imshow</span>
+<span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imshow</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;http://i.telegraph.co.uk/multimedia/archive/01428/darwin1_1428734c.jpg&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -117,7 +115,7 @@ Using Numba's <code>@autojit</code> shows an almost 10x speedup.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -128,7 +126,7 @@ Using Numba's <code>@autojit</code> shows an almost 10x speedup.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -3060,7 +3058,7 @@ SGg8SkAAAAAASUVORK5CYII=
 <span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3070,7 +3068,7 @@ SGg8SkAAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -3081,7 +3079,7 @@ SGg8SkAAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -3193,7 +3191,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 <span class="o">%</span><span class="k">timeit</span> -n 100 numba_average_pixel_1(img, mask) / N
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3203,7 +3201,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -3242,7 +3240,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 <span class="o">%</span><span class="k">timeit</span> -n 100 numba_average_pixel_2(img, mask) / N
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3252,7 +3250,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -3290,7 +3288,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 <span class="o">%</span><span class="k">timeit</span> -n 100 numba_average_pixel_3(img, mask) / N
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3300,7 +3298,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -3317,8 +3315,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These are hardly speedups! Let's code stupider.</p>
 
@@ -3364,7 +3361,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 <span class="o">%</span><span class="k">timeit</span> -n 1000 numba_average_pixel_for_loop(img, mask) / N
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3374,7 +3371,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -3391,8 +3388,7 @@ JhwOm1AoZKqqqswHH3xgjDGs0RwuX76cvWrlaVwfxxi+Lw8ANuObnQBgOUIOAJYj5ABgOUIOAJYj
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="http://i331.photobucket.com/albums/l453/spacecowboy5555/wtf/surprise.gif" alt=""></p>
 <p>Summary: best non-numba method is <code>sum(sum(img * mask[:, :, np.newaxis], 0), 0)</code> at 1.4 ms.
@@ -3411,7 +3407,7 @@ A stupid nested for loop with numba is still 5 times as fast.</p>
             
 
             <hr />
-            <div class="footer"> Updated 17 Jun 2020 </div>
+            <div class="footer"> Updated 06 Apr 2021 </div>
         </div>
         
         </div>

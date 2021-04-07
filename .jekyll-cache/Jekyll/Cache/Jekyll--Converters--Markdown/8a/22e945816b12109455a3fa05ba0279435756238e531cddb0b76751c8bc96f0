@@ -1,0 +1,22 @@
+I"t<p>(Joint work with <a href="http://www.cs.berkeley.edu/~adarob/">Adam Roberts</a> and <a href="http://www.eecs.berkeley.edu/~pimentel/">Harold Pimentel</a>.)</p>
+
+<p>We have developed a cloud-based mobile web application to match users who request similar trips and would like to share a cab.
+The application is hosted on Amazon’s EC2 service and combines several open-source frameworks (Django, PostgresQL, Redis, Node.js) with social networking (Facebook), mapping, and location-awareness (Google) APIs.
+The modularity of our design allows the service to easily scale in the cloud as the user base grows.</p>
+
+<p><del>
+    <a href="http://cabfriendly.com">Use it!</a>
+</del>
+(The application is now offline, sorry.)</p>
+
+<p>The <a href="https://github.com/sergeyk/cabfriendly">code</a> is provided with no documentation or support.</p>
+
+<h3 id="architecture">Architecture</h3>
+
+<p><img src="/images/cabfriendly/architecture.png" alt="Architecture of our application." /></p>
+
+<h3 id="use-case-scenario">Use case scenario</h3>
+
+<p><img src="/images/cabfriendly/use_case.png" alt="A use case scenario in screenshots of the app." /></p>
+
+:ET

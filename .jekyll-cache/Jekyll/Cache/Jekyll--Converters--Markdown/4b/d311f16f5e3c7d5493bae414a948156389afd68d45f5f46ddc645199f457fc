@@ -1,0 +1,5 @@
+I"¸<p>Features have different costs and different classes benefit from different features.
+A multi-class recognition system should dynamically select them to maximize performance under a cost budget.
+This line of work constitutes my <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-207.pdf">PhD Thesis</a>.
+Sources for all of the writeups below are <a href="https://github.com/sergeyk/thesis_writeups">open-source</a>.</p>
+:ET
