@@ -25,8 +25,8 @@ publications:
             <br />
             BMVC 2014
             <br />
-            \[[arXiv page](http://arxiv.org/abs/1311.3715)\]
+            \[[arXiv page](https://arxiv.org/abs/1311.3715)\]
             \[[pdf](/files/1311.3715v3.pdf)\]
             \[[writeup sources](https://github.com/sergeyk/recognizing_image_style_writeup)\]
-            \[[code and data](http://vislab.berkeleyvision.org)\]
+            \[[code and data](https://vislab.berkeleyvision.org)\]
 ---

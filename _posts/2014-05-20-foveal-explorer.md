@@ -48,7 +48,7 @@ Visual recognition requires sequential actions, called *saccades*, which center 
 To build models of visual attention, researchers often record saccades using an eye tracking device, and map them onto the viewed image.
 
 As I was working on reinforcement learning for [dynamic feature selection](/recognition-on-a-budget) at the time, I had an idea to use *inverse reinforcement learning* for learning such a model.
-The gist of the idea is that the *reward function* provides the most concise formulation of such sequential behavior (see Pieter Abbeel's [classic paper](http://scholar.google.com/scholar?cluster=10260011060619377707&hl=en&as_sdt=0,5&as_vis=1)).
+The gist of the idea is that the *reward function* provides the most concise formulation of such sequential behavior (see Pieter Abbeel's [classic paper](https://scholar.google.com/scholar?cluster=10260011060619377707&hl=en&as_sdt=0,5&as_vis=1)).
 
 Eye fixations are strongly dependent on the task: if you're looking for people in a street scene, you'll look at different locations than if you're looking for street signs.
 However, datasets of recorded eye fixations we were able to find were all gathered in "free-viewing," with an unspecified task.
@@ -67,5 +67,5 @@ I abandoned this research direction before obtaining results.
 I'm releasing the foveal explorer code, and 10K image-task fixation histories.
 Perhaps someone would like to take over!
 
-\[[code repo](http://github.com/sergeyk/foveal_explorer)\]
+\[[code repo](https://github.com/sergeyk/foveal_explorer)\]
 

@@ -17,7 +17,7 @@ The application is hosted on Amazon's EC2 service and combines several open-sour
 The modularity of our design allows the service to easily scale in the cloud as the user base grows.
 
 <del markdown="1">
-    [Use it!](http://cabfriendly.com)
+    [Use it!](https://cabfriendly.com)
 </del>
 (The application is now offline, sorry.)
 

@@ -20,7 +20,7 @@ You can approximate that state, by getting rid of all your macports and finks an
 Delete your `/usr/local`.
 Uninstall all XCodes are their developer tools.
 
-Install [homebrew](http://mxcl.github.com/homebrew/):
+Install [homebrew](https://mxcl.github.com/homebrew/):
 
     ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
 
@@ -30,7 +30,7 @@ It is good, but it needs some help: Mountain Lion doesn't come with developer to
 Go to the App Store and download XCode (I am writing this in early August 2012, and the current version is 4.4).
 This can take a little bit, so while it's downloading, let's install X11 libraries that Mountain Lion stripped out.
 
-Go [here](http://xquartz.macosforge.org/trac/wiki) and download 2.7.2+.
+Go [here](https://xquartz.macosforge.org/trac/wiki) and download 2.7.2+.
 Install it, and after it's done, fix the symlink it makes:
 
     ln -s /opt/X11 /usr/X11
@@ -91,8 +91,8 @@ Since we may want to keep up to date on the exciting scientific python developme
 Select `y` at the prompt, and that's it!
 The script will install gfortran and binary builds of the latest development versions of Numpy, Scipy, Matplotlib, IPython, Pandas, Statsmodels, Scikit-learn, and PyMC, as well as their dependencies.
 
-Now let's get IPython to [look beautiful using qtconsole](http://stronginference.com/post/innovations-in-ipython).
-Download [Qt 4.7.4 libraries](http://get.qt.nokia.com/qt/source/qt-mac-opensource-4.7.4.dmg) and [PySide libraries](http://pyside.markus-ullmann.de/pyside-1.1.0-qt47-py27apple.pkg).
+Now let's get IPython to [look beautiful using qtconsole](https://stronginference.com/post/innovations-in-ipython).
+Download [Qt 4.7.4 libraries](https://get.qt.nokia.com/qt/source/qt-mac-opensource-4.7.4.dmg) and [PySide libraries](https://pyside.markus-ullmann.de/pyside-1.1.0-qt47-py27apple.pkg).
 
 Unfortunately, the PySide package installs its stuff into the system python site-packages directory, and our virtualenv ipython doesn't see it.
 We could try building PySide from source, but instead we are just going to symlink the relevant stuff from the system to our virtualenv folder.
@@ -151,7 +151,7 @@ For Node and its package manager, simply
     brew install node
 
 Lastly, you may want to install Heroku at some point.
-I ran into a problem when installing from the [Heroku Toolbelt](http://toolbelt.heroku.com) package.
+I ran into a problem when installing from the [Heroku Toolbelt](https://toolbelt.heroku.com) package.
 Instead, simply
 
     gem install heroku

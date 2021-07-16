@@ -1,7 +1,6 @@
 name: Sergey Karayev
 author: Sergey Karayev
 url: https://sergeykarayev.com
-highlighter: pygments
 permalink: /:title
 ordered_categories: [Academic Projects, Other Projects]
 sass:

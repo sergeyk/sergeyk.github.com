@@ -13,6 +13,6 @@ abstract:
 
 links:
 >
-    \[[video](http://www.vimeo.com/4892120)\]
+    \[[video](https://www.vimeo.com/4892120)\]
     \[[pdf](/files/vz_thesis.pdf)\]
 ---

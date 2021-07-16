@@ -25,7 +25,7 @@ publications:
             ICCV-W 2011
             <br />
             \[[pdf](/files/iccvw2011.pdf)\]
-            \[[dataset](http://kinectdata.com)\]
+            \[[dataset](https://kinectdata.com)\]
     IROS-2011:
         image: /images/iros2011_thumb.png
         info:
