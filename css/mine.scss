@@ -1,17 +1,7 @@
 ---
 ---
-/* Normalize */
 @import "yui_reset";
 
-/* Apply ipython notebook styles to notebook div. */
-#notebook {
-  @import "notebook";
-}
-
-/*
-  My style.
-  color scheme: http://colorschemedesigner.com/#3s21QvyQpw0w0
-*/
 html, body {
   font: 100%/1.5 "ff-meta-serif-web-pro", serif;
   text-rendering: optimizeLegibility;
@@ -71,6 +61,16 @@ ul.bullets {
 
 ul.projects li {
   display: flex;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 640px) {
+  ul.projects li {
+    flex-direction: column;
+  }
+  .publication {
+    flex-direction: column;
+  }
 }
 
 .post--image {
@@ -149,7 +149,7 @@ h3, .h3-like{
   line-height: 2em;
   margin-bottom: 2em;
 }
-.footer, .small, .publication {
+.footer, .small {
   font-size: .875em; /* equiv 14px */
   line-height: 1.7143em;
   margin-bottom: 1.7143em;
@@ -164,9 +164,11 @@ code, pre, samp {
   white-space: pre-wrap;
   font-family: consolas, monospace;
 }
-code{
+
+code {
   line-height: 1em;
 }
+
 table{
   margin-bottom: 1.5em;
 }

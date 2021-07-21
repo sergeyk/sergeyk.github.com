@@ -6,11 +6,11 @@ layout: default
 My goal is to deploy AI systems to improve human life.
 
 <ul class="bullets">
-    <li>Working on something new</li>
+    <li>Currently working on something new</li>
     <li>Co-founder of <a href="https://fullstackdeeplearning.com">Full Stack Deep Learning</a> (online, <a href="https://bit.ly/berkeleyfsdl">UC Berkeley</a>, and <a href="https://bit.ly/uwfsdl">University of Washington</a>)</li>
     <li>Co-founder of <a href="https://gradescope.com">Gradescope</a> (acquired by <a href="https://turnitin.com">Turnitin</a>)</li>
     <li>PhD in Computer Vision at <a href="https://eecs.berkeley.edu">UC Berkeley</a></li>
-    <li>Advisor to <a href="https://gsv.ventures">GSV Ventures</a>, and to personal portfolio startups</li>
+    <li>Advisor to <a href="https://gsv.ventures">GSV Ventures</a> and to personal portfolio startups</li>
 </ul>
 
 Feel free to get in touch via [Twitter](https://twitter.com/sergeykarayev) or [email](mailto:sergeykarayev@gmail.com).
@@ -19,10 +19,10 @@ I also have [LinkedIn](https://linkedin.in/in/sergeykarayev/) / [Github](https:/
 ---
 
 <h2>Full Stack Deep Learning</h2>
-
+<p>
 I co-founded an educational program that helps you go from a promising ML experiment to a shipped product, with real-world impact.
 All of our materials are available for free online.
-
+</p>
 <ul class="projects">
     <li>
         <div>
@@ -30,7 +30,7 @@ All of our materials are available for free online.
                 <img class="post--image" src="https://fullstackdeeplearning.com/images/positioning_v3.png">
                 <div>
                     <p>
-                        <strong>UC Berkeley and Online Course</strong>
+                        <strong>2021 UC Berkeley and Online Course</strong>
                         <br>
                         For our official Spring 2021 UC Berkeley course, all lectures have been updated, with new lectures on ethics and monitoring.
                         <br>
@@ -47,7 +47,7 @@ All of our materials are available for free online.
                 <img class="post--image" src="/images/fsdl_lab_intro.jpg">
                 <div>
                     <p>
-                        <strong>Labs</strong>
+                        <strong>2021 Lab Project</strong>
                         <br>
                         In the 10-part lab, we build and deploy an end-to-end system to parse handwritten paragraphs.
                         <br>
@@ -62,13 +62,9 @@ All of our materials are available for free online.
                 <img class="post--image" src="/images/fsdl_group.jpg">
                 <div>
                     <p>
-                        <strong>2018-2020</strong>
+                        <strong>2018-2020 Lectures and Labs</strong>
                         <br>
                         I taught the course as University of Washington Professional Master's Program course, and we hosted three weekend bootcamps based in Berkeley.
-                        <br>
-                        <strong><a href="https://sergeykarayev.com">Sergey Karayev</a></strong>,
-                        <a href="">Josh Tobin</a>,
-                        <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
                         <br>
                         [<a href="https://bit.ly/uwfsdl">UW Course</a>]
                         [<a href="https://fall2019.fullstackdeeplearning.com">Fall 2019 Bootcamp</a>]
@@ -82,9 +78,6 @@ All of our materials are available for free online.
 ---
 
 <h2>Talks</h2>
-
-Some presentations I've given.
-
 <ul class="projects">
     <li>
         <div>
@@ -257,11 +250,9 @@ Some presentations I've given.
 ---
 
 <h2>PhD at UC Berkeley</h2>
-
 <p>
     I finished a PhD in Computer Science at UC Berkeley, working on computer vision with <a href="https://www.eecs.berkeley.edu/~trevor/">Trevor Darrell</a>, teaching with <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>, and interning at Adobe Creative Technologies Lab and Artsy.
 </p>
-
 <ul class="projects">
     <li>
         <div>

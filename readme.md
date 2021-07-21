@@ -5,8 +5,7 @@ Everything is a post, but some posts only have metadata.
 
 ## Setup
 
-Run `make`.
-You will need Docker installed.
+Install the Ruby gem `jekyll` and run `jekyll serve`.
 
 ## License
 
