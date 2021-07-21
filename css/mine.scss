@@ -64,6 +64,11 @@ a:not(:hover) {
   color: #0e9ce0;
 }
 
+ul.bullets {
+  list-style: circle;
+  padding-left: 1em;
+}
+
 ul.projects li {
   display: flex;
   padding-left: 1em;
@@ -151,7 +156,7 @@ h3, .h3-like{
   line-height: 2em;
   margin-bottom: 2em;
 }
-.footer, .small {
+.footer, .small, .publication {
   font-size: .875em; /* equiv 14px */
   line-height: 1.7143em;
   margin-bottom: 1.7143em;
@@ -183,6 +188,8 @@ hr {
 
 .publication {
   display: flex;
+  font-size: .875em; /* equiv 14px */
+  line-height: 1.7143em;
 }
 
 .header {

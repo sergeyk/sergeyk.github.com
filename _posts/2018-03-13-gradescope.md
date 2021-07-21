@@ -17,9 +17,12 @@ publications:
             [Sumeet Singh][ss2],
             **[Sergey Karayev][sk]**
             <br />
-            Arxiv
+            ICDAR 2021
             <br />
             \[[paper](https://arxiv.org/abs/2103.06450)\]
+            \[[Import AI newsletter](https://jack-clark.net/2021/04/12/import-ai-244-nvidia-makes-better-fake-images-deepmind-gets-better-at-weather-forecasting-plus-5000-hours-of-speech-data/)]
+            \[[The Batch newsletter](https://read.deeplearning.ai/the-batch/issue-96/)]
+
     L@S-2020:
         image: /images/gradescope_las_2020.png
         info:

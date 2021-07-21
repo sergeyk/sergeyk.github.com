@@ -31,14 +31,14 @@ header, footer, aside, section, article, nav {
 
 /* line 9, ../../../app/assets/stylesheets/controllers/exports.scss */
 body {
-  font-size: 12px;
+  font-size: 14px;
   margin: 50px;
 }
 
 /* line 11, ../../../app/assets/stylesheets/controllers/exports.scss */
 p, ol, ul {
   margin: 10px 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* line 12, ../../../app/assets/stylesheets/controllers/exports.scss */
@@ -94,7 +94,7 @@ h4 {
 
 /* line 24, ../../../app/assets/stylesheets/controllers/exports.scss */
 .post_info {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8em;
   margin-bottom: 1em;
   color: #999;
@@ -121,14 +121,14 @@ div#wrap {
 
 /* line 30, ../../../app/assets/stylesheets/controllers/exports.scss */
 .post {
-  font-size: 13px;
+  font-size: 14px;
   width: 500px;
 }
 
 /* line 31, ../../../app/assets/stylesheets/controllers/exports.scss */
 .post_body {
   width: 500px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8em;
   margin-bottom: 60px;
 }
@@ -268,7 +268,7 @@ a {
   list-style: none;
   padding: 0;
   margin: 0 0 2em;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8em;
 }
 /* line 100, ../../../app/assets/stylesheets/controllers/exports.scss */
