@@ -27,19 +27,34 @@ All of our materials are available for free online.
     <li>
         <div>
             <div class="publication">
-                <img class="post--image" src="https://fullstackdeeplearning.com/images/positioning_v3.png">
+                <img class="post--image" src="https://fullstackdeeplearning.com/images/fsdl-2023-overview.png">
                 <div>
                     <p>
-                        <strong>2021 UC Berkeley and Online Course</strong>
+                        <strong>2023 LLM Bootcamp</strong>
                         <br>
-                        For our official Spring 2021 UC Berkeley course, all lectures have been updated, with new lectures on ethics and monitoring.
+                        Learn best practices and tools for building LLM-powered apps!
+                        <br>
+                        <a href="https://charlesfrye.github.io/about/">Charles Frye</a>,
+                        <strong><a href="https://sergeykarayev.com">Sergey Karayev</a></strong>,
+                        <a href="https://twitter.com/josh_tobin_">Josh Tobin</a>
+                        <br>
+                        [<a href="https://fullstackdeeplearning.com/llm-bootcamp">Register</a>]
+                    </p>
+                </div>
+            </div>
+            <div class="publication">
+                <img class="post--image" src="https://fullstackdeeplearning.com/images/positioning.png">
+                <div>
+                    <p>
+                        <strong>2022 Online Course</strong>
+                        <br>
+                        All lectures updated for 2022, with my lecture on <a href="https://fullstackdeeplearning.com/course/2022/lecture-7-foundation-models/">Foundation Models</a> particularly new.
                         <br>
                         <strong><a href="https://sergeykarayev.com">Sergey Karayev</a></strong>,
-                        <a href="">Josh Tobin</a>,
-                        <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
+                        <a href="https://twitter.com/josh_tobin_">Josh Tobin</a>,
+                        <a href="https://charlesfrye.github.io/about/">Charles Frye</a>
                         <br>
-                        [<a href="https://fullstackdeeplearning.com/spring2021">Online Materials</a>]
-                        [<a href="https://bit.ly/berkeleyfsdl">UC Berkeley Course</a>]
+                        [<a href="https://fullstackdeeplearning.com/course/2022/">Online Materials</a>]
                     </p>
                 </div>
             </div>
@@ -62,12 +77,19 @@ All of our materials are available for free online.
                 <img class="post--image" src="/images/fsdl_group.jpg">
                 <div>
                     <p>
-                        <strong>2018-2020 Lectures and Labs</strong>
+                        <strong>2018-2021 Bootcamps and Courses</strong>
                         <br>
-                        I taught the course as University of Washington Professional Master's Program course, and we hosted three weekend bootcamps based in Berkeley.
+                        We hosted three weekend bootcamps in Berkeley, then taught the course as a UW Professional Master's Program course, a UC Brekeley undergrad course, and an online course open to all.
                         <br>
-                        [<a href="https://bit.ly/uwfsdl">UW Course</a>]
+                        <strong><a href="https://sergeykarayev.com">Sergey Karayev</a></strong>,
+                        <a href="https://twitter.com/josh_tobin_">Josh Tobin</a>,
+                        <a href="https://charlesfrye.github.io/about/">Charles Frye</a>,
+                        <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
+                        <br>
                         [<a href="https://fall2019.fullstackdeeplearning.com">Fall 2019 Bootcamp</a>]
+                        [<a href="https://bit.ly/uwfsdl">UW 2020 Course</a>]
+                        [<a href="https://bit.ly/berkeleyfsdl">UC Berkeley 2021 Course</a>]
+                        [<a href="https://fullstackdeeplearning.com/spring2021">Online 2021 Materials</a>]
                     </p>
                 </div>
             </div>
@@ -77,7 +99,7 @@ All of our materials are available for free online.
 
 ---
 
-<h2>Talks</h2>
+<h2>Misc Talks</h2>
 <ul class="projects">
     <li>
         <div>
@@ -85,7 +107,7 @@ All of our materials are available for free online.
                 <img class="post--image" src="/images/talks/gpt3.png">
                 <div>
                     <p>
-                        <strong>GPT-3: what it is, and how it could affect education</strong>
+                        <strong>GPT-3: what it is, and how it could affect education (January 2021)</strong>
                         <br>
                         Presented at <a href="https://gsv.ventures">GSV Ventures</a> Breakfast Club, aimed at a technical but not ML-savvy audience of ed tech founders and investors.
                         <br>
@@ -97,7 +119,7 @@ All of our materials are available for free online.
                 <img class="post--image" src="/images/talks/grading_rubric_for_ai_applications.png">
                 <div>
                     <p>
-                        <strong>Grading Rubric for AI Applications</strong>
+                        <strong>Grading Rubric for AI Applications (2019)</strong>
                         <br>
                         How to think about potential AI applications today, as a founder, investor, or buyer.
                         A 40-min talk given during the W&B Deep Learning for the Applied Deep Learning Fellowship.
@@ -111,7 +133,7 @@ All of our materials are available for free online.
                 <img class="post--image" src="/images/talks/ai_masterclass.png">
                 <div>
                     <p>
-                        <strong>AI Masterclass at ASU GSV Summit</strong>
+                        <strong>AI Masterclass at ASU GSV Summit (2019)</strong>
                         <br>
                         A 40-min talk aimed at a general audience explaining the brief history of AI research, what's possible to do today, and how to think about developing AI products.
                         <br>
