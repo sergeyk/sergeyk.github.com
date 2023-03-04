@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Sergey Karayev - CSE 498A - Spring 2008 - "Camteraction"</title>
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+  <!--[if IE]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="span-24 center">
+      <h2>Sergey Karayev - CSE 498A - Spring 2008 - "Camteraction"</h2>
+    </div>
+    <div class='span-12'>
+      <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/BrP-flst6TY&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/BrP-flst6TY&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+    </div>
+    <div class="span-12 last">
+      <p>My project, an exploration of webcam-based human-computer interaction and techniques in computer vision, consists of a motion tracker with a framework for features on top of it.</p>
+      <p>The motion tracker is based on an image moments method, as outlined in Computer Vision for Interactive Computer Graphics (Freeman, W., et al. 1998). A Difference Moments module computes the temporal difference image from a live video feed from a webcam (in the development case, the built-in Macbook iSight), and calculates its moments to derive an equivalent rectangle (center point, orientation, width, and height).</p>
+      <p>The difference image can be calculated in two different ways: frame-to-frame or temporally smoothed across 4 frames. The smoothing does not seem to result in a performance hit, and is helpful in smoothing motion. It does result in a little bit more of a delay between action and results on the screen. Both ways are functional in the current program, and can be toggled between using the top button in the control panel.</p>
+      <p>The calculation of the difference image is also robust to changes in brightness of the video feed, continually re-evaluating its threshold for significant temporal difference between pixels based on the average brightness of the latest frame.</p>
+      <p>The minimal bounding rectangle of the image moments rectangle is computed, and passed to a Search Window module for more detailed analysis of the corresponding portion of the image. The moving object in the video frame is often the largest part of the search window image, which could allow for faster face recognition functionality. As proof of concept, the search window currently implements a brightest-pixels tracker, but other types of trackers can be implemented. Another functionality of the search window could be template matching of static hand gestures (a way to do it is outlined in the Freeman paper).</p>
+      <p>A history of the center positions of the tracker is kept, and is passed to a Gesture Recognition module, which is not yet fully implemented. Its functionality is to match the tracker displacements against some stored sequence of displacements--a "gesture."</p>
+      <p>Manual calibration of the range of motion is possible: Click on the second button down in the control area of the applet and move through a full range of motions. Click on the button again. The tracker tracer window (bottom right) now displays a rectangle showing the maximum bounds of motion, and Robot mode (described below) now extrapolates from that rectangle to the entire screen.</p>
+      <p>Robot mode can be engaged by pressing the 'R' key while focused on the applet. This takes control of the system pointer, rendering your mouse powerless. Also, when motion occurs in the right third of the range-of-motion rectangle, the UP arrow is virtually pressed. Motion in the left third presses the DOWN arrow. This can be used when reading a long article; scrolling is possible without touching the keyboard or mouse. Robot mode is disengaged by pressing 'R' again.</p>
+      <p>The project relies on the <a href="http://processing.org">Processing</a> set of libraries for Java, which provides a convenient and powerful set of graphics methods, and handles interfacing with webcams.</p>
+      <p>During the quarter, time was also spent on developing a Processing-based interface for a potential CSE 455 Project 1 replacement (processing-native interface was developed but was inadequate, and a Java GUI-based interface was prototyped but not fully developed due to the shifting nature of the future project), and on exploring a few other methods of detecting motion, including template-matching, and a skin color hue-based approach based on Gary Bradski's Computer Vision Face Tracking For Use in a Perceptual User Interface (1998).</p>
+      <p>An executable .jar file and the source code for the project can be found <a href="http://iamthedivebomber.net/projects/camteraction/Camteraction.zip">here</a>.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>iamthedivebomber: stuff by sergey karayev</title>
+ <link href="http://iamthedivebomber.net/atom.xml" rel="self"/>
+ <link href="http://iamthedivebomber.net/"/>
+ <updated>2009-06-19T11:09:48-07:00</updated>
+ <id>http://iamthedivebomber.net/</id>
+ <author>
+   <name>Sergey Karayev</name>
+   <email>iamthedivebomber@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>UW Courses</title>
+   <link href="http://iamthedivebomber.net//2008/11/17/UW-Courses.html"/>
+   <updated>2008-11-17T00:00:00-08:00</updated>
+   <id>http://iamthedivebomber.net/2008/11/17/UW-Courses</id>
+   <content type="html">&lt;h1&gt;UW Courses&lt;/h1&gt;
+&lt;p class="meta"&gt;17 November 2008 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;During my summer internship at &lt;a href="http://zillow.com"&gt;Zillow.com&lt;/a&gt;, I finished a web application that I started working on back in the spring. Initially, I was going to make a Facebook application that would replace the old Schedules app, where you could enter the courses you were taking. To this end, I made a scraper for the &lt;a href="http://www.washington.edu/students/timeschd/"&gt;UW Time Schedule&lt;/a&gt;, and started working on the Model side of a &lt;a href="http://www.rubyonrails.org/"&gt;Ruby on Rails&lt;/a&gt; app. Swept up by schoolwork, I soon ran out of motivation.&lt;/p&gt;
+&lt;p&gt;That quarter, I was taking a Statistics class aimed at Computer Science majors (UW Seattle: &lt;span class="caps"&gt;STAT&lt;/span&gt; 391). The final project was done in groups and was completely up to the students to define. My group, which included &lt;a href="http://cs.washington.edu/homes/af/"&gt;Alan Fineberg&lt;/a&gt; and Justin McOmie, decided to explore the relationship between UW instructor salaries and the student evaluations of their courses. The University collects student evaluations of almost every course at the end of the quarter, and stores data from the last three quarters at &lt;a href="http://washington.edu/cec/"&gt;http://washington.edu/cec/&lt;/a&gt;. Salary data is available biannually for the past decade from what seems to be a &lt;a href="http://www.lbloom.net/"&gt;&lt;span class="caps"&gt;FOIA&lt;/span&gt; request&lt;/a&gt;. Since three quarters of evaluations were not enough, we headed to the &lt;a href="http://www.archive.org/"&gt;Internet Archive&lt;/a&gt; and dug up evaluations from 1998-2005. Unfortunately, in 2005 UW seems to have enabled an authentication gateway, shutting poor bots out.&lt;/p&gt;
+&lt;p&gt;Anyway, processing the data was a pretty fun bit of data mining. We had to do a substantial amount of cleanup to handle duplicate instructor and evaluation entries, and to join the data the way we wanted to. Although I won&#8217;t vouch for the soundness of our statistical foundations, we were unable to find any significant consistent relationship between instructor performance and salary. We looked at tenured and non-tenured instructors in many departments. Take the finding with a grain of salt, as there are a lot of things missing from a proper analysis: inclusion of research performance and grant money data, normalization of evaluations by course (some courses should be expected to rate lower, because they are harder), and data from 2005-2007.&lt;/p&gt;
+&lt;p&gt;I was responsible for scraping the evaluations, and I decided to make a web app that would present this new wealth of data in a useful way. Mainly, I wanted to enable searching, and present average ratings by course and instructor. Writing the application was a fun experience in learning Rails, and an exercise in &lt;a href="http://en.wikipedia.org/wiki/Test-driven_development"&gt;test-driven development&lt;/a&gt;. Development was on slow simmer for a while, kicking up over the last few weeks of the summer (curiously, as I got busier at Zillow).&lt;/p&gt;
+&lt;p&gt;The result is accessible to all at &lt;a href="http://uwcourses.com/"&gt;UW Courses&lt;/a&gt;. I would be honored if you checked it out, and I hope that UW students find it useful. It contains about five times as many evaluations as are made accessible by UW, and provides a decent search interface. The source code for the whole application lives &lt;a href="http://github.com/iamthedivebomber/uw-courses/tree/master"&gt;here&lt;/a&gt; at Github. Feel free to contribute.&lt;/p&gt;
+&lt;p&gt;Rails was a bit of a poor choice for this application, because the data it presents is really static. I feel that Rails really shines in terms of productivity and ease in dynamic, not static, data applications. Also, I got a good look at Rails performance issues, as the vast amount of data I was dealing with meant that I ran into &#8220;scaling&#8221; problems immediately. The site could be blazing fast with page caching (with memcached), but my hosting solution&#8211;&lt;a href="http://www.slicehost.com/"&gt;256 Slicehost slice&lt;/a&gt;&#8211;lacks the memory.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://uwcourses.com"&gt;&lt;img src="/images/uwcourses.png" alt="A screenshot of uwcourses.com" /&gt;&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Here's Why: review of a book review</title>
+   <link href="http://iamthedivebomber.net//2008/07/05/here's-why.html"/>
+   <updated>2008-07-05T00:00:00-07:00</updated>
+   <id>http://iamthedivebomber.net/2008/07/05/here's-why</id>
+   <content type="html">&lt;h1&gt;Here&#8217;s Why: review of a book review&lt;/h1&gt;
+&lt;p class="meta"&gt;5 July 2008 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;In looking back through old magazines, I found &lt;a href="http://www.newyorker.com/archive/2006/04/10/060410crbo_books" title="New Yorker: Here's Why"&gt;this article&lt;/a&gt; by Malcolm Gladwell. Most of his writing seeks to make some aspect of our everyday lives more understandable by offering a simple but not immediately obvious explanation, often based on research in psychology.&lt;/p&gt;
+&lt;p&gt;One of his most common methods is to introduce new words for thinking about concepts. This is evident when Gladwell describes Mavens, Connectors and Salesmen in the &lt;em&gt;Tipping Point&lt;/em&gt;, divides situations of unknown information into Mysteries and Puzzles in the article &lt;a href="http://www.newyorker.com/reporting/2007/01/08/070108fa_fact" title="New Yorker: Open Secrets"&gt;Open Secrets&lt;/a&gt;, or expounds on intuition as &#8220;thin-slicing&#8221; in &lt;em&gt;Blink&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This article, a book review, is in the same mold. The book, &lt;em&gt;Why?&lt;/em&gt;, by the sociologist Charles Tilly, &#8220;sets out to make sense of our reasons for giving reasons.&#8221; Gladwell focuses on Tilly&#8217;s four categories of reasons: conventions, stories, codes, and technical accounts.&lt;/p&gt;
+&lt;p&gt;Conventions are simple explanations accepted by convention. If I broke a vase in someone&#8217;s home, they could offer a convention to explain the situation: &#8220;Accidents happen.&#8221;&lt;/p&gt;
+&lt;p&gt;Stories are personal accounts where the actors are aware of every cause and effect. I could explain breaking the vase by describing the sleepless night I spent working on some assignment due in the morning, and that in general I am a clumsy person.&lt;/p&gt;
+&lt;p&gt;Codes are high-level conventions&#8211;rules and laws. If I tipped over a vase in a museum instead of someone&#8217;s home, no amount of explanation would prevent me from having to compensate them. It&#8217;s the rule.&lt;/p&gt;
+&lt;p&gt;Technical accounts are stories informed by expert knowledge or authority. In the case of the broken vase, a technical account could explain in detail how the position of the vase in a high-traffic area on a thin pedestal virtually guaranteed that at some point, someone would bump it off.&lt;/p&gt;
+&lt;p&gt;The (abbreviated) point is that each type of reason has a role, that they are not ordered in quality, with technical accounts always the best explanations, and that people will at different times use different types of explanations, determined primarily by their relationship with the other actors in the situation.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Consider the orgy of reason-giving that followed Vice-President Dick Cheney’s quail-hunting accident involving his friend Harry Whittington. Allies of the Vice-President insisted that the media were making way too much of it. “Accidents happen,” they said, relying on a convention. Cheney, in a subsequent interview, looked penitently into the camera and said, “The image of him falling is something I’ll never be able to get out of my mind. I fired, and there’s Harry falling. And it was, I’d have to say, one of the worst days of my life.” Cheney told a story. Some of Cheney’s critics, meanwhile, focussed on whether he conformed to legal and ethical standards. Did he have a valid license? Was he too slow to notify the White House? They were interested in codes. Then came the response of hunting experts. They retold the narrative of Cheney’s accident, using their specialized knowledge of hunting procedure. The Cheney party had three guns, and on a quail shoot, some of them said, you should never have more than two. Why did Whittington retrieve the downed bird? A dog should have done that. Had Cheney’s shotgun been aimed more than thirty degrees from the ground, as it should have been? And what were they doing in the bush at five-thirty in the afternoon, when the light isn’t nearly good enough for safe hunting? The experts gave a technical account.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;P.S. In the &lt;a href="http://www.newyorker.com/reporting/2007/01/08/070108fa_fact" title="New Yorker: Open Secrets"&gt;Open Secrets&lt;/a&gt; article mentioned above, Enron was the main subject. It is commonly accepted that Enron&#8217;s accounting was a puzzle&#8211;that a crucial piece of information that would have affected Enron&#8217;s valuation was withheld from the public. Gladwell argues that Enron&#8217;s case was really a mystery&#8211;that all the requisite information for an accurate valuation was available, but that it was too convoluted even for Enron&#8217;s internal accounting to make sense of.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Maze Runner</title>
+   <link href="http://iamthedivebomber.net//2007/11/14/maze-runner.html"/>
+   <updated>2007-11-14T00:00:00-08:00</updated>
+   <id>http://iamthedivebomber.net/2007/11/14/maze-runner</id>
+   <content type="html">&lt;h1&gt;Maze Runner&lt;/h1&gt;
+&lt;p class="meta"&gt;14 November 2007 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;One of the projects for the &lt;a href="http://www.cs.washington.edu/education/courses/cse326/07su/"&gt;Data Structures &amp; Algorithms&lt;/a&gt; class I took this summer consisted of writing code to solve mazes. For extra credit, we could write a visualizer. Here&#8217;s what &lt;a href="http://cs.washington.edu/vkirst/"&gt;Victoria Kirst&lt;/a&gt; and I made:&lt;/p&gt;
+&lt;p&gt;&lt;a href="/projects/MazeRunner" title="MazeRunner"&gt;&lt;img src="/images/mazerunner.png" alt="MazeRunner" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Again, it&#8217;s a Java applet made using the Processing graphics library. Click on the picture to run it yourself! Unfortunately, I can&#8217;t share the source code, as that probably constitutes some kind of cheating.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Grant me serenity</title>
+   <link href="http://iamthedivebomber.net//2007/09/09/grant-me-serenity.html"/>
+   <updated>2007-09-09T00:00:00-07:00</updated>
+   <id>http://iamthedivebomber.net/2007/09/09/grant-me-serenity</id>
+   <content type="html">&lt;h1&gt;Grant me serenity&lt;/h1&gt;
+&lt;p class="meta"&gt;9 September 2007 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“God, grant me serenity to accept what I cannot change, the courage to change what I can, and the wisdom to know the difference.” &lt;/strong&gt;You might have seen this prayer on posters or on the Internet. I like the message. Some things in life can’t be changed—we just have to accept them. Other things are unfair and undesirable, but luckily, we can fix them. The trick is knowing which is which, goes the punchline. If we do not accept the things we cannot change, we will be unhappy, in constant struggle. If we accept things that are undesirable for us but that we can change, we will not be as happy as possible.&lt;/p&gt;
+&lt;p&gt;Hold on. Is that right? Why should we even strive to be as happy as possible? That is a path that does not end, and it will never fulfill. “If only I had this one thing in my life, I would finally be truly happy. Okay, now I have it, and I’m almost there, but I just want this one more thing&#8230;” It will never stop. (If you think you disagree, try to tell yourself what all you want to have in life to be finally, fully, irrevocably happy.) We should strive to be content with what we have. All else is a treadmill of wants and desires. The prayer could read simply, “God, grant me serenity to accept all that happens.”&lt;/p&gt;
+&lt;p&gt;But that seems fatalistic. If people always just accepted things as they were, then important social changes would never take place. Such changes as the Civil Rights movement, women’s suffrage, end of apartheid. I consider these changes beneficial, because they allow greater numbers of people to live with less suffering. But above, I argued that we should all just be content with what we have, because striving to be as happy as possible is an endless, unfulfillable path.&lt;/p&gt;
+&lt;p&gt;The reconciliation of these ideas should be clear. Each one of us should be content with her own lot in life. I should not strive to be happier than I am. What more happiness I hope for is a mirage; the idea that I will be happier with the attainment of more things or achievements, beyond satisfying my basic needs, is an illusion. At the same time, each one of us should do all that is possible to help other people. Here, the help that I bring is real; the idea that people’s lives can be improved is solid. (There is a difference between the acceptance of quality of life and the quality of life itself. A mother with a starving child may have gathered all the serenity in the world to accept the situation, but it is clear that her life can be improved dramatically by satisfying her and her child’s basic needs.)&lt;/p&gt;
+&lt;p&gt;I would revise the prayer. &lt;strong&gt;“May I have serenity to accept all that happens to me, and the courage to do all I can to help others.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There is a wonderful koan that illustrates this idea.&lt;br /&gt;
+&lt;blockquote&gt;&lt;em&gt;I once heard a story about a visit to heaven and hell. In both places the visitor saw many people seated at a table on which many delicious foods were laid out. Chopsticks over a meter long were tied to their right hands, while their left hands were tied to their chairs. In hell, however much they stretched out their arms, the chopsticks were too long for them to get food into their mouths. They grew impatient and got their hands and chopsticks tangled with one another&#8217;s. The delicacies were scattered here and there.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In heaven on the other hand, people happily used the long chopsticks to pick out someone else&#8217;s favorite food and feed it to him, and in turn they were being fed by others. They all enjoyed their meal in harmony.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;-&lt;strong&gt;Shundo Aoyama, &lt;em&gt;Zen Seeds&lt;/em&gt;.&lt;/strong&gt;&lt;/blockquote&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Flowers</title>
+   <link href="http://iamthedivebomber.net//2007/08/10/flowers.html"/>
+   <updated>2007-08-10T00:00:00-07:00</updated>
+   <id>http://iamthedivebomber.net/2007/08/10/flowers</id>
+   <content type="html">&lt;h1&gt;Flowers&lt;/h1&gt;
+&lt;p class="meta"&gt;10 October 2007 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;For Sonya’s birthday a month ago I made a bouquet of flowers. It’s actually an animated Java applet that you can view in your browser. Click on the picture to try it out.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/projects/Flowers/" title="Flowers"&gt;&lt;img src="/images/flowers.png" /&gt;&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Upcoming Concert: The National</title>
+   <link href="http://iamthedivebomber.net//2007/07/15/upcoming-concert-the-national.html"/>
+   <updated>2007-07-15T00:00:00-07:00</updated>
+   <id>http://iamthedivebomber.net/2007/07/15/upcoming-concert-the-national</id>
+   <content type="html">&lt;h1&gt;Upcoming Concert: The National&lt;/h1&gt;
+&lt;p class="meta"&gt;15 July 2007 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;Today I got excited about an upcoming concert. Whenever the National comes on the radio, I always think of how amazing their live show must be. I remember when Pitchfork reviewed Clap Your Hands Say Yeah/The National double bill, back when they were tripping on the influence they had launching &lt;span class="caps"&gt;CYHSY&lt;/span&gt; into indie cosmos. I expected another drooling reviewer, but this guy gave &lt;span class="caps"&gt;CYHSY&lt;/span&gt; a chilly review, and, noting that half of the indie kids left after the band&#8217;s performance, said that they missed a far better show. John in the Morning also sang praises to the National show, saying they were one of the best live bands around. I really think they can come close to Interpol. The concert is October 2&lt;sup&gt;nd&lt;/sup&gt; at the Showbox, for $15. Tell me if you want me to buy you a ticket at the box office.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>I made it again</title>
+   <link href="http://iamthedivebomber.net//2007/07/10/i-made-it-again.html"/>
+   <updated>2007-07-10T00:00:00-07:00</updated>
+   <id>http://iamthedivebomber.net/2007/07/10/i-made-it-again</id>
+   <content type="html">&lt;h1&gt;I made it again&lt;/h1&gt;
+&lt;p class="meta"&gt;10 July 2007 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;And it’s interesting that I made it again precisely one year later. My plan is to use this blog to post some cool things that I make, and maybe share some ideas and experiences.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Me!</title>
+   <link href="http://iamthedivebomber.net//2006/07/09/me.html"/>
+   <updated>2006-07-09T00:00:00-07:00</updated>
+   <id>http://iamthedivebomber.net/2006/07/09/me</id>
+   <content type="html">&lt;h1&gt;Me!&lt;/h1&gt;
+&lt;p class="meta"&gt;9 July 2006 &#8211; Seattle&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/me.jpg" alt="" /&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>

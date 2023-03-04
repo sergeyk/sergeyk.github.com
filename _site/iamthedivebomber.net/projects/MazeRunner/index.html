@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>MazeRunner: Built with Processing</title>
+
+<style type="text/css">
+body {
+  margin: 0px 0px 0px 0px;
+  font-family: verdana, geneva, arial, helvetica, sans-serif; 
+  font-size: 11px; 
+  background-color: #EEEEEE; 
+  text-decoration: none; 
+  font-weight: normal; 
+  line-height: normal; 
+}
+ 
+A          { color: #3399CC; }
+A:link     { color: #3399CC; text-decoration: underline; }
+A:visited  { color: #3399CC; text-decoration: underline; }
+A:active   { color: #3399CC; text-decoration: underline; }
+A:hover    { color: #3399CC; text-decoration: underline; }
+
+#sketch {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#comments {
+  margin-top: 15px;
+  margin-left: 50px;
+  width:600px;
+}
+
+</style>
+
+<script language="javascript">
+function resizeToWindow(name) {
+  if (navigator.appName.indexOf("Microsoft") != -1) {
+    width=document.body.clientWidth;
+    height=document.body.clientHeight;
+  } else {
+    var netscapeScrollWidth=15;
+    width=window.innerWidth - netscapeScrollWidth;
+    height=window.innerHeight-netscapeScrollWidth;
+  }
+  resize(name, width, height)
+}
+
+function resize(name, width, height) {
+  get(id).width = width;
+  get(id).height = height;
+  window.scroll(0,0);
+}
+
+function get(id) {
+  return document.getElementById(id);
+}
+
+window.onResize = resize;
+window.onLoad = resize;
+</script>
+
+</head>
+
+<body>
+
+<div id="content">
+
+<div id="sketch">
+<applet
+ name="PApplet"
+ code="Visualizer" 
+ archive="MazeRunner.jar,core.jar,swing-worker.jar"
+ width="500" height="300"
+ mayscript="true">
+<param name="image" value="loading.gif">
+<param name="boxmessage" value="Loading Processing software...">
+<param name="boxbgcolor" value="#EEEEEE">
+<param name="progressbar" value="true">
+<param name="subapplet.classname" VALUE="Visualizer"> 
+<param name="subapplet.displayname" VALUE="MazeRunner"> 
+
+<!-- This is the message that shows up when people don't have
+     Java installed in their browser. Any HTML can go here
+     (i.e. if you wanted to include an image other links, 
+     or an anti-Microsoft diatribe. -->
+To view this content, you need to install Java from <A HREF="http://java.com">java.com</A>
+</applet>
+</div>
+
+<div id="comments">
+<p>
+Click on the maze to solve it. Click again to solve it using a different methods. There are four methods: Depth-First, Breadth-First, Best-First (always pick cell closest to exit), and A*. After a maze is solved with all four methods, another maze is loaded.
+</p>
+<p>
+Sergey Karayev & Victoria Kirst
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
