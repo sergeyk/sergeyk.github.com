@@ -9,7 +9,9 @@ I’d like to improve the world a bit, in three ways:
 - Help my family and friends flourish.
 - Create businesses that help people flourish.
 
-*Flourish*: to grow in a healthy way. I like that. If things aren't growing, they’re dying. On the other hand, growth should not come at the expense of health or quality.
+To flourish is to grow in a healthy way. I like that. If things aren't growing, they’re dying. On the other hand, growth should not come at the expense of health or quality.
+
+---
 
 ## **Flourish as a person**
 
@@ -18,8 +20,7 @@ I am a part of the world, so if I am more alive, the world is a little bit more 
 What this means to me:
 
 - Eat healthy and exercise.
-- Work with talented people I like.
-- Feel pride in the work that we do.
+- Feel pride in the work that I do.
 - Make memories with family and friends.
 - Share my thoughts and learn from others.
 
@@ -28,6 +29,8 @@ The North Star question for this goal is, “How much of last week did I feel li
 - Was I filled with energy?
 - Was I in flow state a large part of the day?
 - Was I present and positive in my interactions with others?
+
+---
 
 ## **Help my family and friends flourish**
 
@@ -41,6 +44,8 @@ What this means to me:
 - Build a community of friends and support them in times of need.
 
 The North Star question for this goal is, “If my funeral were to be held next week, who’d be there and what would they say?”
+
+---
 
 ## **Create things that help people flourish**
 
