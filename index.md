@@ -13,6 +13,8 @@ I am a software entrepreneur based in the Bay Area.
 
 If you believe I may be helpful in a specific and special way, get in touch on [X](https://twitter.com/sergeykarayev) or [email](mailto:sergeykarayev@gmail.com).
 
+[Goals](/goals.html)
+
 ---
 
 ## Volition
