@@ -6,7 +6,7 @@ layout: default
 My goal is to deploy AI systems to improve human life.
 
 <ul class="bullets">
-    <li>Currently working on something new</li>
+    <li>Co-founder of <a href="https://volition.co">Volition</a>, a product studio.</li>
     <li>Co-founder of <a href="https://fullstackdeeplearning.com">Full Stack Deep Learning</a> (online, <a href="https://bit.ly/berkeleyfsdl">UC Berkeley</a>, and <a href="https://bit.ly/uwfsdl">University of Washington</a>)</li>
     <li>Co-founder of <a href="https://gradescope.com">Gradescope</a> (acquired by <a href="https://turnitin.com">Turnitin</a>)</li>
     <li>PhD in Computer Vision at <a href="https://eecs.berkeley.edu">UC Berkeley</a></li>
