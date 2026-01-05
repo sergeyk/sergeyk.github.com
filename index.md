@@ -32,9 +32,7 @@ links:
 
 ## Recent Little Projects
 
-Claude Code with Opus 4.5 is a [watershed moment](https://x.com/sergeykarayev/status/2007899893483045321) for software development, making the first 80% of an app take minutes instead of days.
-
-I'm making my way through a backlog of little software ideas with it.
+Claude Code with Opus 4.5 is a [watershed moment](https://x.com/sergeykarayev/status/2007899893483045321) for software development, making the first 80% of an app take minutes instead of days. I'm making my way through a backlog of little software ideas with it.
 
 ```publication
 image: /images/model-comparison.jpg
@@ -42,6 +40,15 @@ title: AI Model Comparison Table
 description: A single-page web app to compare AI models by pricing, capabilities, and benchmark performance.
 links:
   - [Website](https://sergeykarayev.com/model-comparison)
+```
+
+```publication
+image: /images/multichat.jpg
+title: Multichat
+description: Run `uvx multichat` to receive responses from all four frontier LLMs.
+links:
+  - [GitHub Repo](https://github.com/sergeyk/multichat)
+  - [PyPi Package](https://pypi.org/project/multichat)
 ```
 
 ---
