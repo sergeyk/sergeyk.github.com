@@ -3,8 +3,6 @@ author: Sergey Karayev
 url: https://sergeykarayev.com
 permalink: /:title
 ordered_categories: [Academic Projects, Other Projects]
-sass:
-  sass_dir: css
 defaults:
   -
     scope:

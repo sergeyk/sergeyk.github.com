@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" class="scroll-smooth">
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -9,10 +9,227 @@
 
     <title>{{ site.name }} | {{ page.title }}</title>
 
-    <link rel="stylesheet" media="all" href="/css/mine.css" />
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- Theme detection and toggle -->
+    <script>
+        // Check for saved theme preference or use system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!('theme' in localStorage)) {
+                if (e.matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+        });
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+
+        function resetTheme() {
+            localStorage.removeItem('theme');
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        body {
+            font-family: 'ff-meta-serif-web-pro', Georgia, serif;
+            color: #585857;
+            background: white;
+            line-height: 1.5;
+        }
+        .dark body {
+            background: #111827;
+            color: #d1d5db;
+        }
+        h1, h2, h3, h4, h5, h6, .header, .footer, .publication {
+            font-family: 'source-sans-pro', system-ui, sans-serif;
+        }
+        h1, h2, h3, h4 {
+            color: #3f3f3e;
+        }
+        .dark h1, .dark h2, .dark h3, .dark h4 {
+            color: #e5e7eb;
+        }
+        a {
+            color: #0e9ce0;
+            text-decoration: none;
+            transition: color 0.15s ease-out;
+        }
+        a:hover {
+            color: #ff8a04;
+        }
+        .dark a {
+            color: #38bdf8;
+        }
+        .dark a:hover {
+            color: #fb923c;
+        }
+        .publication {
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.875em;
+            line-height: 1.7143em;
+            margin-bottom: 1.5em;
+        }
+        .publication p {
+            margin-top: 0;
+        }
+        @media (max-width: 640px) {
+            .publication {
+                flex-direction: column;
+            }
+        }
+        .post--image {
+            width: 180px;
+            flex-shrink: 0;
+            margin-right: 20px;
+            margin-bottom: 1em;
+            align-self: flex-start;
+        }
+        @media (max-width: 640px) {
+            .post--image {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            flex-shrink: 0;
+        }
+        code, pre, samp {
+            white-space: pre-wrap;
+            font-family: Consolas, Monaco, monospace;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .smaller-container {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .content p, .content pre, .content code {
+            max-width: 640px;
+        }
+        ul, ol {
+            list-style-position: outside;
+            padding-left: 1.5em;
+            margin: 0 0 1.5em 0;
+        }
+        ul {
+            list-style-type: circle;
+            list-style: circle outside;
+        }
+        ol {
+            list-style-type: decimal;
+        }
+        li {
+            margin-bottom: 0.25em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        h2 {
+            font-size: 1.5em;
+            line-height: 1.5em;
+            margin: 0 0 1em 0;
+            color: #3f3f3e;
+        }
+        .dark h2 {
+            color: #e5e7eb;
+        }
+        h3 {
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0 0 0.5em 0;
+        }
+        hr {
+            height: 0;
+            margin: 1.5rem 0;
+            border: 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .dark hr {
+            border-bottom-color: rgba(255,255,255,0.15);
+        }
+        .smaller, aside {
+            font-size: 0.75em;
+            line-height: 2em;
+        }
+        .footer {
+            font-size: 0.875em;
+            color: #888;
+        }
+        .dark .footer {
+            color: #9ca3af;
+        }
+        aside {
+            margin-left: 700px;
+            position: absolute;
+            width: 180px;
+        }
+        @media screen and (max-width: 840px) {
+            aside {
+                margin-left: 0;
+                position: relative;
+                width: auto;
+            }
+        }
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: #585857;
+            transition: background 0.15s;
+        }
+        .theme-toggle:hover {
+            background: #f3f4f6;
+        }
+        .dark .theme-toggle {
+            color: #d1d5db;
+        }
+        .dark .theme-toggle:hover {
+            background: #374151;
+        }
+        .theme-toggle svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        .theme-toggle .sun-icon { display: none; }
+        .theme-toggle .moon-icon { display: block; }
+        html.dark .theme-toggle .sun-icon { display: block; }
+        html.dark .theme-toggle .moon-icon { display: none; }
+    </style>
+
     {% if page.code %}
     <link rel="stylesheet" href="/ext/highlight.js/styles/sunburst.css">
     {% endif %}
@@ -66,12 +283,12 @@
     </script>
 </head>
 
-<body lang="en">
+<body>
     <div class="container">
         {% if page.url != '/' %}
-        <div class="smaller_container">
+        <div class="smaller-container">
         {% endif %}
-            <div class="header">
+            <div class="header" style="margin-top: 1em; position: relative;">
                 {% if page.url != '/' %}
                     <p>
                         <a href="/" rel="author">
@@ -79,10 +296,20 @@
                             {{ site.name }}
                         </a>
                     </p>
-                    <h1>{{ page.title | markdownify | strip }}</h1>
+                    <h1 style="font-size: 2em; margin: 0 0 1em 0;">{{ page.title | markdownify | strip }}</h1>
                 {% else %}
-                <div class="avatar"></div>
-                <div class="site_title"><h1>{{ site.name }}</h1></div>
+                <div style="display: flex; align-items: center; position: relative;">
+                    <img src="/images/headshot.jpg" alt="{{ site.name }}" class="avatar">
+                    <h1 style="font-size: 2em; margin: 0 0 0 1rem; font-weight: bold;">{{ site.name }}</h1>
+                    <button onclick="toggleTheme()" class="theme-toggle" title="Toggle dark mode" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                        <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="moon-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                </div>
                 {% endif %}
             </div>
 
@@ -120,7 +347,6 @@
 
             <hr />
             <div class="footer"> Updated {{ site.time | date_to_string }} </div>
-        </div>
         {% if page.url != '/' %}
         </div>
         {% endif %}

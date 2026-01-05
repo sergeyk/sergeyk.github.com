@@ -5,6 +5,7 @@
 [as]: https://www.linkedin.com/in/arjun-singh-629216105
 [ashyr]: https://www.linkedin.com/in/alex-shyr-3669623/
 [bs]: https://www.benstenhaug.com
+[cf]: https://charlesfrye.github.io/about/
 [cp]: https://stanford.edu/~cpiech/bio/index.html
 [es]: https://github.com/shelhamer
 [ew]: https://www.linkedin.com/in/ericxwangai/
@@ -16,6 +17,7 @@
 [jb]: https://www.cs.berkeley.edu/~barron/
 [jd]: https://jeffdonahue.com/
 [jl]: https://people.eecs.berkeley.edu/~jonlong/
+[jt]: https://twitter.com/josh_tobin_
 [kg]: https://kevingutowski.com/
 [kk]: https://people.eecs.berkeley.edu/~keutzer/
 [ks]: https://www.bu.edu/cs/profiles/kate-saenko/
