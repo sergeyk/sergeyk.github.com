@@ -3,8 +3,6 @@ title: Goals
 layout: default
 ---
 
-# Goals
-
 I’d like to improve the world a bit, in three ways:
 
 - Flourish as a person
