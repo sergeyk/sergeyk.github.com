@@ -5,10 +5,11 @@ layout: default
 
 I am a software entrepreneur based in the Bay Area.
 
-- I co-founded [Volition](https://www.volition.co), a small but well-funded team that builds AI-powered software.
-- Previously, I co-founded [Gradescope](https://www.gradescope.com) (acquired). If you took a STEM class at a major university in the last 5-10 years, you’ve likely used it.
-- I co-developed [Full Stack Deep Learning](https://fullstackdeeplearning.com/llm-bootcamp/), a set of courses on building AI-powered software.
-- I did my PhD at UC Berkeley, working with [Trevor Darrell](https://www2.eecs.berkeley.edu/Faculty/Homepages/darrell.html) on computer vision.
+- Co-founded [Volition](https://www.volition.co), a small but well-funded team that builds AI-powered software.
+- Previously, co-founded [Gradescope](https://www.gradescope.com) (acquired). If you took a STEM class at a major university in the last 5-10 years, you’ve likely used it.
+- Co-developed [Full Stack Deep Learning](https://fullstackdeeplearning.com/llm-bootcamp/), a set of courses on building AI-powered software.
+- Did my PhD at UC Berkeley, working with [Trevor Darrell](https://www2.eecs.berkeley.edu/Faculty/Homepages/darrell.html) on computer vision.
+- Originally from Russia, moved to Seattle when I was 11.
 
 If you believe I may be helpful in a specific and special way, get in touch on [X](https://twitter.com/sergeykarayev) or [email](mailto:sergeykarayev@gmail.com).
 
@@ -70,13 +71,11 @@ links:
 ```publication
 image: /images/fsdl_group.jpg
 title: 2018-2022 Bootcamps and Courses
-description: We hosted three weekend bootcamps in Berkeley, then taught the course as a **University of Washington** Professional Master's Program course, a **UC Berkeley** undergrad course, and an online course open to all.
+description: We hosted three weekend bootcamps in Berkeley, then taught the course as a **University of Washington** MS course, a **UC Berkeley** undergrad course, and an online course open to all.
 authors: **[Sergey Karayev][sk]**, [Josh Tobin][jt], [Charles Frye][cf], [Pieter Abbeel][pa]
 links:
-  - [Fall 2019 Bootcamp](https://fall2019.fullstackdeeplearning.com)
-  - [UW 2020 Course](https://bit.ly/uwfsdl)
   - [UC Berkeley 2021 Course](https://bit.ly/berkeleyfsdl)
-  - [Online 2021 Materials](https://fullstackdeeplearning.com/spring2021)
+  - [Online 2022 Course](https://fullstackdeeplearning.com/course/2022/)
 ```
 
 ---
@@ -194,7 +193,7 @@ image: /images/rayleigh_thumb.png
 title: Multi-color image search
 description: During my summer internship at [Artsy](https://artsy.net), I became interested in color perception and indexing images by color. I developed an open-source system for quickly searching large image collections by multiple colors given as a palette, or by color similarity to a query image.
 links:
-  - [project](/rayleigh-multicolor-search)
+  - [project](https://sergeykarayev.com/rayleigh)
 ```
 
 ### Anytime Visual Recognition
@@ -249,7 +248,7 @@ authors: [Allison Janoch][aj], **[Sergey Karayev][sk]**, [Yangqing Jia][yj], [Jo
 venue: ICCV-W 2011
 links:
   - [pdf](/files/iccvw2011.pdf)
-  - [dataset](https://kinectdata.com)
+  - [dataset](https://www.dropbox.com/scl/fi/w4bs2ygirpf2s1ggz1wal/VOCB3DO.zip?rlkey=drgt6idi0adssa1omm1ll1iyj&e=1&dl=0)
 ```
 
 ```publication
