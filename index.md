@@ -6,9 +6,10 @@ layout: default
 I am a software entrepreneur based in the Bay Area.
 
 - Co-founded [Volition](https://www.volition.co), a small but well-funded team that builds AI-powered software.
-- Previously, co-founded [Gradescope](https://www.gradescope.com) (acquired). If you took a STEM class at a major university in the last 5-10 years, you’ve likely used it.
+- Previously, co-founded [Gradescope](https://www.gradescope.com). If you took a STEM class at a major university in the last 5-10 years, you’ve likely used it.
 - Co-developed [Full Stack Deep Learning](https://fullstackdeeplearning.com/llm-bootcamp/), a set of courses on building AI-powered software.
 - Did my PhD at UC Berkeley, working with [Trevor Darrell](https://www2.eecs.berkeley.edu/Faculty/Homepages/darrell.html) on computer vision.
+- Went to University of Washington for undegrad.
 - Originally from Russia, moved to Seattle when I was 11.
 
 If you believe I may be helpful in a specific and special way, get in touch on [X](https://twitter.com/sergeykarayev) or [email](mailto:sergeykarayev@gmail.com).
@@ -62,6 +63,7 @@ description: Run `npx x-backup ﹤path-to-twitter-data-export﹥` to create a be
 links:
   - [GitHub Repo](https://github.com/sergeyk/x-backup)
   - [NPM](https://www.npmjs.com/package/x-backup)
+  - [Example](/x-backup/index.html)
 ```
 
 ```publication
