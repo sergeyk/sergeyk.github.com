@@ -13,7 +13,7 @@ I am a software entrepreneur based in the Bay Area.
 
 If you believe I may be helpful in a specific and special way, get in touch on [X](https://twitter.com/sergeykarayev) or [email](mailto:sergeykarayev@gmail.com).
 
-[Goals](/goals.html) · [Some Beliefs](/beliefs.html) 
+[Goals](/goals.html) · [Some Beliefs](/beliefs.html) · [X Backup](/x-backup/index.html)
 
 ---
 
@@ -33,7 +33,7 @@ links:
 
 ---
 
-## Recent Little Projects
+## Recent Vibe Projects
 
 Claude Code with Opus 4.5 is a [watershed moment](https://x.com/sergeykarayev/status/2007899893483045321) for software development, making the first 80% of an app take minutes instead of days. I'm making my way through a backlog of little software ideas with it.
 
@@ -43,6 +43,7 @@ title: AI Model Comparison Table
 description: A single-page web app to compare AI models by pricing, capabilities, and benchmark performance.
 links:
   - [Website](https://sergeykarayev.com/model-comparison)
+  - [GitHub Repo](https://github.com/sergeyk/model-comparison)
 ```
 
 ```publication
@@ -51,7 +52,24 @@ title: Multichat
 description: Run `uvx multichat` to receive responses from all four frontier LLMs.
 links:
   - [GitHub Repo](https://github.com/sergeyk/multichat)
-  - [PyPi Package](https://pypi.org/project/multichat)
+  - [PyPI](https://pypi.org/project/multichat)
+```
+
+```publication
+image: /images/x-backup.jpg
+title: X Backup
+description: Run `npx x-backup ﹤path-to-twitter-data-export﹥` to create a beautiful, searchable, sortable single page backup of all of your X posts.
+links:
+  - [GitHub Repo](https://github.com/sergeyk/x-backup)
+  - [NPM](https://www.npmjs.com/package/x-backup)
+```
+
+```publication
+image: /images/world_demographic_halflife_map.jpg
+title: World Demographic Half-Life Map
+description: Interactive visualization showing how long until half the population of each country will have been born after a given year.
+links:
+  - [Page](/world-demographic-halflife-map.html)
 ```
 
 ---

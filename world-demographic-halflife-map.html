@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Demographic Half-Life Map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background: #0a0a0f;
+            color: #e8e6e3;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0d0d12 0%, #1a1a24 100%);
+            padding: 20px 32px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                #ff4d6d 0%, 
+                #ffb347 25%, 
+                #87d068 50%, 
+                #4ecdc4 75%, 
+                #a855f7 100%);
+        }
+
+        .header h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 0%, #a0a0b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            color: #6b6b7b;
+            font-size: 0.8rem;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 100px);
+        }
+
+        #map-container {
+            flex: 1;
+            background: #0d0d12;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .country {
+            stroke: rgba(255,255,255,0.15);
+            stroke-width: 0.5;
+            cursor: pointer;
+            transition: stroke-width 0.15s, stroke 0.15s;
+        }
+
+        .country:hover {
+            stroke: #fff;
+            stroke-width: 1.5;
+        }
+
+        .sidebar {
+            width: 320px;
+            background: #0d0d12;
+            border-left: 1px solid rgba(255,255,255,0.08);
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .legend {
+            background: rgba(26, 26, 36, 0.8);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .legend h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8b8b9b;
+            margin-bottom: 14px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.7rem;
+        }
+
+        .legend-color {
+            width: 24px;
+            height: 14px;
+            border-radius: 3px;
+            margin-right: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .legend-label {
+            color: #b8b8c8;
+        }
+
+        .info-panel {
+            background: rgba(26, 26, 36, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .info-panel h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8b8b9b;
+            margin-bottom: 14px;
+        }
+
+        .country-name {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .stat {
+            background: rgba(255,255,255,0.03);
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b6b7b;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-value.shrinking {
+            color: #ff4d6d;
+        }
+
+        .stat-value.growing {
+            color: #4ecdc4;
+        }
+
+        .stat-value.stable {
+            color: #ffb347;
+        }
+
+        .stat.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .halflife-display {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .placeholder-text {
+            color: #5b5b6b;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 30px 16px;
+            line-height: 1.7;
+        }
+
+        .formula {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 6px;
+            padding: 14px;
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: #c8b8e8;
+            line-height: 1.7;
+        }
+
+        .formula code {
+            background: rgba(0,0,0,0.3);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: #1a1a24;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-family: 'Space Mono', monospace;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            color: #fff;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s;
+            z-index: 100;
+            font-size: 0.75rem;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .tooltip-country {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-detail {
+            color: #a0a0b0;
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Syne', sans-serif;
+            color: #6b6b7b;
+            font-size: 1rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .loading span {
+            animation: pulse 1.5s infinite;
+        }
+
+        .zoom-controls {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 10;
+        }
+
+        .zoom-btn {
+            width: 32px;
+            height: 32px;
+            background: #1a1a24;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+
+        .zoom-btn:hover {
+            background: #2a2a34;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: 280px;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.08);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧬 World Demographic Half-Life</h1>
+        <p>How long until each country's population halves (or doubles) based on current Total Fertility Rate.</p>
+    </div>
+    
+    <div class="container">
+        <div id="map-container">
+            <div class="loading" id="loading"><span>Loading map...</span></div>
+            <div class="zoom-controls">
+                <button class="zoom-btn" id="zoom-in">+</button>
+                <button class="zoom-btn" id="zoom-out">−</button>
+                <button class="zoom-btn" id="zoom-reset" style="font-size: 0.7rem;">⟲</button>
+            </div>
+            <svg id="map"></svg>
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+        <div class="sidebar">
+            <div class="legend">
+                <h3>Half-Life / Doubling Time</h3>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff2d55;"></div>
+                    <span class="legend-label">&lt; 50 yrs (rapid decline)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff6b6b;"></div>
+                    <span class="legend-label">50-100 yrs (decline)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffa502;"></div>
+                    <span class="legend-label">100-200 yrs (slow decline)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffd93d;"></div>
+                    <span class="legend-label">~Stable (TFR ≈ 2.1)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #6bcb77;"></div>
+                    <span class="legend-label">100-200 yrs (slow growth)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4ecdc4;"></div>
+                    <span class="legend-label">50-100 yrs (growth)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #0891b2;"></div>
+                    <span class="legend-label">&lt; 50 yrs (rapid growth)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #374151;"></div>
+                    <span class="legend-label">No data</span>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h3>Country Details</h3>
+                <div id="country-info">
+                    <p class="placeholder-text">Hover over a country to see its demographic half-life.</p>
+                </div>
+                
+                <div class="formula">
+                    <strong>Formula:</strong><br>
+                    Half-Life = <code>ln(0.5) / ln(TFR/2.1) × 27.5</code><br><br>
+                    2.1 = replacement rate<br>
+                    27.5 = generation length (years)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // TFR Data (2024 UN estimates)
+        const tfrData = {
+            "Afghanistan": 4.18, "Albania": 1.35, "Algeria": 2.78, "Andorra": 1.22, "Angola": 5.02,
+            "Argentina": 1.73, "Armenia": 1.65, "Australia": 1.63, "Austria": 1.41, "Azerbaijan": 1.71,
+            "Bahamas": 1.39, "Bahrain": 1.80, "Bangladesh": 1.98, "Barbados": 1.58, "Belarus": 1.38,
+            "Belgium": 1.56, "Belize": 2.05, "Benin": 4.75, "Bhutan": 1.80, "Bolivia": 2.41,
+            "Bosnia and Herz.": 1.20, "Botswana": 2.65, "Brazil": 1.64, "Brunei": 1.75, "Bulgaria": 1.56,
+            "Burkina Faso": 4.49, "Burundi": 4.93, "Cambodia": 2.24, "Cameroon": 4.25, "Canada": 1.43,
+            "Central African Rep.": 5.69, "Chad": 6.03, "Chile": 1.47, "China": 1.16, "Colombia": 1.70,
+            "Comoros": 3.84, "Dem. Rep. Congo": 5.98, "Congo": 4.14, "Costa Rica": 1.48, "Croatia": 1.48,
+            "Cuba": 1.45, "Cyprus": 1.32, "Czechia": 1.71, "Denmark": 1.67, "Djibouti": 2.64,
+            "Dominican Rep.": 2.11, "Ecuador": 2.02, "Egypt": 2.65, "El Salvador": 1.85, "Eq. Guinea": 4.11,
+            "Eritrea": 3.59, "Estonia": 1.52, "eSwatini": 2.75, "Ethiopia": 3.90, "Fiji": 2.50,
+            "Finland": 1.32, "France": 1.79, "Gabon": 3.54, "Gambia": 4.47, "Georgia": 1.97,
+            "Germany": 1.46, "Ghana": 3.48, "Greece": 1.32, "Guatemala": 2.37, "Guinea": 4.28,
+            "Guinea-Bissau": 3.98, "Guyana": 2.31, "Haiti": 2.69, "Honduras": 2.23, "Hungary": 1.52,
+            "Iceland": 1.59, "India": 2.00, "Indonesia": 2.12, "Iran": 1.69, "Iraq": 3.21,
+            "Ireland": 1.62, "Israel": 2.90, "Italy": 1.24, "Côte d'Ivoire": 3.93, "Jamaica": 1.85,
+            "Japan": 1.20, "Jordan": 2.62, "Kazakhstan": 2.95, "Kenya": 3.20, "Kuwait": 2.01,
+            "Kyrgyzstan": 2.91, "Laos": 2.31, "Latvia": 1.55, "Lebanon": 2.02, "Lesotho": 2.84,
+            "Liberia": 4.07, "Libya": 2.15, "Lithuania": 1.43, "Luxembourg": 1.37, "Madagascar": 3.73,
+            "Malawi": 3.78, "Malaysia": 1.72, "Maldives": 1.62, "Mali": 5.67, "Malta": 1.13,
+            "Mauritania": 4.14, "Mauritius": 1.36, "Mexico": 1.79, "Moldova": 1.77, "Mongolia": 2.54,
+            "Montenegro": 1.72, "Morocco": 2.19, "Mozambique": 4.42, "Myanmar": 2.04, "Namibia": 3.21,
+            "Nepal": 1.88, "Netherlands": 1.57, "New Zealand": 1.64, "Nicaragua": 2.17, "Niger": 6.64,
+            "Nigeria": 4.57, "North Korea": 1.79, "North Macedonia": 1.43, "Norway": 1.48, "Oman": 2.55,
+            "Pakistan": 3.32, "Palestine": 3.38, "Panama": 2.19, "Papua New Guinea": 3.10, "Paraguay": 2.27,
+            "Peru": 2.02, "Philippines": 2.38, "Poland": 1.29, "Portugal": 1.36, "Qatar": 1.77,
+            "Romania": 1.62, "Russia": 1.50, "Rwanda": 3.67, "Saudi Arabia": 2.33, "Senegal": 3.84,
+            "Serbia": 1.46, "Sierra Leone": 3.78, "Singapore": 1.04, "Slovakia": 1.52, "Slovenia": 1.55,
+            "Solomon Is.": 3.70, "Somalia": 6.01, "South Africa": 2.24, "South Korea": 0.73, "S. Sudan": 4.54,
+            "Spain": 1.19, "Sri Lanka": 1.91, "Sudan": 4.10, "Suriname": 2.24, "Sweden": 1.67,
+            "Switzerland": 1.46, "Syria": 2.58, "Taiwan": 0.87, "Tajikistan": 3.08, "Tanzania": 4.49,
+            "Thailand": 1.16, "Timor-Leste": 3.11, "Togo": 3.87, "Trinidad and Tobago": 1.63, "Tunisia": 1.99,
+            "Turkey": 1.88, "Turkmenistan": 2.63, "Uganda": 4.34, "Ukraine": 1.22, "United Arab Emirates": 1.37,
+            "United Kingdom": 1.56, "United States of America": 1.66, "Uruguay": 1.47, "Uzbekistan": 2.70, "Vanuatu": 3.57,
+            "Venezuela": 2.09, "Vietnam": 1.94, "Yemen": 3.59, "Zambia": 4.17, "Zimbabwe": 3.33,
+            "Puerto Rico": 0.90, "W. Sahara": 2.30, "Greenland": 1.90, "New Caledonia": 1.80, "Fr. S. Antarctic Lands": 0,
+            "Falkland Is.": 0, "Antarctica": 0
+        };
+
+        // Name mappings for TopoJSON
+        const nameMap = {
+            "United States of America": ["USA", "United States"],
+            "Democratic Republic of the Congo": ["Dem. Rep. Congo", "Democratic Republic of Congo", "DRC"],
+            "Republic of the Congo": ["Congo", "Republic of Congo"],
+            "Ivory Coast": ["Côte d'Ivoire", "Cote d'Ivoire"],
+            "South Korea": ["Korea", "Republic of Korea"],
+            "North Korea": ["Dem. Rep. Korea"],
+            "Czech Republic": ["Czechia"],
+            "Swaziland": ["eSwatini", "Eswatini"],
+            "Bosnia and Herzegovina": ["Bosnia and Herz."],
+            "Central African Republic": ["Central African Rep."],
+            "Dominican Republic": ["Dominican Rep."],
+            "Equatorial Guinea": ["Eq. Guinea"],
+            "South Sudan": ["S. Sudan"],
+            "Solomon Islands": ["Solomon Is."],
+            "Western Sahara": ["W. Sahara"],
+            "Falkland Islands": ["Falkland Is."]
+        };
+
+        const REPLACEMENT_RATE = 2.1;
+        const GENERATION_LENGTH = 27.5;
+
+        function calculateHalfLife(tfr) {
+            if (!tfr || tfr <= 0) return null;
+            const ratio = tfr / REPLACEMENT_RATE;
+            if (Math.abs(ratio - 1) < 0.02) return { type: 'stable', years: Infinity };
+            if (ratio < 1) {
+                return { type: 'shrinking', years: Math.abs((Math.log(0.5) / Math.log(ratio)) * GENERATION_LENGTH) };
+            }
+            return { type: 'growing', years: Math.abs((Math.log(2) / Math.log(ratio)) * GENERATION_LENGTH) };
+        }
+
+        function getColor(tfr) {
+            if (!tfr) return '#374151';
+            const result = calculateHalfLife(tfr);
+            if (!result) return '#374151';
+            if (result.type === 'stable') return '#ffd93d';
+            if (result.type === 'shrinking') {
+                if (result.years < 50) return '#ff2d55';
+                if (result.years < 100) return '#ff6b6b';
+                if (result.years < 200) return '#ffa502';
+                return '#ffd93d';
+            }
+            if (result.years < 50) return '#0891b2';
+            if (result.years < 100) return '#4ecdc4';
+            if (result.years < 200) return '#6bcb77';
+            return '#ffd93d';
+        }
+
+        function findTFR(name) {
+            if (!name) return null;
+            if (tfrData[name]) return tfrData[name];
+            for (const [key, aliases] of Object.entries(nameMap)) {
+                if (name === key || aliases.includes(name)) {
+                    if (tfrData[key]) return tfrData[key];
+                    for (const alias of aliases) {
+                        if (tfrData[alias]) return tfrData[alias];
+                    }
+                }
+            }
+            // Fuzzy
+            const lower = name.toLowerCase();
+            for (const k of Object.keys(tfrData)) {
+                if (k.toLowerCase().includes(lower) || lower.includes(k.toLowerCase())) {
+                    return tfrData[k];
+                }
+            }
+            return null;
+        }
+
+        function updateInfoPanel(name, tfr) {
+            const el = document.getElementById('country-info');
+            if (!tfr) {
+                el.innerHTML = `<div class="country-name">${name}</div><p class="placeholder-text">No fertility data available.</p>`;
+                return;
+            }
+            const result = calculateHalfLife(tfr);
+            const emoji = result.type === 'shrinking' ? '📉' : result.type === 'growing' ? '📈' : '⚖️';
+            const cls = result.type;
+            const label = result.type === 'stable' ? 'STABLE' : result.type === 'shrinking' ? 'YEARS TO HALVE' : 'YEARS TO DOUBLE';
+            const val = result.years === Infinity ? '∞' : Math.round(result.years);
+            const trend = result.type === 'shrinking' ? 'Declining' : result.type === 'growing' ? 'Growing' : 'Stable';
+            el.innerHTML = `
+                <div class="country-name">${emoji} ${name}</div>
+                <div class="stat-grid">
+                    <div class="stat full-width">
+                        <div class="stat-label">${label}</div>
+                        <div class="stat-value ${cls} halflife-display">${val}${val !== '∞' ? ' yrs' : ''}</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Fertility Rate</div>
+                        <div class="stat-value">${tfr.toFixed(2)}</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">vs Replacement</div>
+                        <div class="stat-value ${cls}">${((tfr/REPLACEMENT_RATE-1)*100).toFixed(0)}%</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Trend</div>
+                        <div class="stat-value ${cls}">${trend}</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Per Generation</div>
+                        <div class="stat-value">${(tfr/REPLACEMENT_RATE).toFixed(2)}x</div>
+                    </div>
+                </div>`;
+        }
+
+        // Initialize
+        const container = document.getElementById('map-container');
+        const svg = d3.select('#map');
+        const tooltip = document.getElementById('tooltip');
+        let width, height, projection, path, g, zoom;
+
+        function resize() {
+            width = container.clientWidth;
+            height = container.clientHeight;
+            svg.attr('width', width).attr('height', height);
+            projection = d3.geoNaturalEarth1()
+                .scale(width / 5.5)
+                .translate([width / 2, height / 2]);
+            path = d3.geoPath().projection(projection);
+            if (g) g.selectAll('path').attr('d', path);
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+
+        // Zoom
+        zoom = d3.zoom()
+            .scaleExtent([1, 8])
+            .on('zoom', (e) => { if (g) g.attr('transform', e.transform); });
+        svg.call(zoom);
+
+        document.getElementById('zoom-in').onclick = () => svg.transition().call(zoom.scaleBy, 1.5);
+        document.getElementById('zoom-out').onclick = () => svg.transition().call(zoom.scaleBy, 0.67);
+        document.getElementById('zoom-reset').onclick = () => svg.transition().call(zoom.transform, d3.zoomIdentity);
+
+        // Ocean background
+        svg.append('rect')
+            .attr('width', '100%')
+            .attr('height', '100%')
+            .attr('fill', '#0d0d12');
+
+        g = svg.append('g');
+
+        // Load map data
+        d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+            .then(world => {
+                document.getElementById('loading').style.display = 'none';
+                const countries = topojson.feature(world, world.objects.countries);
+
+                g.selectAll('path')
+                    .data(countries.features)
+                    .enter()
+                    .append('path')
+                    .attr('class', 'country')
+                    .attr('d', path)
+                    .attr('fill', d => {
+                        const name = d.properties.name;
+                        return getColor(findTFR(name));
+                    })
+                    .on('mouseover', function(event, d) {
+                        const name = d.properties.name;
+                        const tfr = findTFR(name);
+                        const result = tfr ? calculateHalfLife(tfr) : null;
+
+                        d3.select(this).raise();
+
+                        let html = `<div class="tooltip-country">${name}</div>`;
+                        if (tfr && result) {
+                            const lbl = result.type === 'shrinking' ? 'Half-life' : result.type === 'growing' ? 'Doubling' : 'Status';
+                            const v = result.type === 'stable' ? 'Stable' : Math.round(result.years) + ' yrs';
+                            html += `<div class="tooltip-detail">TFR: ${tfr.toFixed(2)} · ${lbl}: ${v}</div>`;
+                        } else {
+                            html += `<div class="tooltip-detail">No data</div>`;
+                        }
+                        tooltip.innerHTML = html;
+                        tooltip.classList.add('visible');
+
+                        updateInfoPanel(name, tfr);
+                    })
+                    .on('mousemove', function(event) {
+                        tooltip.style.left = (event.pageX + 12) + 'px';
+                        tooltip.style.top = (event.pageY - 10) + 'px';
+                    })
+                    .on('mouseout', function() {
+                        tooltip.classList.remove('visible');
+                    });
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('loading').innerHTML = 'Error loading map data';
+            });
+    </script>
+</body>
+</html>
